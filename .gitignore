@@ -1,3 +1,5 @@
 *.txt
 *.class
-*.out
+out
+.idea
+*.iml
