@@ -35,6 +35,27 @@ class Cholution {
   }
 }
 
+class SolutionNew {
+    public int findMin(int[] arr){
+        int low = 0, high = arr.length-1;
+        int topIndex = -1;
+        while(low<=high){
+            int mid = low + (high-low)/2;
+            int prev = mid == 0 ? arr[arr.length-1] : arr[mid-1];
+            int next = mid == arr.length-1 ? arr[0]: arr[mid+1];
+            if(arr[mid] > prev && arr[mid] > next){
+                topIndex = mid;
+                break;
+            }else if(arr[mid] < arr[low]){
+                high = mid - 1;
+            }else {
+                low = mid + 1;
+            }
+        }
+        return topIndex == arr.length - 1 ? arr[0]: arr[topIndex+1];
+    }
+}
+
 class B4MinInRotatedArr {
     public static void main(String[] args){
         int nums1[] = {4,5,6,7,0,1,2};
@@ -42,7 +63,7 @@ class B4MinInRotatedArr {
         int[] nums3 = {11,13,15,17};
         int[] nums4 = {2,3,4,5,1};
         int[] nums5 = {5,1,2,3,4};
-        Solution sol = new Solution();
+        SolutionNew sol = new SolutionNew();
         assert sol.findMin(nums1) == 0;
         assert sol.findMin(nums2) == 1;
         assert sol.findMin(nums3) == 11;
