@@ -1,4 +1,5 @@
 // https://leetcode.com/problems/maximum-subarray/
+// AKA kadane's algorithm
 
 class Solution {
     public int maxSubArray(int[] arr){
@@ -16,9 +17,8 @@ class Solution {
 
 public class U2MaxSubArray {
     public static void main(String[] args) {
-        // int[]nums = {-2,1,-3,4,-1,2,1,-5,4};
         int[] nums = {-5,-6,-7,-1,-2,-3};
-        Solution s = new Solution();
-        System.out.println("max sub arr tot is:"+s.maxSubArray(nums));
+        Solution sol = new Solution();
+        assert sol.maxSubArray(nums) == -1;
     }
 }
