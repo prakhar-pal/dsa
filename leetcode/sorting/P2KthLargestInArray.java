@@ -2,41 +2,14 @@
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Random;
 
 interface Solution {
     public int findKthLargest(int[] nums, int k);
 }
 class Solution1 implements Solution {
-    private static int MAX_SIZE = (int)Math.pow(10, 5) + 1;
-    public int findKthLargest(int[] nums, int k) {
-        int maxIndex = 1;
-        int[] freqArr = new int[MAX_SIZE];
-        for(int num:nums){
-            freqArr[num]++;
-            if(num > maxIndex) {
-                maxIndex = num;
-            }
-        }
-        int currentIndex = maxIndex;
-        while(k > 1) {
-            if(freqArr[currentIndex] > 0) {
-                k--;
-                freqArr[currentIndex]--;
-            }
-            if(freqArr[currentIndex] == 0) {
-                for(int i=currentIndex-1;i>=0;i--){
-                    currentIndex = i;
-                    if(freqArr[i] != 0) {
-                        break;
-                    }
-                }
-            }
-        }
-        return currentIndex;
-    }
-}
-
-class Solution2 implements Solution {
+    // slow solution O(nlogn) where n = nums.length
+    // beats 11.3%
     public int findKthLargest(int[] nums, int k) {
         ArrayList<Integer> list = new ArrayList<>();
         for(int num: nums){
@@ -45,6 +18,43 @@ class Solution2 implements Solution {
 
         Collections.sort(list);
         return list.get(nums.length - k);
+    }
+}
+
+class Solution2 implements Solution {
+    // using quick select
+    // TLEs passes all tests
+    public int findKthLargest(int[] nums, int k){
+        return findUsingQuickSelect(nums, 0, nums.length-1, k);
+    }
+
+    public int findUsingQuickSelect(int[] nums, int left, int right, int k){
+        Random random = new Random();
+        int pivotIndex = random.nextInt(left, right + 1);
+        int pivotValue = nums[pivotIndex];
+        swap(nums, pivotIndex, right);
+        pivotIndex = left;
+        for(int i=left;i<right;i++){
+            if(nums[i] < nums[right]) {
+                swap(nums, i, pivotIndex);
+                pivotIndex++;
+            }
+        }
+        swap(nums, pivotIndex, right);
+        int kthSmallest = nums.length - k;
+        if(pivotIndex == kthSmallest){
+            return nums[pivotIndex];
+        }
+        if(pivotIndex > kthSmallest) {
+            return findUsingQuickSelect(nums, 0, pivotIndex-1, k);
+        }
+        return findUsingQuickSelect(nums, pivotIndex+1, right, k);
+    }
+
+    public void swap(int[] arr, int index1, int index2){
+        int temp = arr[index1];
+        arr[index1] = arr[index2];
+        arr[index2] = temp;
     }
 }
 
