@@ -3,8 +3,8 @@ class GuessGame {
     public GuessGame(int num){
         this.num = num;
     }
-    public int guess(int x){
-
+    public int guess(int x) {
+        return 0;
     }
 }
 
