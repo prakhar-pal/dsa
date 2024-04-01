@@ -1,5 +1,5 @@
 // https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/646/
-class Solution {
+class SolutionA03RotateArr {
     public int[] rotate(int[] nums, int k) {
 		k = k % nums.length;
         int temp[] = new int[k];
@@ -25,7 +25,7 @@ class A03RotateArr {
 		}
 	}
 	public static void main(String[] args){
-		Solution sol = new Solution();
+		SolutionA03RotateArr sol = new SolutionA03RotateArr();
 
 		// tc 1
 		int arr1[] = {1,2,3,4,5,6,7};

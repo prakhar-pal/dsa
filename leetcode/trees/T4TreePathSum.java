@@ -21,7 +21,7 @@ class TreeNode {
     }
 }
 
-class Solution {
+class SolutionT4TreePathSum {
     public boolean hasPathSum(TreeNode root, int targetSum) {
         // System.out.println("target sum:" + targetSum + root == null ? "null" : "searching at: " + root.val);
         if(root == null) return false;
@@ -44,7 +44,7 @@ public class T4TreePathSum {
         TreeNode temp = root.left;
         root.left = root.right;
         root.right = temp;
-        Solution sol = new Solution();
+        SolutionT4TreePathSum sol = new SolutionT4TreePathSum();
         int sum = 22;
         System.out.println("has sum path:" + sol.hasPathSum(root, sum));
     }

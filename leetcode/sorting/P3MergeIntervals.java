@@ -12,7 +12,7 @@ class Range {
     }
 }
 
-class Solution2 {
+class SolutionP3MergeIntervals2 {
     // https://leetcode.com/problems/merge-intervals/solutions/4893229/easy-java-solution-beats-100-sorting/
     public int[][] merge(int[][] arr) {
         int n = arr.length;
@@ -35,7 +35,7 @@ class Solution2 {
     }
 }
 
-class Solution {
+class SolutionP3MergeIntervals {
     // beats 88.05% users with Java
     int MAX_SIZE = (int)Math.pow(10, 4) + 1;
     public int[][] merge(int[][] intervals) {
@@ -110,7 +110,7 @@ public class P3MergeIntervals {
         return true;
     }
     public static void main(String[] args){
-        Solution sol = new Solution();
+        SolutionP3MergeIntervals sol = new SolutionP3MergeIntervals();
 
         int[][][] case1 = {
             {{1,3},{2,6},{8,10},{15,18}},

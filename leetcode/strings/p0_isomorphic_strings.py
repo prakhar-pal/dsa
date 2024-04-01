@@ -1,4 +1,4 @@
-class Solution(object):
+class Solutionp0_isomorphic_strings.py(object):
     def isIsomorphic(self, s, t):
         """
         :type s: str
@@ -7,7 +7,7 @@ class Solution(object):
         """
         return len(set(s)) == len(set(zip(s, t))) == len(set(t))
 
-sol = Solution();
+sol = Solutionp0_isomorphic_strings.py();
 assert sol.isIsomorphic("egg", "add")
 assert sol.isIsomorphic("foo", "bar") == False
 assert sol.isIsomorphic("paper", "title")

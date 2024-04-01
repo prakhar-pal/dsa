@@ -1,6 +1,6 @@
 // https://leetcode.com/explore/learn/card/binary-search/137/conclusion/977/
 
-class Solution {
+class SolutionC01LetterSearchLetterSearch {
     public char nextGreatestLetter(char[] letters, char target) {
         int len = letters.length;
         if(letters[0] <= target && letters[len-1] > target){
@@ -40,7 +40,7 @@ class C01LetterSearch {
         char letters5[] = letters1;
         char target5 = 'j';
 
-        Solution sol = new Solution();
+        SolutionC01LetterSearchLetterSearch sol = new SolutionC01LetterSearchLetterSearch();
         assert sol.nextGreatestLetter(letters1, target1) == 'c';
         assert sol.nextGreatestLetter(letters2, target2) == 'f';
         assert sol.nextGreatestLetter(letters3, target3) == 'f';

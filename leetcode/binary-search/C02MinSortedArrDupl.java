@@ -1,6 +1,6 @@
 // https://leetcode.com/explore/learn/card/binary-search/144/more-practices/1031/
 
-class Solution {
+class SolutionC02MinSortedArrDuplMinSortedArr {
     public int findMin(int[] nums) {
         return findMin(nums, 0, nums.length-1);
     }
@@ -20,7 +20,7 @@ class Solution {
 
 class C02MinSortedArrayDupl {
     public static void main(String[] args){
-        Solution sol = new Solution();
+        SolutionC02MinSortedArrDuplMinSortedArr sol = new SolutionC02MinSortedArrDuplMinSortedArr();
 
         int tc1[] = {1,3,5};
         int tc2[] = {2,2,2,0,1};

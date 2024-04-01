@@ -1,5 +1,5 @@
 // https://leetcode.com/problems/longest-palindromic-substring/
-class Solution {
+class SolutionDP02LongestPanlidromicSubstring {
     /**
      * @param s
      * @return
@@ -36,7 +36,7 @@ class Solution {
 
 public class DP02LongestPanlidromicSubstring {
     public static void main(String[] args) {
-        Solution sol = new Solution();
+        SolutionDP02LongestPanlidromicSubstring sol = new SolutionDP02LongestPanlidromicSubstring();
         // System.out.println(sol.longestPalindrome("ababac"));
         assert sol.longestPalindrome("babad").length() == 3;
         assert sol.longestPalindrome("ababac").length() == 5;

@@ -1,5 +1,5 @@
 // https://leetcode.com/explore/learn/card/binary-search/137/conclusion/978/
-class Solution {
+class SolutionB8PerfectSquarePerfectSquare {
     public boolean isPerfectSquare(int num) {
         int MAX = (int)Math.sqrt(Math.pow(2,31)-1);
         int low = 1, high = Math.min(Math.max(1,num/2), MAX);
@@ -24,7 +24,7 @@ class Solution {
 
 class B8PerfectSquare {
     public static void main(String[] args){
-        Solution sol = new Solution();
+        SolutionB8PerfectSquarePerfectSquare sol = new SolutionB8PerfectSquarePerfectSquare();
         assert sol.isPerfectSquare(4) == true;
         assert sol.isPerfectSquare(1) == true;
         assert sol.isPerfectSquare(2) == false;

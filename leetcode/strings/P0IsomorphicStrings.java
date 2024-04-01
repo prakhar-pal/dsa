@@ -26,11 +26,11 @@ class Zip<T,U> {
     }
 }
 
-interface Solution {
+interface SolutionP0IsomorphicStrings {
     public boolean isIsomorphic(String s, String t);
 }
 
-class Solution1 implements Solution {
+class SolutionP0IsomorphicStrings1 implements SolutionP0IsomorphicStrings {
     public boolean isIsomorphic(String s, String t) {
         if(s.length() != t.length()) {
             return false;
@@ -62,7 +62,7 @@ class Solution1 implements Solution {
     }
 }
 
-class Solution2 implements Solution {
+class SolutionP0IsomorphicStrings2 implements SolutionP0IsomorphicStrings {
     public boolean isIsomorphic(String s, String t) {
         if(s.length() != t.length()) {
             return false;
@@ -92,7 +92,7 @@ class Solution2 implements Solution {
 
 class P0IsomorphicStrings {
     public static void main(String[] args) {
-        Solution sol = new Solution2();
+        SolutionP0IsomorphicStrings sol = new SolutionP0IsomorphicStrings2();
         assert sol.isIsomorphic(new String("egg"), "add");
         assert !sol.isIsomorphic("foo", "bar");
         assert sol.isIsomorphic("paper", "title");

@@ -1,7 +1,7 @@
 // https://leetcode.com/explore/interview/card/top-interview-questions-easy/127/strings/881/
 // First Unique Character in a String
 
-class Solution {
+class SolutionS02FirstUniqueChar {
     public int firstUniqChar(String s) {
         int[] freqs = new int[26];
         for(int i=0;i<26;i++){
@@ -30,7 +30,7 @@ class S02 {
         String s3 = "aabb";
         int index3 = -1;
         
-        Solution sol = new Solution();
+        SolutionS02FirstUniqueChar sol = new SolutionS02FirstUniqueChar();
         
         assert sol.firstUniqChar(s1) == index1;
         assert sol.firstUniqChar(s2) == index2;

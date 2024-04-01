@@ -1,5 +1,5 @@
 import java.util.Arrays;
-class Solution {
+class SolutionC07KthSmallestPairDistance {
     public int smallestDistancePair(int[] nums, int k) {
         Arrays.sort(nums);
         int totalNums = nums.length;
@@ -19,7 +19,7 @@ class Solution {
 
 class C07KthSmallestPairDistance {
     public static void main(String[] args){
-        Solution sol = new Solution();
+        SolutionC07KthSmallestPairDistance sol = new SolutionC07KthSmallestPairDistance();
 
         int arr1[] = {1,3,1};
         int k1 = 1;

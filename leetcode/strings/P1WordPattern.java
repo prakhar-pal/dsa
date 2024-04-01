@@ -3,7 +3,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 
 // https://leetcode.com/problems/word-pattern/description/
-class Solution {
+class SolutionP1WordPattern {
     public boolean wordPattern(String pattern, String s) {
         HashMap<String, String> match = new HashMap<>();
         String[] letters = pattern.split("");
@@ -34,7 +34,7 @@ class Solution {
 }
 public class P1WordPattern {
  public static void main(String[] args) {
-    Solution sol  = new Solution();
+    SolutionP1WordPattern sol  = new SolutionP1WordPattern();
     assert sol.wordPattern("abba", "dog cat cat dog");
     assert sol.wordPattern("abba", "dog cat cat fish") == false;
     assert sol.wordPattern("aaaa", "dog cat cat dog") == false;

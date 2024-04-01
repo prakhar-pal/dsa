@@ -1,7 +1,7 @@
 // https://leetcode.com/explore/learn/card/binary-search/146/more-practices-ii/1039/
 import java.util.Arrays;
 
-class Solution {
+class SolutionC06ArrDupl {
     public int findDuplicate(int[] nums) {
         Arrays.sort(nums);
         for(int i=0;i<nums.length-1;i++){
@@ -23,7 +23,7 @@ class Solution {
 
 class C06ArrDupl {
     public static void main(String[] args){
-        Solution sol = new Solution();
+        SolutionC06ArrDupl sol = new SolutionC06ArrDupl();
 
         int tc1[] = {1,3,4,2,2};
 

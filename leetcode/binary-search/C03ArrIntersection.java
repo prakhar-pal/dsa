@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 
-class Solution {
+class SolutionC03ArrIntersection {
     public int[] intersection(int[] nums1, int[] nums2) {
         HashMap<Integer, Integer> hm = new HashMap<>();
         for(int num:nums1){
@@ -24,7 +24,7 @@ class Solution {
     }
 }
 
-class SolutionBySet {
+class SolutionC03ArrIntersectionBySet {
     public int[] intersection(int[] nums1, int[] nums2) {
         HashSet<Integer> hs = new HashSet<>();
         HashSet<Integer> rs = new HashSet<>();
@@ -65,7 +65,7 @@ class C03ArrIntersection {
     }
 
     public static void main(String[] args){
-        Solution sol = new Solution();
+        SolutionC03ArrIntersection sol = new SolutionC03ArrIntersection();
         int tc1[][] = { {1,2,2,1}, {2,2}};
         int res1[] = {2};
         int tc2[][] = { {4,9,5}, {9,4,9,8,4} };

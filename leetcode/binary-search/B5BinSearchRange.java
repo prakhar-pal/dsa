@@ -8,7 +8,7 @@ class Pair {
         result[1] = e;
     }
 }
-class Solution {
+class SolutionB5BinSearchRange {
     public int[] searchRange(int[] nums, int target) {
         // find start index
         int startIndex = -1, endIndex = -1;
@@ -60,7 +60,7 @@ class B5BinSearchRange {
         return true;
     }
     public static void main(String[] args){
-        Solution sol = new Solution();
+        SolutionB5BinSearchRange sol = new SolutionB5BinSearchRange();
         int array1[] = {5,7,7,8,8,10};
         int target1 = 8;
         int array2[] = {5,7,7,8,8,10};

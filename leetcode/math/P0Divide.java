@@ -1,5 +1,5 @@
 // https://leetcode.com/explore/interview/card/top-interview-questions-medium/113/math/820/
-class Solution {
+class SolutionP0Divide {
     public static long LOWEST_QUOTIENT = (long)Math.pow(2, 31) * (-1);
     public static long HIGHEST_QUOTIENT = (long) (Math.pow(2, 31) - 1);
     public long abs(long num) {
@@ -29,7 +29,7 @@ class Solution {
 
 class P0Divide {
     public static void main(String[] args) {
-        Solution sol = new Solution();
+        SolutionP0Divide sol = new SolutionP0Divide();
         assert sol.divide(10, 3) == 3;
         assert sol.divide(7, -3) == -2;
         assert sol.divide(-2147483648, -1) == 2147483647;

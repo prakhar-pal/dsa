@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Collections;
 
-class Solution {
+class SolutionB6KClosest {
     public int closer(int[] arr, int x, int index1, int index2){
         int diff1 = Math.abs(arr[index1] - x);
         int diff2 = Math.abs(arr[index2] - x);
@@ -71,7 +71,7 @@ class B6KClosest {
         int[] arr3 = {-2,-1,1,2,3,4,5};
         int k3 = 7, x3 = 3;
 
-        Solution sol = new Solution();
+        SolutionB6KClosest sol = new SolutionB6KClosest();
 
         List<Integer> ans1 = sol.findClosestElements(arr1, k1, x1);
         List<Integer> ans2 = sol.findClosestElements(arr2, k2, x2);

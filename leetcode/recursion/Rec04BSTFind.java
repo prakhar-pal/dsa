@@ -19,7 +19,7 @@ class TreeNode {
     }
 }
 
-class Solution {
+class SolutionRec04BSTFind {
     public TreeNode searchBST(TreeNode root, int val) {
         if(root == null || root.val == val) return root;
         else return val > root.val ?  searchBST(root.right, val) : searchBST(root.left, val);
@@ -28,7 +28,7 @@ class Solution {
 
 public class Rec04BSTFind {
     public static void main(String[] args) {
-        Solution sol = new Solution();
+        SolutionRec04BSTFind sol = new SolutionRec04BSTFind();
         // example 1
         // TreeNode node = new TreeNode(4);
         // node.left = new TreeNode(2);

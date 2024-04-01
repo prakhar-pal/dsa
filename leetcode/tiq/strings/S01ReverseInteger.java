@@ -3,7 +3,7 @@
 import java.math.BigInteger;
 
 
-class SolutionOne {
+class SolutionS01ReverseIntegerOne {
     // The first attempt
     public int reverse(int x) {
         if(x == 0) return 0;
@@ -27,7 +27,7 @@ class SolutionOne {
 }
 
 
-class Solution {
+class SolutionS01ReverseInteger {
     // Copied from
     // https://leetcode.com/submissions/detail/667576346/
     public int reverse(int x) {
@@ -48,7 +48,7 @@ class Solution {
 
 class S01 {
     public static void main(String args[]){
-        Solution sol = new Solution();
+        SolutionS01ReverseInteger sol = new SolutionS01ReverseInteger();
         int x1 = 123;
         int res1 = 321;
         

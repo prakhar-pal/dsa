@@ -26,7 +26,7 @@ class TreeNode {
     }
 }
 
-class Solution {
+class SolutionT6TreeFromInorderPreorder {
     private int[] toArray(ArrayList<Integer> list){
         int[] arr = new int[list.size()];
         for(int i=0;i<list.size();i++){
@@ -89,7 +89,7 @@ public class T6TreeFromInorderPreorder {
     public static void main(String[] args) {
         int inorder[] = {9,3,15,20,7};
         int preorder[] = {3,9,20,15,7};
-        Solution sol = new Solution();
+        SolutionT6TreeFromInorderPreorder sol = new SolutionT6TreeFromInorderPreorder();
         TreeNode root = sol.buildTree(preorder, inorder);
         System.out.println("priting the result:");
         printSequence(root);

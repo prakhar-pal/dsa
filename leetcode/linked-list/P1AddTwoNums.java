@@ -31,7 +31,7 @@ public class P1AddTwoNums {
         return isSameLinkedList(list1.next, list2.next);
     }
     public static void main(String[] args){
-        SolutionAdd2Nums sol = new SolutionAdd2Nums();
+        SolutionP1AddTwoNumsAdd2Nums sol = new SolutionP1AddTwoNumsAdd2Nums();
 
         ListNode result1 = sol.addTwoNumbers(
             new ListNode(1),
@@ -80,7 +80,7 @@ public class P1AddTwoNums {
     }
 }
 
-class SolutionAdd2Nums {
+class SolutionP1AddTwoNumsAdd2Nums {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         int value = l1.val + l2.val;
         int remainder = value/10;

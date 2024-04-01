@@ -20,7 +20,7 @@ class TreeNode {
     }
 }
 
-class Solution {
+class SolutionT0PreorderTraversal {
     private void ptUtil(TreeNode root, List<Integer> list){
         if(root == null) return;
         list.add(root.val);
@@ -40,7 +40,7 @@ class T0PreorderTraversal {
         root.val = 1;
         root.left = new TreeNode(2);
         // root.right.left = new TreeNode(3);
-        Solution sol = new Solution();
+        SolutionT0PreorderTraversal sol = new SolutionT0PreorderTraversal();
         List<Integer> list = sol.preorderTraversal(root);
         for(Integer item : list){
             System.out.println(item);

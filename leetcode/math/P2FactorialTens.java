@@ -2,10 +2,10 @@
 
 import java.util.HashMap;
 
-interface Solution {
+interface SolutionP2FactorialTens {
     public int trailingZeroes(int n);
 }
-class Solution1 implements Solution {
+class SolutionP2FactorialTens1 implements SolutionP2FactorialTens {
     // beats 6% of the solutions
     public int trailingZeroes(int n) {
         int count5 = 0;
@@ -21,7 +21,7 @@ class Solution1 implements Solution {
     }
 }
 
-class Solution2 implements Solution {
+class SolutionP2FactorialTens2 implements SolutionP2FactorialTens {
     // beats 9.65% of the solutions
     public int trailingZeroes(int n) {
         int start = 5;
@@ -65,9 +65,9 @@ class MemoizedTZ {
     }
 }
 
-class Solution3 implements Solution {
+class SolutionP2FactorialTens3 implements SolutionP2FactorialTens {
     public static MemoizedTZ memoizedTz;
-    public Solution3() {
+    public SolutionP2FactorialTens3() {
         if(memoizedTz == null) {
             memoizedTz = new MemoizedTZ();
         }
@@ -77,7 +77,7 @@ class Solution3 implements Solution {
     }
 }
 
-class Solution4 implements Solution {
+class SolutionP2FactorialTens4 implements SolutionP2FactorialTens {
     // fastest solution
     public int trailingZeroes(int n) {
         int count = 0;
@@ -93,7 +93,7 @@ class Solution4 implements Solution {
 
 public class P2FactorialTens {
  public static void main(String[] args) {
-    Solution sol = new Solution3();
+    SolutionP2FactorialTens sol = new SolutionP2FactorialTens3();
     // System.out.println("sol.trailingZeroes(23):" + sol.trailingZeroes(23));
     assert sol.trailingZeroes(0) == 0;
     assert sol.trailingZeroes(5) == 1;

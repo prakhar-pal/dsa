@@ -17,7 +17,7 @@ import java.util.Scanner;
       }
  }
 
-class Solution {
+class SolutionRec10UniqueBST2 {
    public List<TreeNode> generateTrees(int n) {
         return generateTrees(1,n);
    }
@@ -51,7 +51,8 @@ class Rec10UniqueBST2 {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        Solution sol = new Solution();
+        SolutionRec10UniqueBST2 sol = new SolutionRec10UniqueBST2();
         System.out.println(sol.generateTrees(n).size());
+        sc.close();
     }
 }

@@ -1,7 +1,7 @@
 // https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/546/
 import java.util.HashMap;
 import java.util.Map;
-class Solution {
+class SolutionA08TwoSum {
     public int[] twoSum(int[] nums, int target) {
         HashMap<Integer,Integer> map = new HashMap<Integer,Integer>();
         int result[] = new int[2];
@@ -34,7 +34,7 @@ class A08 {
 	}
 	
     public static void main(String[] args){
-        Solution sol = new Solution();
+        SolutionA08TwoSum sol = new SolutionA08TwoSum();
         
         // tc1
         int arr1[] = {2,7,11,15};

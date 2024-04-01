@@ -8,7 +8,7 @@ class ListNode {
     ListNode(int val) { this.val = val; }
     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
 }
-class Solution {
+class SolutionRec03RevLinkedList {
     public ListNode reverseList(ListNode head) {
         if(head == null) return null;
         ListNode[] reversedNodes = reverseListUtil(head);
@@ -49,7 +49,7 @@ public class Rec03RevLinkedList {
             currentNode = currentNode.next;
         }
 
-        Solution sol = new Solution();
+        SolutionRec03RevLinkedList sol = new SolutionRec03RevLinkedList();
         ListNode reverseList = sol.reverseList(node);
         printReversed(reverseList);
     }    

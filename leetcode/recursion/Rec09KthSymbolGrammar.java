@@ -1,6 +1,6 @@
 // https://leetcode.com/explore/learn/card/recursion-i/253/conclusion/1675/
 import java.util.Scanner;
-class Solution {
+class SolutionRec09KthSymbolGrammar {
     public int kthGrammar(int n, int k) {
         int result;
         if(n==1 || k==1) {
@@ -31,7 +31,7 @@ class Rec09KthSymbolGrammar {
             int n, k;
             n = sc.nextInt();
             k = sc.nextInt();
-            Solution sol = new Solution();
+            SolutionRec09KthSymbolGrammar sol = new SolutionRec09KthSymbolGrammar();
             System.out.println(sol.kthGrammar(n,k));
         }
         sc.close();

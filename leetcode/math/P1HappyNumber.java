@@ -1,7 +1,7 @@
 import java.util.HashSet;;
 /* https://leetcode.com/explore/interview/card/top-interview-questions-medium/113/math/815/ */
 
-class Solution {
+class SolutionP1HappyNumber {
     public HashSet<Integer> rejects = new HashSet<Integer>();
     public HashSet<Integer> accepts = new HashSet<Integer>();
     public int goHappyNext(int n) {
@@ -37,7 +37,7 @@ class Solution {
 }
 
 
-class Solution2 {
+class SolutionP1HappyNumber2 {
     public int goHappyNext(int n) {
         int squaredSum = 0;
         while(n > 0) {
@@ -58,7 +58,7 @@ class Solution2 {
 
 class P1HappyNumber {
     public static void main(String[] args) {
-        Solution2 sol = new Solution2();
+        SolutionP1HappyNumber2 sol = new SolutionP1HappyNumber2();
         assert sol.isHappy(19);
         assert !sol.isHappy(2);
         assert sol.isHappy(13);

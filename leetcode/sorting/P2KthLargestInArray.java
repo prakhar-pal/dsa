@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
 
-interface Solution {
+interface SolutionP2KthLargestInArray {
     public int findKthLargest(int[] nums, int k);
 }
-class Solution1 implements Solution {
+class SolutionP2KthLargestInArray1 implements SolutionP2KthLargestInArray {
     // slow solution O(nlogn) where n = nums.length
     // beats 11.3%
     public int findKthLargest(int[] nums, int k) {
@@ -21,7 +21,7 @@ class Solution1 implements Solution {
     }
 }
 
-class Solution2 implements Solution {
+class SolutionP2KthLargestInArray2 implements SolutionP2KthLargestInArray {
     // using quick select
     // TLEs passes all tests
     public int findKthLargest(int[] nums, int k){
@@ -60,7 +60,7 @@ class Solution2 implements Solution {
 
 class P2KthLargestInArray {
     public static void main(String[] args) {
-        Solution sol = new Solution2();
+        SolutionP2KthLargestInArray sol = new SolutionP2KthLargestInArray2();
         int[][] case1 = {
             {3,2,1,5,6,4},
             {2}

@@ -1,6 +1,6 @@
 // https://leetcode.com/explore/learn/card/binary-search/138/background/1038/
 
-class Solution {
+class SolutionB0BinarySearchBinarySearch {
     public int search(int[] nums, int target) {
         return search(nums, target, 0, nums.length-1);
     }
@@ -16,7 +16,7 @@ class Solution {
 
 class B0BinarySearch {
     public static void main(String[] args){
-        Solution sol = new Solution();
+        SolutionB0BinarySearchBinarySearch sol = new SolutionB0BinarySearchBinarySearch();
         int arr1[] = {-1,0,3,5,9,12};
         int target1 = 9;
         int arr2[] = {-1,0,3,5,9,12};

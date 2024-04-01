@@ -8,7 +8,7 @@ class ListNode {
     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
 }
 
-class Solution {
+class SolutionRec02Swap2Nodes {
     public ListNode swapPairs(ListNode head) {
         if(head == null) return null;
         else if(head != null && head.next == null) return head;
@@ -45,7 +45,7 @@ public class Rec02Swap2Nodes {
 
         //example 3
         ListNode node = null;
-        Solution sol = new Solution();
+        SolutionRec02Swap2Nodes sol = new SolutionRec02Swap2Nodes();
         ListNode newNode = sol.swapPairs(node);
         printSwapped(newNode);
     }

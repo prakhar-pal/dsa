@@ -18,7 +18,7 @@ class TreeNode {
     }
 }
 
-class Solution {
+class SolutionT2TreeMaxDepth {
     public int maxDepth(TreeNode root) {
         if (root == null)
         return 0;
@@ -34,7 +34,7 @@ public class T2TreeMaxDepth {
         root.right = new TreeNode(20);
         root.right.left = new TreeNode(15);
         root.right.right = new TreeNode(7);
-        Solution sol = new Solution();
+        SolutionT2TreeMaxDepth sol = new SolutionT2TreeMaxDepth();
         System.out.println("max depth is:" + sol.maxDepth(root));
     }
 }

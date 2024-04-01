@@ -1,4 +1,4 @@
-class Solution {
+class SolutionB7PeakElement {
     // public int findPeakElement(int[] nums){
     //     return findPeakElement(nums, 0, nums.length-1);
     // }
@@ -19,7 +19,7 @@ class Solution {
 
 class B7PeakElement {
     public static void main(String[] args){
-        Solution sol = new Solution();
+        SolutionB7PeakElement sol = new SolutionB7PeakElement();
         int arr[] = {1,2,3,1};
         assert sol.findPeakElement(arr) == 3;
     }

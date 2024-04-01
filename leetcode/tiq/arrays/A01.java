@@ -1,6 +1,6 @@
 // https://leetcode.com/explore/featured/card/top-interview-questions-easy/92/array/727/
 
-class Solution {
+class SolutionA01 {
     private int removeDuplicates1(int[] nums) {
         if(nums.length == 0) return 0;
         int pi = 1; // ci = current index, pi = placement index
@@ -48,7 +48,7 @@ class A01 {
     }
     public static void main(String[] args){
 
-        Solution sol = new Solution();
+        SolutionA01 sol = new SolutionA01();
 
         int[] arr1 = {1,1,2};
         int[] expectedResult1 = {1,2};

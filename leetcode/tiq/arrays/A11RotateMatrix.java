@@ -2,7 +2,7 @@ import java.util.Queue;
 import java.util.LinkedList;
 
 // https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/770/
-class Solution {
+class SolutionA11RotateMatrix {
     // private static void swap(int[][] matrix, int )
     public void rotate(int[][] matrix) {
         int n = matrix.length;
@@ -47,7 +47,7 @@ class A11 {
 		}
 	}
     public static void main(String[] args){
-        Solution sol = new Solution();
+        SolutionA11RotateMatrix sol = new SolutionA11RotateMatrix();
         
         int mat1[][] = {{1,2,3},{4,5,6},{7,8,9}};
         int result1[][] = {{7,4,1},{8,5,2},{9,6,3}};

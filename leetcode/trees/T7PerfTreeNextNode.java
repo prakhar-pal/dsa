@@ -23,7 +23,7 @@ class Node {
 };
 
 
-class Solution {
+class SolutionT7PerfTreeNextNode {
     public Node connect(Node root) {
         if(root == null) return null;
         else {
@@ -61,7 +61,7 @@ public class T7NextRightNode {
         root.left.right = new Node(5);
         root.right.left = new Node(6);
         root.right.right = new Node(7);
-        Solution sol = new Solution();
+        SolutionT7PerfTreeNextNode sol = new SolutionT7PerfTreeNextNode();
         sol.connect(root);
         printSol(root);
     }

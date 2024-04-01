@@ -26,7 +26,7 @@ class TreeNode {
     }
 }
 
-class Solution {
+class SolutionT5TreeFromInorderPostorder {
     private int[] toArray(ArrayList<Integer> list){
         int[] arr = new int[list.size()];
         for(int i=0;i<list.size();i++){
@@ -93,7 +93,7 @@ public class T5TreeFromInorderPostorder {
         // int postorder[] = {2,1};
         int inorder[] = {2,3,1};
         int postorder[] = {3,2,1};
-        Solution sol = new Solution();
+        SolutionT5TreeFromInorderPostorder sol = new SolutionT5TreeFromInorderPostorder();
         TreeNode root = sol.buildTree(inorder, postorder);
         System.out.println("priting the result:");
         printSequence(root);

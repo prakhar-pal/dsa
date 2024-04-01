@@ -76,9 +76,9 @@ class Sieve2 {
         return primeCount[n];
     }
 }
-class Solution {
+class SolutionDP03PrimeCount {
     private static Sieve sieve = null;
-    public Solution() {
+    public SolutionDP03PrimeCount() {
         if(sieve == null) {
             sieve = new Sieve();
         }
@@ -91,7 +91,7 @@ class Solution {
 
 class DP03PrimeCount {
     public static void main(String[] args) {
-        Solution sol = new Solution();
+        SolutionDP03PrimeCount sol = new SolutionDP03PrimeCount();
         assert sol.countPrimes(7) == 3;
         assert sol.countPrimes(8) == 4;
         assert sol.countPrimes(6) == 3;

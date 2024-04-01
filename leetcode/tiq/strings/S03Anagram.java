@@ -1,4 +1,4 @@
-class Solution {
+class SolutionS03Anagram {
     private int getCharPos(char ch){
         return (int)(ch - 'a');
     }
@@ -31,7 +31,7 @@ class S03 {
         String s2 = "rat", t2 = "car";
         boolean result2 = false;
         
-        Solution sol = new Solution();
+        SolutionS03Anagram sol = new SolutionS03Anagram();
         
         assert sol.isAnagram(s1,t1) == result1;
         assert sol.isAnagram(s2,t2) == result2;

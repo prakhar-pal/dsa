@@ -17,7 +17,10 @@ class GuessGame {
 *               otherwise return 0
 * int guess(int num);
 */
-class Solution extends GuessGame {
+class SolutionB1GuessNumGuessGame extends GuessGame {
+    public SolutionB1GuessNumGuessGame() {
+        super(0);
+    }
     public int guessNumber(int n) {
         int start = 1, end = n;
         while(true){

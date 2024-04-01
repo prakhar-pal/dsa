@@ -1,6 +1,6 @@
 // https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/559/
 
-class Solution {
+class SolutionA06PlusOne {
     private boolean isAll9s(int[] digits){
         for(int digit: digits){
             if(digit != 9) return false;
@@ -40,7 +40,7 @@ class A06 {
 	}
 	
     public static void main(String[] args){
-        Solution sol = new Solution();
+        SolutionA06PlusOne sol = new SolutionA06PlusOne();
         
         // tc 1
         int arr1[] = {1,2,3};

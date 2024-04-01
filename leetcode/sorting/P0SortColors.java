@@ -1,5 +1,5 @@
 // https://leetcode.com/problems/sort-colors/description/
-class Solution {
+class SolutionP0SortColors {
     public void sortColors(int[] nums) {
         this.sortColors(nums);
     }
@@ -36,7 +36,7 @@ public class P0SortColors {
         return true;
     }
     public static void main(String[] args) {
-        Solution sol = new Solution();
+        SolutionP0SortColors sol = new SolutionP0SortColors();
         int[][] example1 = {
             {2,0,2,1,1,0},
             {0,0,1,1,2,2}

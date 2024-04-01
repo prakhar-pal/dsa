@@ -1,5 +1,5 @@
 // https://leetcode.com/explore/learn/card/binary-search/144/more-practices/1035/
-class Solution {
+class SolutionC05ArrTwoSum {
     public int[] twoSum(int[] nums, int target) {
         int low = 0, high = nums.length - 1;
         while(high > low) {
@@ -29,7 +29,7 @@ class C05ArrTwoSum {
         return true;
     }
     public static void main(String[] args){
-        Solution sol = new Solution();
+        SolutionC05ArrTwoSum sol = new SolutionC05ArrTwoSum();
 
         int tc1[] = {2,7,11,15};
         int target1 = 9;

@@ -3,13 +3,13 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
 
-class Solution {
+class SolutionR5NumberWaveR5NumberWave {
     private boolean[][] visited;
     private boolean[][] processed;
 
-    public Solution(){
+    public SolutionR5NumberWaveR5NumberWave(){
     }
-    public void printSolution(int r, int c, int x, int y){
+    public void printSolutionR5NumberWaveR5NumberWave(int r, int c, int x, int y){
         int[][] matrix = new int[r][c];
         this.visited = new boolean[r][c];
         this.processed = new boolean[r][c];
@@ -71,8 +71,8 @@ public class R5NumberWave {
         c = sc.nextInt();
         x = sc.nextInt();
         y = sc.nextInt();
-        Solution sol = new Solution();
-        sol.printSolution(r, c, x, y);
+        SolutionR5NumberWaveR5NumberWave sol = new SolutionR5NumberWaveR5NumberWave();
+        sol.printSolutionR5NumberWaveR5NumberWave(r, c, x, y);
         sc.close();
     }
 }

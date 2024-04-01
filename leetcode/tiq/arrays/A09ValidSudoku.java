@@ -3,7 +3,7 @@ import java.util.Set;
 import java.util.HashSet;
 
 
-class Solution {
+class SolutionA09ValidSudoku {
     public boolean isValidSudoku(char[][] board) {
         // check rows have unique numbers
         for(int i=0;i<board.length;i++){
@@ -49,7 +49,7 @@ class Solution {
 
 class A09 {
     public static void main(String[] args){
-        Solution sol = new Solution();
+        SolutionA09ValidSudoku sol = new SolutionA09ValidSudoku();
         
         char board1[][] = {
             {'5','3','.','.','7','.','.','.','.'}

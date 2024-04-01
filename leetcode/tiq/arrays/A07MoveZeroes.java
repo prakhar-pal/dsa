@@ -1,6 +1,6 @@
 // https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/567/
 
-class Solution {
+class SolutionA07MoveZeroes {
     public void moveZeroes(int[] nums) {
         int pi=0,ii=0; // pi = position index, ii = item index
         while(ii < nums.length){
@@ -27,7 +27,7 @@ class A07 {
 	}
 	
     public static void main(String[] args){
-        Solution sol = new Solution();
+        SolutionA07MoveZeroes sol = new SolutionA07MoveZeroes();
         
         // tc 1
         int arr1[] = {0,1,0,3,12};

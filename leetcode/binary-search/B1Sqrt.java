@@ -38,7 +38,7 @@ class Cholution {
     }
 }
 
-class Solution {
+class SolutionB1SqrtSqrt {
     public int mySqrt(int x){
         if(x<2) return x;
         int left = 1, right =x;
@@ -56,7 +56,7 @@ class Solution {
 
 class B1Sqrt {
     public static void main(String[] args){
-        Solution sol = new Solution();
+        SolutionB1SqrtSqrt sol = new SolutionB1SqrtSqrt();
         assert sol.mySqrt(4) == 2;
         assert sol.mySqrt(8) == 2;
         assert sol.mySqrt(9) == 3;

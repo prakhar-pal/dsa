@@ -2,8 +2,14 @@
 
 /* The isBadVersion API is defined in the parent class VersionControl.
       boolean isBadVersion(int version); */
+class VersionControl {
+    boolean isBadVersion(int version) {
+        // to be overriden: this is sample
+        return true;
+    }
+}
 
-public class Solution extends VersionControl {
+class SolutionB3BadVersnStartBadVersionControl extends VersionControl {
     public int firstBadVersion(int n) {
         int left = 2, right = n;
         if(isBadVersion(1)) return 1;

@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-class Solution {
+class SolutionP1StringSubsetsRecursive {
     public List<String> getAllSubstrings(String str){
         List<String> list = new ArrayList<>();
         if(str == null){
@@ -34,7 +34,7 @@ public class P1StringSubsetsRecursive {
         String str;
         Scanner sc = new Scanner(System.in);
         str = sc.nextLine();
-        Solution sol = new Solution();
+        SolutionP1StringSubsetsRecursive sol = new SolutionP1StringSubsetsRecursive();
         List<String> list = sol.getAllSubstrings(str);
         for(String s: list){
             if(s.equals("")) System.out.print("-\t");

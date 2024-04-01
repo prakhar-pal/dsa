@@ -2,9 +2,9 @@
 import java.util.HashMap;
 import java.util.Scanner;
 
-class Solution {
+class SolutionRec06FibSeries {
     private HashMap<Integer, Integer> cache;
-    public Solution(){
+    public SolutionRec06FibSeries(){
         this.cache = new HashMap<>();
     }
     public int fib(int n) {
@@ -26,7 +26,7 @@ class Rec06FibSeries {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        Solution sol = new Solution();
+        SolutionRec06FibSeries sol = new SolutionRec06FibSeries();
         System.out.println("fib::"+n+"::"+sol.fib(n));
     }
 }

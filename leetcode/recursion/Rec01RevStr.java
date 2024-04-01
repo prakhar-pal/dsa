@@ -1,6 +1,6 @@
 //https://leetcode.com/explore/learn/card/recursion-i/250/principle-of-recursion/1440/
 
-class Solution {
+class SolutionRec01RevStr {
     public void reverseString(char[] s) {
         int i=0, j=s.length-1;
         reverseString(s,i,j);
@@ -21,7 +21,7 @@ public class Rec01RevStr {
     public static void main(String[] args) {
         char[] s1 = {'h','e','l','l','o'};
         char[] s2 = {'H','a','n','n','a','h'};
-        Solution sol = new Solution();
+        SolutionRec01RevStr sol = new SolutionRec01RevStr();
         sol.reverseString(s1);
         sol.reverseString(s2);
         System.out.println(s1);

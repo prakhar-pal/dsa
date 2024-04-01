@@ -1,6 +1,6 @@
 // https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/564/
 
-class Solution {
+class SolutionA02MaxProfit2 {
     public int maxProfit(int[] prices) {
 		int profit = 0;
 		for(int i=0;i<prices.length-1;i++){
@@ -14,7 +14,7 @@ class Solution {
 
 class A02MaxProfit2 {
 	public static void main(String[] args){
-		Solution sol = new Solution();
+		SolutionA02MaxProfit2 sol = new SolutionA02MaxProfit2();
 
 		// tc 1
 		int prices1[] = {7,1,5,3,6,4};

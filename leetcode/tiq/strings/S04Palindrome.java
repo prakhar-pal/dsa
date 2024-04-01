@@ -1,7 +1,7 @@
 // https://leetcode.com/explore/interview/card/top-interview-questions-easy/127/strings/883/
 // check if a sentence is a palindrome 
 
-class Solution {
+class SolutionS04Palindrome {
     public boolean isPalindrome(String s) {
         s = s.toLowerCase();
         StringBuilder temp = new StringBuilder("");
@@ -19,7 +19,7 @@ class Solution {
 
 class S04 {
     public static void main(String[] args){
-        Solution sol = new Solution();
+        SolutionS04Palindrome sol = new SolutionS04Palindrome();
         
         String s1 = "A man, a plan, a canal: Panama";
         boolean result1 = true;

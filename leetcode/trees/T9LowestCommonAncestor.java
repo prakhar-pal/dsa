@@ -10,7 +10,7 @@ class TreeNode {
     }
 }
 
-class Solution {
+class SolutionT9LowestCommonAncestor {
     public boolean updatePath(TreeNode root, TreeNode node, ArrayList<TreeNode> list) {
         if (root == null)
             return false;
@@ -55,7 +55,7 @@ public class T9LowestCommonAncestor {
         root.left.right.right = new TreeNode(4);
         root.right.right = new TreeNode(8);
         root.right.left = new TreeNode(0);
-        Solution sol = new Solution();
+        SolutionT9LowestCommonAncestor sol = new SolutionT9LowestCommonAncestor();
         TreeNode lca = sol.lowestCommonAncestor(root, root.left, root.left.right.right);
         TreeNode lca2 = sol.lowestCommonAncestor(root, root.left, root.right);
         System.out.println(lca.val + " " + lca2.val);

@@ -1,5 +1,5 @@
 // https://leetcode.com/problems/zigzag-conversion/description/
-class Solution {
+class SolutionP2StrZigZag {
     public String convert(String s, int numRows) {
         int slength = s.length();
         char result[] = new char[slength];
@@ -34,7 +34,7 @@ class Solution {
 }
 
 // https://leetcode.com/problems/zigzag-conversion/solutions/3049344/c-such-an-easy-solution/
-class Solution2 {
+class SolutionP2StrZigZag2 {
     public String convert(String s, int numRows) {
         String rows[] = new String[numRows];
         for(int i=0;i<numRows;i++){
@@ -67,7 +67,7 @@ class Solution2 {
 
 public class P2StrZigZag {
     public static void main(String[] args) {
-        Solution2 sol = new Solution2();
+        SolutionP2StrZigZag2 sol = new SolutionP2StrZigZag2();
         assert sol.convert("PAYPALISHIRING", 1).equals("PAYPALISHIRING");
         assert sol.convert("PAYPALISHIRING", 3).equals("PAHNAPLSIIGYIR");
         assert sol.convert("PAYPALISHIRING", 4).equals("PINALSIGYAHRPI");

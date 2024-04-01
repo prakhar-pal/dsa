@@ -1,7 +1,7 @@
 // https://leetcode.com/explore/learn/card/recursion-i/256/complexity-analysis/2380/
 import java.util.Scanner;
 
-class Solution {
+class SolutionRec07MathPow {
     public double myPowUtil(double x, int n){
         if(n==0) return 1.0;
         else if(n==1) return x;
@@ -36,7 +36,7 @@ class Rec07MathPow {
         // sc.close();
         double x = 2.0;
         int n = -2147483648;
-        Solution sol = new Solution();
+        SolutionRec07MathPow sol = new SolutionRec07MathPow();
         System.out.println("result "+sol.myPow(x,n));
         // System.out.println("result2:"+sol.powPow(x,n));
     }

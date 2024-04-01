@@ -26,7 +26,7 @@ class TreeNode {
     }
 }
 
-class Solution {
+class SolutionT3SymmetricTree {
     private boolean isSymmetric(ArrayList<TreeNode> list){
         int size = list.size();
         // System.out.println("isSymmetric:list::"+ list.toString());
@@ -72,7 +72,7 @@ public class T3SymmetricTree {
         root.right = new TreeNode(20);
         root.right.left = new TreeNode(15);
         root.right.right = new TreeNode(7);
-        Solution sol = new Solution();
+        SolutionT3SymmetricTree sol = new SolutionT3SymmetricTree();
         System.out.println("is symmetric:r1:" + sol.isSymmetric(root));
         TreeNode root2 = new TreeNode(1);
         root2.left = new TreeNode(2);

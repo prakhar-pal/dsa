@@ -4,9 +4,9 @@ import java.util.List;
 
 // https://leetcode.com/explore/learn/card/recursion-i/251/scenario-i-recurrence-relation/3234/
 
-class Solution {
+class SolutionRec05PascalTriangle2 {
     private HashMap<HashMap<Integer,Integer>, Integer> ptMap;
-    public Solution() {
+    public SolutionRec05PascalTriangle2() {
         ptMap = new HashMap<>();
     }
     private int getPascValueMemoized(int row, int col){
@@ -50,7 +50,7 @@ class Choluson {
 }
 public class Rec05PascalTriangle2 {
     public static void main(String[] args) {
-        Solution sol = new Solution();
+        SolutionRec05PascalTriangle2 sol = new SolutionRec05PascalTriangle2();
         // use the Cholusion instance to observe the non memoized version
         // Choluson sol = new Choluson(); 
         List<Integer> list = sol.getRow(30);

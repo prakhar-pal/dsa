@@ -14,7 +14,7 @@ class Pair {
     }
 }
 
-class Solution {
+class SolutionP1TopKFrequentNums {
     public int freqComparator(Pair a, Pair b){
         return b.second - a.second;
     }
@@ -31,7 +31,7 @@ class Solution {
         for(int key: freqMap.keySet()){
             freqList.add(new Pair(key, freqMap.get(key)));
         }
-        Solution that = this;
+        SolutionP1TopKFrequentNums that = this;
         Collections.sort(freqList, new Comparator<Pair>() {
             @Override
             public int compare(Pair a, Pair b) {
@@ -69,7 +69,7 @@ class P1TopKFrequentNums {
     }
 
     public static void main(String[] args) {
-        Solution sol = new Solution();
+        SolutionP1TopKFrequentNums sol = new SolutionP1TopKFrequentNums();
         int case1[][] = {
             {1,1,1,1,2,2,3},
             {1,2}

@@ -1,6 +1,6 @@
 // https://leetcode.com/explore/learn/card/binary-search/125/template-i/952/
 
-class Solution {
+class SolutionB2SearchRotatedArrSearchRotatedArray {
     private int bs(int nums[], int start, int end, int target){
         while(start <= end){
             int mid = (start+end)/2;
@@ -31,7 +31,7 @@ class B2SearchRotatedArr {
     public static void main(String[] args){
         int nums[] = {4,5,6,7,0,1,2};
         int target = 0;
-        Solution sol = new Solution();
+        SolutionB2SearchRotatedArrSearchRotatedArray sol = new SolutionB2SearchRotatedArrSearchRotatedArray();
         assert sol.search(nums, target) == 4;
     }
 }

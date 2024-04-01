@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/median-of-two-sorted-arrays/
 
-class Solution {
+class SolutionB9MedianSortedArraysMedSortedArray {
     private double median(int[] nums) {
         int len = nums.length;
         if (len % 2 == 0) {
@@ -49,7 +49,7 @@ class B9MedianSortedArrays {
         int tc4[][] = { { 1, 2, 3 }, { 4, 5, 6 } };
         int tc5[][] = { { 3 }, { -2, -1 } };
 
-        Solution sol = new Solution();
+        SolutionB9MedianSortedArraysMedSortedArray sol = new SolutionB9MedianSortedArraysMedSortedArray();
         assert sol.findMedianSortedArrays(tc2[0], tc2[1]) == 0.0;
         assert sol.findMedianSortedArrays(tc1[0], tc1[1]) == 2.0;
         assert sol.findMedianSortedArrays(tc3[0], tc3[1]) == 4.5;

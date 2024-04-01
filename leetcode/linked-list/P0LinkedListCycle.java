@@ -10,7 +10,7 @@
     }
 }
 
-class Solution {
+class SolutionP0LinkedListCycle {
     public ListNode getNextFastNode(ListNode head) {
         if(head == null) return null;
         ListNode nextNode = head.next;
@@ -32,7 +32,7 @@ class Solution {
     }
 }
 
-class Solution2 {
+class SolutionP0LinkedListCycle2 {
     public boolean hasCycle(ListNode head) {
         ListNode turtle = head,hare = head;
         while(hare != null && hare.next != null){
@@ -48,7 +48,7 @@ class Solution2 {
 
 public class P0LinkedListCycle {
     public static void main(String[] args) {
-        Solution2 sol = new Solution2();
+        SolutionP0LinkedListCycle2 sol = new SolutionP0LinkedListCycle2();
 
         ListNode list1 = new ListNode(3);
         list1.next = new ListNode(2);

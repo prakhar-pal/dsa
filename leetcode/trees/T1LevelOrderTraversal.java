@@ -22,7 +22,7 @@ class TreeNode {
     }
 }
 
-class Solution {
+class SolutionT1LevelOrderTraversal {
     public List<List<Integer>> levelOrder(TreeNode root) {
         List<List<Integer>> list = new ArrayList<>();
         if(root == null) return list;
@@ -53,7 +53,7 @@ class T1LevelOrderTraversal {
         root.right = new TreeNode(20);
         root.right.left = new TreeNode(15);
         root.right.right = new TreeNode(7);
-        Solution sol = new Solution();
+        SolutionT1LevelOrderTraversal sol = new SolutionT1LevelOrderTraversal();
         List<List<Integer>> list = sol.levelOrder(root);
         for(List<Integer> row : list){
             for(int value: row){

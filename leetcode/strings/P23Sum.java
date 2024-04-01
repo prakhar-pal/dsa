@@ -9,11 +9,11 @@ import java.util.*;
  *  -105 <= nums[i] <= 105
  */
 
- interface Solution {
+ interface SolutionP23Sum {
     public List<List<Integer>> threeSum(int[] nums);
  }
 
-class Solution3Sum implements Solution {
+class SolutionP23Sum3Sum implements SolutionP23Sum {
     public List<List<Integer>> threeSum(int[] nums) {
         System.out.println("info:threeSum.");
         Arrays.sort(nums);
@@ -64,7 +64,7 @@ class Solution3Sum implements Solution {
     }
 }
 
-class Solution100Pc implements Solution {
+class SolutionP23Sum100Pc implements SolutionP23Sum {
     // solution from leetcode which passes and  beats 100% of other submissions
     private List<List<Integer>> res;
     public List<List<Integer>> threeSum(int[] nums) {
@@ -124,7 +124,7 @@ class P23Sum {
         return true;
     }
     public static void main(String[] args){
-        Solution sol = new SolutionTutCup();
+        SolutionP23Sum sol = new SolutionP23Sum3Sum();
 
         int[] input1 = {-1,0,1,2,-1,-4};
         int[][] output1 = {{-1,-1,2},{-1,0,1}};

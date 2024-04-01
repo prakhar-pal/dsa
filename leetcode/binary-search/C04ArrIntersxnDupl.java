@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 
-class SolutionBySet {
+class SolutionC04ArrIntersxnDuplBySet {
     public int[] intersection(int[] nums1, int[] nums2) {
         HashMap<Integer, Integer> hm = new HashMap<>();
         for(int num: nums1){
@@ -58,7 +58,7 @@ class C04ArrIntersxnDupl {
     }
 
     public static void main(String[] args){
-        SolutionBySet sol = new SolutionBySet();
+        SolutionC04ArrIntersxnDuplBySet sol = new SolutionC04ArrIntersxnDuplBySet();
         int tc1[][] = { {1,2,2,1}, {2,2}};
         int res1[] = {2,2};
         int tc2[][] = { {4,9,5}, {9,4,9,8,4} };

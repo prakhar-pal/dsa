@@ -10,7 +10,7 @@
       ListNode(int val, ListNode next) { this.val = val; this.next = next; }
 }
 
-class Solution {
+class SolutionRec08MergeSortedList {
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         if(l1 == null || l2 == null){
             return l1 == null ? l2 : l1;
@@ -45,7 +45,7 @@ class Rec08MergeSortedList {
         ListNode list2 = new ListNode(1,
         new ListNode(3,
         new ListNode(4)));
-        Solution sol = new Solution();
+        SolutionRec08MergeSortedList sol = new SolutionRec08MergeSortedList();
         printList(sol.mergeTwoLists(list1, list2));
     }
 }

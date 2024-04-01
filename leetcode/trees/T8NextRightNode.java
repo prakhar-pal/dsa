@@ -20,7 +20,7 @@ class Node {
 };
 
 
-class Solution {
+class SolutionT8NextRightNode {
     public Node getLeftMost(Node node){
         if(node == null) return null;
         return node.left != null ? node.left : node.right != null ? node.right : this.getLeftMost(node.next);
@@ -118,7 +118,7 @@ public class T8NextRightNode {
         // 1 
         // 2 3 
         // 4 5 7 
-        Solution sol = new Solution();
+        SolutionT8NextRightNode sol = new SolutionT8NextRightNode();
         sol.connect(root);
         printSol(root);
     }

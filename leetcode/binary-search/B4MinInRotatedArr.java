@@ -1,6 +1,6 @@
 // https://leetcode.com/explore/learn/card/binary-search/126/template-ii/949/
 
-class Solution {
+class SolutionB4MinInRotatedArrMinRotateArr {
     public int findMin(int[] nums) {
         int l = 0, r = nums.length-1;
         if(nums.length == 1) return nums[0];
@@ -35,7 +35,7 @@ class Cholution {
   }
 }
 
-class SolutionNew {
+class SolutionB4MinInRotatedArrNew {
     public int findMin(int[] arr){
         int low = 0, high = arr.length-1;
         int topIndex = -1;
@@ -63,7 +63,7 @@ class B4MinInRotatedArr {
         int[] nums3 = {11,13,15,17};
         int[] nums4 = {2,3,4,5,1};
         int[] nums5 = {5,1,2,3,4};
-        SolutionNew sol = new SolutionNew();
+        SolutionB4MinInRotatedArrNew sol = new SolutionB4MinInRotatedArrNew();
         assert sol.findMin(nums1) == 0;
         assert sol.findMin(nums2) == 1;
         assert sol.findMin(nums3) == 11;

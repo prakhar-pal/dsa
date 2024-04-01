@@ -1,7 +1,7 @@
 // https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/646/
 import java.util.HashSet;
 
-class Solution {
+class SolutionA04ArrDuplDetect {
 	 public boolean containsDuplicate(int[] nums) {
         HashSet<Integer> set = new HashSet<Integer>();
 		for(int num:nums){
@@ -13,7 +13,7 @@ class Solution {
 
 class A04ArrDuplDetect {
 	public static void main(String[] args){
-		Solution sol = new Solution();
+		SolutionA04ArrDuplDetect sol = new SolutionA04ArrDuplDetect();
 
 		// tc 1
 		int arr1[] = {1};

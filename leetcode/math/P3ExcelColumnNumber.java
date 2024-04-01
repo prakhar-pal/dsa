@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/excel-sheet-column-number/
 
-class Solution {
+class SolutionP3ExcelColumnNumber {
     public int titleToNumber(String columnTitle) {
         char a = 'A';
         int column = 0;
@@ -15,7 +15,7 @@ class Solution {
 
 class P3ExcelColumnNumber {
     public static void main(String[] args) {
-        Solution sol = new Solution();
+        SolutionP3ExcelColumnNumber sol = new SolutionP3ExcelColumnNumber();
         assert sol.titleToNumber("A") == 1;
         assert sol.titleToNumber("AB") == 28;
         assert sol.titleToNumber("ZY") == 701;
