@@ -6,7 +6,14 @@
         {
             "label": "compileCurrentJavaFile",
             "type": "shell",
-            "command": "javac ${file}"
+            "command": "javac -cp ${workspaceFolder} ${file}",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$java-compilation"
+            ]
         }
     ]
 }
