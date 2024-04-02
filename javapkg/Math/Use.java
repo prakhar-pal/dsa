@@ -1,4 +1,4 @@
-package com.lawki.Math;
+package javapkg.Math;
 public class Use {
     public static void main(String[] args) {
         System.out.println("doing sum " + new Sum().act(1, 2));
