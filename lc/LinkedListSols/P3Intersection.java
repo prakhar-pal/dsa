@@ -8,17 +8,6 @@ import java.util.HashSet;
  * For example, the following two linked lists begin to intersect at node c1:
  */
 public class P3Intersection {
-    // public ListNode reverseList(ListNode head) {
-    //     ListNode prevNode = null;
-    //     ListNode currentNode = head;
-    //     while(currentNode != null) {
-    //         ListNode next = currentNode.next;
-    //         currentNode.next = prevNode;
-    //         prevNode = currentNode;
-    //         currentNode = next;
-    //     }
-    //     return prevNode;
-    // }
     public static boolean isSameLinkedList(ListNode list1, ListNode list2) {
         System.out.println("comparing: list1=" + list1 + ", list2=" + list2);
         if(list1 == list2) {
@@ -57,13 +46,9 @@ public class P3Intersection {
         headB.next = intersectHead;
     }
     public static void main(String[] args) {
-        P3IntersectionFasterSolution sol = new P3IntersectionFasterSolution();
+        P3Solution sol = new P3IntersectionSolution03();
 
-        // assert isSameLinkedList(sol.reverseList(createList(new int[]{1,2,3})), createList(new int[] {3,2,1}));
-
-        // assert isSameLinkedList(sol.reverseList(null), null);
-
-        // assert sol.getIntersectionNode(null, null) == null;
+        assert sol.getIntersectionNode(null, null) == null;
 
         ListNode headA1 = createList(new int[]{1,2});
         ListNode headB1 = createList(new int[]{1,2,3});
@@ -95,7 +80,12 @@ public class P3Intersection {
     }
 }
 
-class P3IntersectionSolution {
+
+interface P3Solution {
+    public ListNode getIntersectionNode(ListNode headA, ListNode headB);
+}
+
+class P3IntersectionSolution implements P3Solution {
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
         HashSet<ListNode> set = new HashSet<>();
         ListNode commonNode = null;
@@ -121,9 +111,10 @@ class P3IntersectionSolution {
     }
 }
 
-class P3IntersectionFasterSolution {
+class P3IntersectionFasterSolution implements P3Solution{
     /**
      * it's like two pointer
+     * from the comments section of leetcode
      */
 
      public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
@@ -135,6 +126,46 @@ class P3IntersectionFasterSolution {
             currB = currB == null? headA : currB.next;
         }
         
+        return currA;
+    }
+}
+
+
+class P3IntersectionSolution03 implements P3Solution {
+     public int getListLength(ListNode head) {
+        int length = 0;
+        while(head != null) {
+            length++;
+            head = head.next;
+        }
+        return length;
+     }
+
+     public ListNode goForwardInList(ListNode head, int size) {
+        while(size > 0) {
+            head = head.next;
+            size--;
+        }
+        return head;
+     }
+
+     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
+        ListNode currA = headA;
+        ListNode currB = headB;
+        int lengthA = getListLength(headA);
+        int lengthB = getListLength(headB);
+        if(lengthA > lengthB) {
+            currA = goForwardInList(headA, lengthA-lengthB);
+        }else {
+            currB = goForwardInList(headB, lengthB-lengthA);
+        }
+        while(currA != currB) {
+            currA = currA.next;
+            currB = currB.next;
+        }
+        if(currA != null) {
+            currA = new ListNode(currA.val);
+        }
         return currA;
     }
 }
