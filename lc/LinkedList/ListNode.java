@@ -1,4 +1,4 @@
-package lc.LinkedListSols;
+package lc.LinkedList;
 
  /**
  * Definition for singly-linked list.

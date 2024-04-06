@@ -1,13 +1,6 @@
+import lc.common.PairArray;
 // https://leetcode.com/explore/learn/card/binary-search/135/template-iii/944/
 
-class Pair {
-    public int[] result;
-    public Pair(int s, int e){
-        result = new int[2];
-        result[0] = s;
-        result[1] = e;
-    }
-}
 class SolutionB5BinSearchRange {
     public int[] searchRange(int[] nums, int target) {
         // find start index
@@ -47,7 +40,7 @@ class SolutionB5BinSearchRange {
                right = mid -1;
            }
        }
-       return new Pair(startIndex, endIndex).result;
+       return new PairArray(startIndex, endIndex).result;
     }
 }
 
@@ -67,8 +60,8 @@ class B5BinSearchRange {
         int target2 = 6;
         int array3[] = {};
         int target3 = 0;
-        assert isSame(sol.searchRange(array2, target2), new Pair(-1,-1).result);
-        assert isSame(sol.searchRange(array3, target3), new Pair(-1,-1).result);
-        assert isSame(sol.searchRange(array1, target1), new Pair(3,4).result);
+        assert isSame(sol.searchRange(array2, target2), new PairArray(-1,-1).result);
+        assert isSame(sol.searchRange(array3, target3), new PairArray(-1,-1).result);
+        assert isSame(sol.searchRange(array1, target1), new PairArray(3,4).result);
     }
 }

@@ -1,3 +1,4 @@
+package lc.LinkedList;
 /**
  * https://leetcode.com/explore/interview/card/top-interview-questions-medium/107/linked-list/784/
  * Given the head of a singly linked list, group all the nodes with odd indices together followed by the nodes with even indices, and return the reordered list.
@@ -9,27 +10,6 @@
  * You must solve the problem in O(1) extra space complexity and O(n) time complexity.
  */
 
- /**
- * Definition for singly-linked list.
- */
-class ListNode {
-    int val;
-    ListNode next;
-    ListNode() {}
-    ListNode(int val) { this.val = val; }
-    ListNode(int val, ListNode next) { this.val = val; this.next = next; }
-    public String toString() {
-        String name = new String("");
-        ListNode cn = this;
-        while(cn != null) {
-            name = name + cn.val + "-> ";
-            cn = cn.next;
-        }
-        name = name + "null";
-        name = name.trim();
-        return name;
-    }
-}
 
 public class P2SortOddEven {
     public static boolean isSameLinkedList(ListNode list1, ListNode list2) {

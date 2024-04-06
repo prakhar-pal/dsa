@@ -1,26 +1,18 @@
-/**
- * Definition for singly-linked list.
- */
- class ListNode {
-    int val;
-    ListNode next;
-    ListNode(int x) {
-        val = x;
-        next = null;
-    }
-}
+package lc.LinkedList;
+
+import lc.recursion.ListNode;
 
 class SolutionP0LinkedListCycle {
-    public ListNode getNextFastNode(ListNode head) {
+    public lc.recursion.ListNode getNextFastNode(lc.recursion.ListNode head) {
         if(head == null) return null;
-        ListNode nextNode = head.next;
+        lc.recursion.ListNode nextNode = head.next;
         if(nextNode == null) return null;
         nextNode = nextNode.next;
         return nextNode;
     }
-    public boolean hasCycle(ListNode head) {
-        ListNode slowNode = head;
-        ListNode fastNode = getNextFastNode(head);
+    public boolean hasCycle(lc.recursion.ListNode head) {
+        lc.recursion.ListNode slowNode = head;
+        lc.recursion.ListNode fastNode = getNextFastNode(head);
         while(fastNode != null && slowNode != null && slowNode != fastNode) {
             slowNode = slowNode.next;
             fastNode = getNextFastNode(fastNode);
@@ -33,7 +25,7 @@ class SolutionP0LinkedListCycle {
 }
 
 class SolutionP0LinkedListCycle2 {
-    public boolean hasCycle(ListNode head) {
+    public boolean hasCycle(lc.recursion.ListNode head) {
         ListNode turtle = head,hare = head;
         while(hare != null && hare.next != null){
             turtle = turtle.next;
@@ -50,18 +42,18 @@ public class P0LinkedListCycle {
     public static void main(String[] args) {
         SolutionP0LinkedListCycle2 sol = new SolutionP0LinkedListCycle2();
 
-        ListNode list1 = new ListNode(3);
-        list1.next = new ListNode(2);
-        ListNode repeatNode = list1.next;
-        list1.next.next = new ListNode(0);
-        list1.next.next.next = new ListNode(-4);
+        lc.recursion.ListNode list1 = new lc.recursion.ListNode(3);
+        list1.next = new lc.recursion.ListNode(2);
+        lc.recursion.ListNode repeatNode = list1.next;
+        list1.next.next = new lc.recursion.ListNode(0);
+        list1.next.next.next = new lc.recursion.ListNode(-4);
         assert sol.hasCycle(list1) == false;
         list1.next.next.next.next = repeatNode;
         assert sol.hasCycle(list1) == true;
 
-        ListNode l2node1 = new ListNode(1);
-        ListNode l2node2 = new ListNode(2);
-        ListNode l2node3 = new ListNode(3);
+        lc.recursion.ListNode l2node1 = new lc.recursion.ListNode(1);
+        lc.recursion.ListNode l2node2 = new lc.recursion.ListNode(2);
+        lc.recursion.ListNode l2node3 = new lc.recursion.ListNode(3);
         l2node1.next = l2node2;
         l2node2.next = l2node3;
         // l2node3.next = l2node1;

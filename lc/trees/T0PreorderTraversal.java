@@ -1,24 +1,25 @@
+package  lc.trees;
 import java.util.ArrayList;
 import java.util.List;
 
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-
-    TreeNode() {
-    }
-
-    TreeNode(int val) {
-        this.val = val;
-    }
-
-    TreeNode(int val, TreeNode left, TreeNode right) {
-        this.val = val;
-        this.left = left;
-        this.right = right;
-    }
-}
+//class TreeNode {
+//    int val;
+//    TreeNode left;
+//    TreeNode right;
+//
+//    TreeNode() {
+//    }
+//
+//    TreeNode(int val) {
+//        this.val = val;
+//    }
+//
+//    TreeNode(int val, TreeNode left, TreeNode right) {
+//        this.val = val;
+//        this.left = left;
+//        this.right = right;
+//    }
+//}
 
 class SolutionT0PreorderTraversal {
     private void ptUtil(TreeNode root, List<Integer> list){
@@ -36,8 +37,7 @@ class SolutionT0PreorderTraversal {
 
 class T0PreorderTraversal {
     public static void main(String[] args) {
-        TreeNode root = new TreeNode();
-        root.val = 1;
+        TreeNode root = new TreeNode(1);
         root.left = new TreeNode(2);
         // root.right.left = new TreeNode(3);
         SolutionT0PreorderTraversal sol = new SolutionT0PreorderTraversal();

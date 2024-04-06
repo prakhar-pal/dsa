@@ -1,3 +1,4 @@
+package  lc.trees;
 //https://leetcode.com/explore/learn/card/data-structure-tree/133/conclusion/995/
 import java.util.LinkedList;
 
@@ -5,15 +6,15 @@ import java.util.LinkedList;
 // e.g. for n nodes it requires arr of size 2^n-1
 
 // Definition for a binary tree node.
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-
-    TreeNode(int x) {
-        val = x;
-    }
-}
+//class TreeNode {
+//    int val;
+//    TreeNode left;
+//    TreeNode right;
+//
+//    TreeNode(int x) {
+//        val = x;
+//    }
+//}
 
 class Pair {
     public TreeNode node;

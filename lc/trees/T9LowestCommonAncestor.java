@@ -1,4 +1,6 @@
+package lc.trees;
 import java.util.ArrayList;
+
 //https://leetcode.com/explore/learn/card/data-structure-tree/133/conclusion/932/
 class TreeNode {
     int val;

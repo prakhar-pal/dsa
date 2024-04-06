@@ -1,13 +1,6 @@
+package  lc.recursion;
 // https://leetcode.com/explore/learn/card/recursion-i/251/scenario-i-recurrence-relation/2378/
 
-// Definition for singly-linked list.
-class ListNode {
-    int val;
-    ListNode next;
-    ListNode() {}
-    ListNode(int val) { this.val = val; }
-    ListNode(int val, ListNode next) { this.val = val; this.next = next; }
-}
 class SolutionRec03RevLinkedList {
     public ListNode reverseList(ListNode head) {
         if(head == null) return null;

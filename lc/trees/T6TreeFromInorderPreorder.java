@@ -3,28 +3,28 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 //https://leetcode.com/explore/learn/card/data-structure-tree/133/conclusion/942/
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-
-    TreeNode() {
-    }
-
-    TreeNode(int val) {
-        this.val = val;
-    }
-
-    TreeNode(int val, TreeNode left, TreeNode right) {
-        this.val = val;
-        this.left = left;
-        this.right = right;
-    }
-    @Override
-    public String toString() {
-        return this.val + "";
-    }
-}
+//class TreeNode {
+//    int val;
+//    TreeNode left;
+//    TreeNode right;
+//
+//    TreeNode() {
+//    }
+//
+//    TreeNode(int val) {
+//        this.val = val;
+//    }
+//
+//    TreeNode(int val, TreeNode left, TreeNode right) {
+//        this.val = val;
+//        this.left = left;
+//        this.right = right;
+//    }
+//    @Override
+//    public String toString() {
+//        return this.val + "";
+//    }
+//}
 
 class SolutionT6TreeFromInorderPreorder {
     private int[] toArray(ArrayList<Integer> list){

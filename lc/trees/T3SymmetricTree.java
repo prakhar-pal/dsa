@@ -1,30 +1,31 @@
+package  lc.trees;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
 
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-
-    TreeNode() {
-    }
-
-    TreeNode(int val) {
-        this.val = val;
-    }
-
-    TreeNode(int val, TreeNode left, TreeNode right) {
-        this.val = val;
-        this.left = left;
-        this.right = right;
-    }
-    @Override
-    public String toString() {
-        // TODO Auto-generated method stub
-        return this.val + "";
-    }
-}
+//class TreeNode {
+//    int val;
+//    TreeNode left;
+//    TreeNode right;
+//
+//    TreeNode() {
+//    }
+//
+//    TreeNode(int val) {
+//        this.val = val;
+//    }
+//
+//    TreeNode(int val, TreeNode left, TreeNode right) {
+//        this.val = val;
+//        this.left = left;
+//        this.right = right;
+//    }
+//    @Override
+//    public String toString() {
+//        // TODO Auto-generated method stub
+//        return this.val + "";
+//    }
+//}
 
 class SolutionT3SymmetricTree {
     private boolean isSymmetric(ArrayList<TreeNode> list){

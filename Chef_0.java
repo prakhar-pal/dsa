@@ -11,7 +11,7 @@ class Chef_0{
             int min = num;
             String numString = num + "";
             for(int i=0;i<numString.length();i++){
-                int amount = num - Integer.parseInt(numString.charAt(i)+ "") * Math.pow(10, numString.length()-i-1);
+                int amount = (int)(num - Integer.parseInt(numString.charAt(i)+ "") * Math.pow(10, numString.length()-i-1));
                 if(amount<min)
                     min = amount;
             }

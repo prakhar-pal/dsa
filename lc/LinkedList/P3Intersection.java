@@ -1,4 +1,4 @@
-package lc.LinkedListSols;
+package lc.LinkedList;
 
 import java.util.HashSet;
 

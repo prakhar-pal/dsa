@@ -18,7 +18,7 @@ class SolutionB4MinInRotatedArrMinRotateArr {
     }
 }
 
-class Cholution {
+class B4MinInRotatedArrSolution {
     public int findMin(int[] arr) {
         int start = 0;
         int end = arr.length-1;

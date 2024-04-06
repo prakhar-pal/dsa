@@ -1,5 +1,7 @@
-package javapkg.Math;
-public class Use {
+package javapkg.sample.Math;
+import javapkg.Math.Sum;
+import javapkg.Math.Subtract;
+public class MathUsage {
     public static void main(String[] args) {
         System.out.println("doing sum " + new Sum().act(1, 2));
         System.out.println("doing subtraction "+new Subtract().act(2, 1));

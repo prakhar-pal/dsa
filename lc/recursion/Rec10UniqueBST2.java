@@ -1,21 +1,9 @@
+package lc.recursion;
 // https://leetcode.com/explore/learn/card/recursion-i/253/conclusion/2384/
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-//  Definition for a binary tree node.
- class TreeNode {
-      int val;
-      TreeNode left;
-      TreeNode right;
-      TreeNode() {}
-      TreeNode(int val) { this.val = val; }
-      TreeNode(int val, TreeNode left, TreeNode right) {
-          this.val = val;
-          this.left = left;
-          this.right = right;
-      }
- }
 
 class SolutionRec10UniqueBST2 {
    public List<TreeNode> generateTrees(int n) {

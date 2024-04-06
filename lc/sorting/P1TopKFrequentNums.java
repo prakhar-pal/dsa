@@ -1,3 +1,4 @@
+import lc.common.Pair;
 // https://leetcode.com/problems/top-k-frequent-elements/description/
 
 import java.util.ArrayList;
@@ -5,14 +6,6 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.HashSet;
-
-class Pair {
-    int first, second;
-    public Pair(int first, int second) {
-        this.first = first;
-        this.second = second;
-    }
-}
 
 class SolutionP1TopKFrequentNums {
     public int freqComparator(Pair a, Pair b){

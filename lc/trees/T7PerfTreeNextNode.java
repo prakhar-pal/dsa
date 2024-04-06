@@ -40,7 +40,7 @@ class SolutionT7PerfTreeNextNode {
     }
 }
 
-public class T7NextRightNode {
+class T7NextRightNode {
     public static void printSol(Node root){
         Queue<Node> q = new LinkedList<Node>();
         while(root != null){
