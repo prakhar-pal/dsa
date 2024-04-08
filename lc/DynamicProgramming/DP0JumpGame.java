@@ -3,7 +3,7 @@ package lc.DynamicProgramming;
  * https://leetcode.com/problems/jump-game/description/
  */
 
-public class P0JumpGame {
+public class DP0JumpGame {
     public static void main(String[] args) {
         P0Solution sol = new P0SolutionOne();
 
