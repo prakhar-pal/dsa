@@ -3,6 +3,7 @@ package lc.DynamicProgramming;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Arrays;
+import lc.common.MathUtils;
 
 /**
  * https://leetcode.com/problems/jump-game-ii/description/
@@ -13,7 +14,7 @@ import java.util.Arrays;
  * Return the minimum number of jumps to reach nums[n - 1]. The test cases are generated such that you can reach nums[n - 1].
  */
 
-public class DP02MinJumpGame {
+public class DP04MinJumpGame {
     public static void main(String[] args) {
         IDP02Solution sol = new DP02Solution();
         assert sol.jump(new int[] {2,3,1,1,4}) == 2;
