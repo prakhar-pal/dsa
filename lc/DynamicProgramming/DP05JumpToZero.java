@@ -1,6 +1,6 @@
 package lc.DynamicProgramming;
 
-import java.util.Arrays;
+import java.util.*;
 
 /**
  * https://leetcode.com/problems/jump-game-iii/description/
@@ -10,14 +10,21 @@ import java.util.Arrays;
 
 public class DP05JumpToZero {
     public static void main(String[] args) {
-        DP03Solution sol = new DP03Solution();
+        DP03Solution sol = new DP03SolutionTwo();
         assert sol.canReach(new int[]{4,2,3,0,3,1,2}, 5);
         assert sol.canReach(new int[]{4,2,3,0,3,1,2}, 0);
         assert sol.canReach(new int[]{3,0,2,1,2}, 2) == false;
     }
 }
 
-class DP03Solution {
+interface DP03Solution {
+    public boolean canReach(int[] arr, int start);
+}
+
+class DP03SolutionOne implements DP03Solution{
+    /**
+     * Runtime: better than 83%
+     */
     boolean[] dp;
     public boolean canReach(int[] arr, int start) {
         dp = new boolean[arr.length];
@@ -37,5 +44,27 @@ class DP03Solution {
         boolean canReachFromLeft = leftIndex >=0 && canReachDp(arr, leftIndex);
         boolean canReachFromRight = rightIndex < arr.length && canReachDp(arr, rightIndex);
         return canReachFromLeft || canReachFromRight;
+    }
+}
+
+class DP03SolutionTwo implements DP03Solution{
+    /**
+     * marginally faster solution
+     * 100%
+     */
+    public boolean canReach(int[] arr, int start) {
+        Queue<Integer> queue = new LinkedList<>();
+        queue.offer(start);
+
+        while(!queue.isEmpty()) {
+            int item = queue.poll();
+            if (item < 0 || item >= arr.length || arr[item] < 0) continue;
+            if (arr[item] == 0) return true;
+            
+            if(item - arr[item] >= 0) queue.offer(item - arr[item]);
+            if(item + arr[item] < arr.length) queue.offer(item + arr[item]);
+            arr[item] = item * -1;
+        }
+        return false;
     }
 }
