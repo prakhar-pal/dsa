@@ -1,3 +1,4 @@
+package lc.strings;
 class SolutionS03Anagram {
     private int getCharPos(char ch){
         return (int)(ch - 'a');

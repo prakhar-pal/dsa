@@ -1,3 +1,4 @@
+package lc.strings;
 // print all subsets of a given string
 import java.util.ArrayList;
 import java.util.List;
