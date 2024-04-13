@@ -20,20 +20,36 @@ import java.util.List;
 public class DP07CoinChange {
     public static void main(String[] args){
         DP07Solution sol = new DP07SolutionTwo();
-        // System.out.println("the big one"+sol.coinChange(new int[] {411,412,413,414,415,416,417,418,419,420,421,422},9864));
-        // assert sol.coinChange(new int[] {1,2,5}, 11) == 3;
-        // assert sol.coinChange(new int[] {2}, 3) == -1;
-        // assert sol.coinChange(new int[] {1}, 0) == 0;
-        // assert sol.coinChange(new int[]{186,419,83,408}, 6249) == 20;
-        // assert sol.coinChange(new int[]{1,2,5} , 3) == 2;
-        // assert sol.coinChange(new int[]{1,2,5} , 9) == 3;
-        // assert sol.coinChange(new int[]{1,2} , 9) == 5;
+        assert sol.coinChange(new int[] {1,2,5}, 11) == 3;
+        assert sol.coinChange(new int[] {2}, 3) == -1;
+        assert sol.coinChange(new int[] {1}, 0) == 0;
+        assert sol.coinChange(new int[]{186,419,83,408}, 6249) == 20;
+        assert sol.coinChange(new int[]{1,2,5} , 3) == 2;
+        assert sol.coinChange(new int[]{1,2,5} , 9) == 3;
+        assert sol.coinChange(new int[]{1,2} , 9) == 5;
         assert sol.coinChange(new int[] {411,412,413,414,415,416,417,418,419,420,421,422},9864) == 24;
     }
 }
 
 interface DP07Solution {
     public int coinChange(int[] coins, int amount);
+}
+
+class DP07SolutionThree implements DP07Solution {
+    /*
+     * from leetcode submission section
+     * This solution is also found in NeetCode's video for the given problem
+     */
+    public int coinChange(int[] coins, int amount) {
+        int[] dp = new int[amount + 1];
+        Arrays.fill(dp, 1, dp.length, amount + 1);
+    
+        for (final int coin : coins)
+          for (int i = coin; i <= amount; ++i)
+            dp[i] = Math.min(dp[i], dp[i - coin] + 1);
+    
+        return dp[amount] == amount + 1 ? -1 : dp[amount];
+    }
 }
 
 

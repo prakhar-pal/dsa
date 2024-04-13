@@ -1,3 +1,4 @@
+package cc;
 import java.util.Scanner;
 
 class Chef_0{
