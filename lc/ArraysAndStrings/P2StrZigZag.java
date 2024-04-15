@@ -1,4 +1,4 @@
-package lc.strings;
+package lc.ArraysAndStrings;
 // https://leetcode.com/problems/zigzag-conversion/description/
 class SolutionP2StrZigZag {
     public String convert(String s, int numRows) {
