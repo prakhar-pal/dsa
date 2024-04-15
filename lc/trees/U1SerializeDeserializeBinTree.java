@@ -1,3 +1,4 @@
+package lc.trees;
 // https://leetcode.com/explore/learn/card/data-structure-tree/133/conclusion/995/
 class TreeNode {
     int val;

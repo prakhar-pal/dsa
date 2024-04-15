@@ -1,3 +1,4 @@
+// package hackerearth.common;
 class BSTRunnerImpl {
     public int value;
     public BSTRunnerImpl left = null;

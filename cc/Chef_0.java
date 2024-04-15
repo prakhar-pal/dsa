@@ -17,6 +17,8 @@ class Chef_0{
                     min = amount;
             }
             System.out.println(min);
+            sc2.close();
         }
+        sc.close();
     }
 }

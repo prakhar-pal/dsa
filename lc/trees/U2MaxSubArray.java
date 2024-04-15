@@ -1,3 +1,4 @@
+package lc.trees;
 // https://leetcode.com/problems/maximum-subarray/
 // AKA kadane's algorithm
 

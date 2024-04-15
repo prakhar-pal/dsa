@@ -9,8 +9,7 @@ class MatrixTriple {
   }
   // @override
   public String toString() {
-    if(this == null) return null;
-    else return "Mat["+this.row+"]["+this.col+"]="+this.value;
+    return "Mat["+this.row+"]["+this.col+"]="+this.value;
   }
 }
 
