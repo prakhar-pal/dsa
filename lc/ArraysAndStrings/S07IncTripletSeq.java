@@ -6,7 +6,7 @@ package lc.ArraysAndStrings;
  */
 public class S07IncTripletSeq {
     public static void main(String[] args) {
-        S07Solution sol = new S07Solution();
+        S07Solution sol = new S07SolutionTwo();
         assert sol.increasingTriplet(new int[] {1,2,3,4,5});
         assert sol.increasingTriplet(new int[] {2,1,5,0,4,6});
         assert sol.increasingTriplet(new int[] {5,4,3,2,1}) == false;
@@ -15,7 +15,12 @@ public class S07IncTripletSeq {
     }
 }
 
-class S07Solution {
+interface S07Solution {
+    public boolean increasingTriplet(int[] nums);
+}
+
+
+class S07SolutionOne implements S07Solution {
     /**
      * Runtime complexity O(n)
      * Space complexity O(n)
@@ -41,6 +46,27 @@ class S07Solution {
         for(int i=1;i<numLength-1;i++) {
             if(minNums[i-1] < nums[i] && nums[i] < maxNums[i+1]) {
                 return true;
+            }
+        }
+        return false;
+    }
+}
+
+
+class S07SolutionTwo implements S07Solution {
+    /**
+     * Runtime complexity O(n)
+     * Space complexity O(1)
+     */
+    public boolean increasingTriplet(int[] nums) {
+        int a = Integer.MAX_VALUE, b = Integer.MAX_VALUE;
+        for(int num:nums) {
+            if(num > b) {
+                return true;
+            }
+            a = Math.min(a, num);
+            if(num > a && num < b) {
+                b = num;
             }
         }
         return false;
