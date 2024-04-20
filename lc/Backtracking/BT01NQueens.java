@@ -49,22 +49,17 @@ class BT01Solution {
             if(isColumnUsed[i]) {
                 continue;
             }
-            if(i>0) {
-                matrix[row][i-1] = '.';
-            }
             boolean isAllowed = true;
             if(row > 0) {
                 boolean canBeDiagonallyAttacked = false;
-                for(int row1=row-1, col1 = i-1;row1>=0 && col1 >=0;row1--, col1--) {
+                for(int row1=row-1, col1 = i-1;row1>=0 && col1 >=0 && !canBeDiagonallyAttacked;row1--, col1--) {
                     if(matrix[row1][col1] == 'Q') {
                         canBeDiagonallyAttacked = true;
-                        break;
                     }
                 }
-                for(int row1=row-1, col1 = i+1;row1>=0 && col1<n;row1--, col1++) {
+                for(int row1=row-1, col1 = i+1;row1>=0 && col1<n && !canBeDiagonallyAttacked;row1--, col1++) {
                     if(matrix[row1][col1] == 'Q') {
                         canBeDiagonallyAttacked = true;
-                        break;
                     }
                 }
                 isAllowed = !isColumnUsed[i] && !canBeDiagonallyAttacked;
