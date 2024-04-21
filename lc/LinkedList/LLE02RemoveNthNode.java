@@ -2,9 +2,12 @@ package lc.LinkedList;
 import lc.ArraysAndStrings.ArrayUtils;
 import java.util.*;
 
+/**
+ * https://leetcode.com/problems/remove-nth-node-from-end-of-list/description/
+ */
 public class LLE02RemoveNthNode {
     public static void main(String[] args) {
-        LLE02Solution sol = new LLE02Solution();
+        LLE02Solution sol = new LLE02SolutionTwo();
 
         ListNode head1 = sol.removeNthFromEnd(ListNode.createLinkedList(new int[] {1,2,3,4,5}), 2);
         assert ArrayUtils.isSame1DArray(ArrayUtils.listToArray(head1.toList()), new int[] {1,2,3,5});
@@ -20,7 +23,12 @@ public class LLE02RemoveNthNode {
     }
 }
 
-class LLE02Solution {
+
+interface LLE02Solution {
+    public ListNode removeNthFromEnd(ListNode head, int n);
+}
+
+class LLE02SolutionOne {
     public ListNode removeNthFromEnd(ListNode head, int n) {
         List<ListNode> list = new ArrayList<>();
         ListNode currentNode = head;
@@ -39,5 +47,53 @@ class LLE02Solution {
             prevNode = prevNode.next;
         }
         return newHead;
+    }
+}
+
+
+class LLE02SolutionTwo implements LLE02Solution {
+    public ListNode removeNthFromEnd(ListNode head, int n) {
+        List<ListNode> list = new ArrayList<>();
+        ListNode currentNode = head;
+        while(currentNode != null) {
+            list.add(currentNode);
+            currentNode = currentNode.next;
+        }
+        int removalIndex = list.size() - n;
+        if(removalIndex == 0) {
+            if(list.size() > 1) {
+                return list.get(1);
+            }
+            return null;
+        }
+
+        ListNode prevNode = list.get(removalIndex-1);
+        if(removalIndex == list.size() - 1) {
+            prevNode.next = null;
+            return head;
+        }
+        ListNode nextNode = list.get(removalIndex+1);
+        prevNode.next = nextNode;
+        return head;
+    }
+}
+
+class LLE02SolutionThree implements LLE02Solution {
+    /**
+     * single pass solution using window sliding
+     * taken from submissions page
+     */
+    public ListNode removeNthFromEnd(ListNode head, int n) {
+        ListNode dummy = new ListNode(0);
+        dummy.next = head;
+        ListNode slow = dummy;
+        ListNode fast = dummy;
+        for(int i = 0; i < n; i++) fast = fast.next;
+        while(fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next;
+        }
+        slow.next = slow.next.next;
+        return dummy.next;
     }
 }
