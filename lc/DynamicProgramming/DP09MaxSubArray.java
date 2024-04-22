@@ -1,8 +1,13 @@
-package lc.trees;
+package lc.DynamicProgramming;
 // https://leetcode.com/problems/maximum-subarray/
 // AKA kadane's algorithm
 
-class SolutionU2MaxSubArray {
+
+interface SolutionDP09 {
+    public int maxSubArray(int[] arr);
+}
+
+class SolutionDP09One implements SolutionDP09 {
     public int maxSubArray(int[] arr){
         int localMax = 0;
         int globalMax = Integer.MIN_VALUE;
@@ -16,10 +21,11 @@ class SolutionU2MaxSubArray {
     }
 }
 
-public class U2MaxSubArray {
+public class DP09MaxSubArray {
     public static void main(String[] args) {
         int[] nums = {-5,-6,-7,-1,-2,-3};
-        SolutionU2MaxSubArray sol = new SolutionU2MaxSubArray();
+        SolutionDP09 sol = new SolutionDP09One();
+        System.out.println("sol"+ sol.maxSubArray(nums));
         assert sol.maxSubArray(nums) == -1;
     }
 }
