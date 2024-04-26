@@ -8,18 +8,21 @@ import lc.common.*;
  */
 public class OE01HammingWeight {
     public static void main(String[] args) {
-        OE01Solution sol = new OE01Solution();
+        OE01Solution sol = new OE01SolutionTwo();
         System.out.println("sol="+sol.hammingWeight(11));
         assert sol.hammingWeight(11) == 3;
-        // assert sol.hammingWeight(128) == 1;
-        // assert sol.hammingWeight(2147483645) == 30;
-        // assert sol.hammingWeight(2147483647) == 31;
+        assert sol.hammingWeight(128) == 1;
+        assert sol.hammingWeight(2147483645) == 30;
+        assert sol.hammingWeight(2147483647) == 31;
     }
 }
 
-class OE01Solution {
+interface OE01Solution {
+    public int hammingWeight(int n);
+}
+class OE01SolutionOne implements OE01Solution {
     NumberToBinary ntb;
-    public OE01Solution() {
+    public OE01SolutionOne() {
         if(ntb == null) {
             ntb = new NumberToBinary();
         }
@@ -31,6 +34,18 @@ class OE01Solution {
             if(bits[i] == 1) {
                 count++;
             }
+        }
+        return count;
+    }
+}
+
+class OE01SolutionTwo implements OE01Solution {
+    public int hammingWeight(int n) {
+        int t = n;
+        int count = 0;
+        while(t!=0) {
+            count += t & 1;
+            t >>= 1;
         }
         return count;
     }
