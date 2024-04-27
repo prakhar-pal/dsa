@@ -21,4 +21,12 @@ public class ArrayUtils {
         }
         return arr;
     }
+
+    public static <T> List<T> arrayToList(T[] arr) {
+        List<T> list = new ArrayList<>();
+        for(T item: arr) {
+            list.add(item);
+        }
+        return list;
+    }
 }
