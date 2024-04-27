@@ -3,15 +3,20 @@ import java.util.*;
 
 import lc.ArraysAndStrings.ArrayUtils;
 
+/**
+ * https://leetcode.com/problems/pascals-triangle/
+ * Given an integer numRows, return the first numRows of Pascal's triangle.
+ * In Pascal's triangle, each number is the sum of the two numbers directly above it as shown:
+ */
 public class OE04PascalTriangle {
     public static void main(String[] args) {
         OE04Solution sol = new OE04Solution();
 
-        // List<List<Integer>> result1 = new ArrayList<>();
-        // List<Integer> result11 = new ArrayList<>();
-        // result11.add(1);
-        // result1.add(result11);
-        // assert sol.generate(1).equals(result1);
+        List<List<Integer>> result1 = new ArrayList<>();
+        List<Integer> result11 = new ArrayList<>();
+        result11.add(1);
+        result1.add(result11);
+        assert sol.generate(1).equals(result1);
 
 
         List<List<Integer>> result2 = new ArrayList<>();
