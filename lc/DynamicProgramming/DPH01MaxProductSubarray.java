@@ -1,7 +1,5 @@
 package lc.DynamicProgramming;
 
-import java.util.*;
-
 /**
  * https://leetcode.com/problems/maximum-product-subarray/description/
  * Given an integer array nums, find a subarray
