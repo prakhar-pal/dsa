@@ -1,5 +1,5 @@
+package he.r;
 import java.util.LinkedList;
-// import java.util.Map;
 import java.util.Queue;
 import java.util.Scanner;
 
