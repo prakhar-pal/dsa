@@ -6,7 +6,7 @@ package lc.DynamicProgramming;
  * that has the largest product, and return the product.
  * The test cases are generated so that the answer will fit in a 32-bit integer.
  */
-public class DPH01MaxProductSubarray {
+public class DP12MaxProductSubarray {
     public static void main(String[] args) {
         DPH01Solution sol = new DPH01Solution();
         assert sol.maxProduct(new int[]{2,3,-2,4}) == 6;

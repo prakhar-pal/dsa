@@ -3,7 +3,7 @@ package lc.DynamicProgramming;
 /**
  * https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/description/
  */
-public class DPH03buySellStocksCooldown {
+public class DP14buySellStocksCooldown {
    public static void main(String[] args) {
         DPH03Solution sol = new DPH03Solution();
         System.out.println("sol" + sol.maxProfit(new int[]{6,1,3,2,4,7}));

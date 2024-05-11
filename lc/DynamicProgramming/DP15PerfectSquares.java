@@ -5,7 +5,7 @@ import java.util.HashMap;
 /**
  * https://leetcode.com/problems/perfect-squares/description/
  */
-public class DPH04PerfectSquares {
+public class DP15PerfectSquares {
     public static void main(String[] args) {
         DPH04Solution sol = new DPH04Solution();
         assert sol.numSquares(0) == 0;

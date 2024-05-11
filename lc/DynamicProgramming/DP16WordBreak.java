@@ -8,7 +8,7 @@ import java.util.List;
 
 import lc.ArraysAndStrings.ArrayUtils;
 
-public class DPH05WordBreak {
+public class DP16WordBreak {
     public static void main(String[] args) {
         DPH05Solution sol = new DPH05SolutionFour();
         assert sol.wordBreak("leetcode", ArrayUtils.arrayToList(new String[] {"leet","code"}));

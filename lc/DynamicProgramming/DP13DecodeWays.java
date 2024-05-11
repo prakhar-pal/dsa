@@ -5,7 +5,7 @@ import java.util.*;
 /**
  * https://leetcode.com/problems/decode-ways/
  */
-public class DPH02DecodeWays {
+public class DP13DecodeWays {
     public static void main(String[] args) {
         DPH02Solution sol = new DPH02SolutionTwo();
         assert sol.numDecodings("12") == 2;
