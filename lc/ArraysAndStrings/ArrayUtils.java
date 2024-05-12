@@ -14,19 +14,12 @@ public class ArrayUtils {
         return true;
     }
 
-    public static  int[] listToArray(List<Integer> list) {
-        int[] arr = new int[list.size()];
-        for(int i=0;i<list.size();i++) {
-            arr[i] = list.get(i);
-        }
-        return arr;
+    public static <T> T[] listToArray(List<T> list) {
+        T[] array = (T[]) list.toArray();
+        return array;
     }
 
     public static <T> List<T> arrayToList(T[] arr) {
-        List<T> list = new ArrayList<>();
-        for(T item: arr) {
-            list.add(item);
-        }
-        return list;
+        return Arrays.asList(arr);
     }
 }
