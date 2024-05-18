@@ -15,11 +15,6 @@ public class D02MinPathSum {
 class D02Solution {
     public int minPathSum(int[][] grid) {
         int[][] costGrid = new int[grid.length][grid[0].length];
-        for(int i=0;i<grid.length;i++) {
-            for(int j=0;j<grid[0].length;j++) {
-                costGrid[i][j] = Integer.MAX_VALUE;
-            }
-        }
         updatedCosts(costGrid, grid, costGrid.length-1, costGrid[0].length-1);
         return costGrid[grid.length-1][grid[0].length-1];
     }
@@ -30,14 +25,15 @@ class D02Solution {
         if(row == 0 && col == 0) {
             costGrid[row][col] = grid[row][col];
         }
-        if(costGrid[row][col] == Integer.MAX_VALUE) {
+        if(costGrid[row][col] == 0) {
+            int min = Integer.MAX_VALUE;
             if((row - 1) >=0) {
                 updatedCosts(costGrid, grid, row-1, col);
-                costGrid[row][col] = Math.min(costGrid[row-1][col] + grid[row][col], costGrid[row][col]);
+                costGrid[row][col] = min = Math.min(costGrid[row-1][col] + grid[row][col], min);
             }
             if((col - 1) >=0) {
                 updatedCosts(costGrid, grid, row, col-1);
-                costGrid[row][col] = Math.min(costGrid[row][col-1] + grid[row][col], costGrid[row][col]);
+                costGrid[row][col] = Math.min(costGrid[row][col-1] + grid[row][col], min);
             }
         }
     }
