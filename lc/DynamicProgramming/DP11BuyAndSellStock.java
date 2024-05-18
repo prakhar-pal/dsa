@@ -6,7 +6,7 @@ package lc.DynamicProgramming;
  * You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that stock.
  * Return the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return 0.
  */
-public class DPE01BuyAndSellStock {
+public class DP11BuyAndSellStock {
    public static void main(String[] args) {
         DPE01Solution sol = new DPE01SolutionTwo();
         assert sol.maxProfit(new int[] {7,1,5,3,6,4}) == 5;
