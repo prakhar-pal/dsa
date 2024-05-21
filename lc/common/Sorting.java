@@ -8,7 +8,7 @@ public class Sorting {
             return;
         }
         int[] arr = new int[] { 3, 2, 1 };
-        Sorter sorter;
+        Sorter sorter = new QuickSorter();
         Logger.log("Using " + args[0] + " sorting algorithm");
         switch (args[0]) {
             case "insertion":
@@ -16,6 +16,9 @@ public class Sorting {
                 break;
             case "selection-sort":
                 sorter = new SelectionSorter();
+                break;
+            case "quick-sort":
+                sorter = new QuickSorter();
                 break;
             default:
                 Logger.log("didn't find any matching algorithm, using bubble sort as default");
@@ -27,12 +30,20 @@ public class Sorting {
     }
 
     private static boolean isSortedArray(int[] arr) {
-        for (int i = 1; i < arr.length; i++) {
+        boolean result = true;
+        for (int i = 1; i < arr.length && result; i++) {
             if (arr[i - 1] > arr[i]) {
-                return false;
+                result = false;
             }
         }
-        return true;
+        if(!result) {
+            Logger.log("Not sorted");
+            for(int n: arr) {
+                Logger.logi(n);
+            }
+            Logger.log("");
+        }
+        return result;
     }
 }
 
@@ -84,5 +95,41 @@ class SelectionSorter implements Sorter {
             arr[minIndex] = arr[i];
             arr[i] = temp;
         }
+    }
+}
+
+class QuickSorter implements Sorter {
+    public void sort(int[] arr) {
+        sort(arr, 0, arr.length-1);
+    }
+    private void sort(int[] arr, int left, int right) {
+        if(right-left <=0 || left < 0 || right >= arr.length) {
+            return;
+        }
+        if(right-left == 1) {
+            if(arr[right] < arr[left]) {
+                int temp = arr[right];
+                arr[right] = arr[left];
+                arr[left] = temp;
+            }
+            return;
+        }
+        int[] copy = new int[right-left+1];
+        int pivotElement = arr[(left+right)/2];
+        int cleft = 0, cright = copy.length-1;
+        for(int i=0;i<copy.length && cleft != cright;i++) {
+            if(arr[i+left] < pivotElement) {
+                copy[cleft] = arr[i+left];
+                cleft++;
+            }else {
+                copy[cright] = arr[i+left];
+                cright--;
+            }
+        }
+        for(int i=0;i<copy.length;i++) {
+            arr[left+i] = copy[i];
+        }
+        sort(arr, left, cleft);
+        sort(arr, cleft+1, right);
     }
 }

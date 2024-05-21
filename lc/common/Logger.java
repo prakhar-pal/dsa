@@ -4,7 +4,10 @@ import java.util.List;
 
 public class Logger {
     public static <T> void log(T object) {
-        System.out.println(object.toString());
+        System.out.println(object);
+    }
+    public static <T> void logi(T object) {
+        System.out.print(object);
     }
     public static void logArray(String name, List<String> list) {
         Logger.log("Printing: " + name);
