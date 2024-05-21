@@ -9,7 +9,7 @@ public class Sorting {
             Logger.log("Usage: java -ea lc.common.Sorting <algorithm>");
             return;
         }
-        Sorter sorter = new QuickSorter();
+        Sorter sorter;
         Logger.log("Using " + args[0] + " sorting algorithm");
         switch (args[0]) {
             case "insertion":
@@ -19,7 +19,7 @@ public class Sorting {
                 sorter = new SelectionSorter();
                 break;
             case "quick-sort":
-                sorter = new QuickSorter();
+                sorter = new QuickSort();
                 break;
             default:
                 Logger.log("didn't find any matching algorithm, using bubble sort as default");
