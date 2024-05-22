@@ -1,7 +1,5 @@
 package lc.Sorting.Algorithms;
 
-
-
 public class QuickSort implements Sorter {
     public void sort(int[] arr) {
         sort(arr, 0, arr.length-1);
@@ -10,6 +8,32 @@ public class QuickSort implements Sorter {
         if(right-left <=0 || left < 0 || left >=arr.length || right <0 || right >= arr.length) {
             return;
         }
+        int pivotIndex = partitionArray(arr, left, right);
+        sort(arr, left, pivotIndex-1);
+        sort(arr, pivotIndex + 1 , right);
+    }
+
+    private int partitionArray(int[] arr, int left, int right) {
+        /**
+         * https://en.wikipedia.org/wiki/Quicksort#Lomuto_partition_scheme
+         */
+        int pivot = arr[right];
+        int pivotIndex = left;
+        for(int i=left;i<right;i++) {
+            if(arr[i] <= pivot) {
+                int temp = arr[pivotIndex];
+                arr[pivotIndex] = arr[i];
+                arr[i] = temp;
+                pivotIndex++;
+            }
+        }
+        int temp = arr[pivotIndex];
+        arr[pivotIndex] = arr[right];
+        arr[right] = temp; 
+        return pivotIndex;
+    }
+
+    private int partitionArrayNaive(int[] arr, int left, int right) {
         int pivotIndex = (left+right)/2;
         int pivotElement = arr[pivotIndex];
         int[] copy = new int[right-left+1];
@@ -33,8 +57,7 @@ public class QuickSort implements Sorter {
                 arr[left+i] = copy[i];
             }
         }
-        sort(arr, left, left + cleft-1);
-        sort(arr, left + cright + 1 , right);
+        return left + cleft;
     }
 }
 
