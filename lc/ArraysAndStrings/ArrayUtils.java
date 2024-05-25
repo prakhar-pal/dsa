@@ -2,7 +2,7 @@ package lc.ArraysAndStrings;
 import java.util.*;
 
 public class ArrayUtils {
-    public static boolean isSame1DArray(int[] arr1, int[] arr2) {
+    public static <T> boolean isSame1DArray(T[] arr1, T[] arr2) {
         if(arr1.length != arr2.length) {
             return false;
         }
