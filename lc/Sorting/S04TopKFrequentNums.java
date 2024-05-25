@@ -41,7 +41,7 @@ class SolutionP1TopKFrequentNums {
     }
 }
 
-class P1TopKFrequentNums {
+class S04TopKFrequentNums {
     public static boolean isSameDisArray(int[] arr1, int[] arr2) {
         if(arr1.length != arr2.length) {
             return false;

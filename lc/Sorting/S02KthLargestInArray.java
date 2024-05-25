@@ -58,7 +58,7 @@ class SolutionP2KthLargestInArray2 implements SolutionP2KthLargestInArray {
     }
 }
 
-class P2KthLargestInArray {
+class S02KthLargestInArray {
     public static void main(String[] args) {
         SolutionP2KthLargestInArray sol = new SolutionP2KthLargestInArray2();
         int[][] case1 = {

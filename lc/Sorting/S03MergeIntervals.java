@@ -93,7 +93,7 @@ class SolutionP3MergeIntervals {
         return result;
     }
 }
-public class P3MergeIntervals {
+public class S03MergeIntervals {
 
     public static boolean isSameArray(int[][] arr1, int[][] arr2) {
         if(arr1.length != arr2.length) {

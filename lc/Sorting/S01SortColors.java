@@ -24,7 +24,7 @@ class SolutionP0SortColors {
     }
 }
 
-public class P0SortColors {
+public class S01SortColors {
 
     public static void main(String[] args) {
         SolutionP0SortColors sol = new SolutionP0SortColors();
