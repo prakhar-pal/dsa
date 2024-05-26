@@ -1,9 +1,6 @@
 package lc.ArraysAndStrings;
 
-import java.util.Arrays;
 import java.util.HashMap;
-
-import lc.common.Logger;
 
 /**
  * https://leetcode.com/problems/4sum-ii/
@@ -11,9 +8,8 @@ import lc.common.Logger;
 public class A15FourSumPart2 {
     public static void main(String[] args) {
         A15Solution solution = new A15SolutionTwo();
-        // Logger.log("sol="+solution.fourSumCount(new int[] {0}, new int[] {0}, new int[] {0}, new int[] {0}));
         assert solution.fourSumCount(new int[] {1,2}, new int[] {-2,-1}, new int[] {-1,2}, new int[] {0,2}) == 2;
-        // assert solution.fourSumCount(new int[] {0}, new int[] {0}, new int[] {0}, new int[] {0}) == 1;
+        assert solution.fourSumCount(new int[] {0}, new int[] {0}, new int[] {0}, new int[] {0}) == 1;
     }
 }
 
