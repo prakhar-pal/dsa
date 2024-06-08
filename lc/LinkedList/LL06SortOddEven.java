@@ -11,7 +11,7 @@ package lc.LinkedList;
  */
 
 
-public class P2SortOddEven {
+public class LL06SortOddEven {
     public static boolean isSameLinkedList(ListNode list1, ListNode list2) {
         if(list1 == list2) {
             return true;
@@ -22,7 +22,7 @@ public class P2SortOddEven {
         if(list1.val != list2.val) {
             return false;
         }
-        return P2SortOddEven.isSameLinkedList(list1.next, list2.next);
+        return LL06SortOddEven.isSameLinkedList(list1.next, list2.next);
     }
 
     public static ListNode createList(int[] arr) {
@@ -40,42 +40,42 @@ public class P2SortOddEven {
     public static void main(String[] args) {
         LLP2Solution sol = new SolutionLLP2Fastest();
 
-        assert P2SortOddEven.isSameLinkedList(
+        assert LL06SortOddEven.isSameLinkedList(
             sol.oddEvenList(new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4, new ListNode(5)))))),
             new ListNode(1, new ListNode(3, new ListNode(5, new ListNode(2, new ListNode(4)))))
         );
 
-        assert P2SortOddEven.isSameLinkedList(
+        assert LL06SortOddEven.isSameLinkedList(
             sol.oddEvenList(new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4))))),
             new ListNode(1, new ListNode(3, new ListNode(2, new ListNode(4))))
         );
 
-        assert P2SortOddEven.isSameLinkedList(
+        assert LL06SortOddEven.isSameLinkedList(
             sol.oddEvenList(null),
             null
         );
 
 
-        assert P2SortOddEven.isSameLinkedList(
+        assert LL06SortOddEven.isSameLinkedList(
             sol.oddEvenList(new ListNode(1)),
             new ListNode(1)
         );
 
 
 
-        assert P2SortOddEven.isSameLinkedList(
+        assert LL06SortOddEven.isSameLinkedList(
             sol.oddEvenList(new ListNode(1)),
             new ListNode(1)
         );
 
-        assert P2SortOddEven.isSameLinkedList(
+        assert LL06SortOddEven.isSameLinkedList(
             sol.oddEvenList(createList(new int[]{2,1,3,5,6,4,7})),
             createList(new int[]{2,3,6,7,1,5,4})
         );
 
 
 
-        assert P2SortOddEven.isSameLinkedList(
+        assert LL06SortOddEven.isSameLinkedList(
             sol.oddEvenList(createList(new int[]{1,2,3,4,5,6})),
             createList(new int[]{1,3,5,2,4,6})
         );

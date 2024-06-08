@@ -13,18 +13,18 @@ import lc.ArraysAndStrings.ArrayUtils;
  *  All the values before node should be in the same order.
  *  All the values after node should be in the same order.
  */
-public class LLE01DeleteNode {
+public class LL01DeleteNode {
     public static void main(String[] args) {
         LLE01Solution sol = new LLE01Solution();
 
         ListNode list1 = ListNode.createLinkedList(new int[] {4,5,1,9});
         sol.deleteNode(list1.next);
-        assert ArrayUtils.isSame1DArray(ArrayUtils.listToArray(list1.toList()), new int[] {4,1,9});
+        assert ArrayUtils.isSame1DArray(ArrayUtils.listToArray(list1.toList()), new Integer[] {4,1,9});
 
 
         ListNode list2 = ListNode.createLinkedList(new int[] {4,5,1,9});
         sol.deleteNode(list2.next.next);
-        assert ArrayUtils.isSame1DArray(ArrayUtils.listToArray(list2.toList()), new int[] {4,5,9});
+        assert ArrayUtils.isSame1DArray(ArrayUtils.listToArray(list2.toList()), new Integer[] {4,5,9});
     }
 }
 

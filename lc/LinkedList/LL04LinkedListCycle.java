@@ -38,7 +38,7 @@ class SolutionP0LinkedListCycle2 {
     }
 }
 
-public class P0LinkedListCycle {
+public class LL04LinkedListCycle {
     public static void main(String[] args) {
         SolutionP0LinkedListCycle2 sol = new SolutionP0LinkedListCycle2();
 
