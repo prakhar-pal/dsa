@@ -7,7 +7,7 @@ import java.util.HashSet;
  * Given the heads of two singly linked-lists headA and headB, return the node at which the two lists intersect. If the two linked lists have no intersection at all, return null.
  * For example, the following two linked lists begin to intersect at node c1:
  */
-public class P3Intersection {
+public class LL07Intersection {
     public static boolean isSameLinkedList(ListNode list1, ListNode list2) {
         System.out.println("comparing: list1=" + list1 + ", list2=" + list2);
         if(list1 == list2) {

@@ -5,7 +5,7 @@ package lc.LinkedList;
  * You may assume the two numbers do not contain any leading zero, except the number 0 itself.
  */
 
-public class P1AddTwoNums {
+public class LL05AddTwoNums {
     public static boolean isSameLinkedList(ListNode list1, ListNode list2) {
         if(list1 == list2) {
             return true;

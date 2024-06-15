@@ -3,7 +3,7 @@ package lc.LinkedList;
  * https://leetcode.com/problems/palindrome-linked-list/
  * Given the head of a singly linked list, return true if it is a palindrome or false otherwise
  */
-public class LLE03PalindromeLinkedList {
+public class LL03PalindromeLinkedList {
     public static void main(String[] args) {
         LLE03Solution sol = new LLE03Solution();
         assert sol.isPalindrome(ListNode.createLinkedList(new int[] {1,2,2,1}));

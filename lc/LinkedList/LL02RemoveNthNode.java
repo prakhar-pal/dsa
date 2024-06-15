@@ -5,21 +5,21 @@ import java.util.*;
 /**
  * https://leetcode.com/problems/remove-nth-node-from-end-of-list/description/
  */
-public class LLE02RemoveNthNode {
+public class LL02RemoveNthNode {
     public static void main(String[] args) {
         LLE02Solution sol = new LLE02SolutionTwo();
 
         ListNode head1 = sol.removeNthFromEnd(ListNode.createLinkedList(new int[] {1,2,3,4,5}), 2);
-        assert ArrayUtils.isSame1DArray(ArrayUtils.listToArray(head1.toList()), new int[] {1,2,3,5});
+        assert ArrayUtils.isSame1DArray(ArrayUtils.listToArray(head1.toList()), new Integer[] {1,2,3,5});
 
         ListNode head2 = sol.removeNthFromEnd(ListNode.createLinkedList(new int[] {1}), 1);
         assert head2 == null;
 
         ListNode head3 = sol.removeNthFromEnd(ListNode.createLinkedList(new int[] {1,2}), 1);
-        assert ArrayUtils.isSame1DArray(ArrayUtils.listToArray(head3.toList()), new int[] {1});
+        assert ArrayUtils.isSame1DArray(ArrayUtils.listToArray(head3.toList()), new Integer[] {1});
 
         ListNode head4 = sol.removeNthFromEnd(ListNode.createLinkedList(new int[] {1,2,3}), 1);
-        assert ArrayUtils.isSame1DArray(ArrayUtils.listToArray(head4.toList()), new int[] {1,2});
+        assert ArrayUtils.isSame1DArray(ArrayUtils.listToArray(head4.toList()), new Integer[] {1,2});
     }
 }
 
