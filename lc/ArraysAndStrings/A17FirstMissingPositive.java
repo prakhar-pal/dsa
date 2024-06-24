@@ -4,7 +4,7 @@ package lc.ArraysAndStrings;
  */
 public class A17FirstMissingPositive {
     public static void main(String[] args) {
-        A17Solution solution = new A17Solution();
+        A17Solution solution = new A17SolutionTwo();
         assert solution.firstMissingPositive(new int[] {1,2,0}) == 3;
         assert solution.firstMissingPositive(new int[] {3,4,-1,1}) == 2;
         assert solution.firstMissingPositive(new int[] {7,8,9,11,12}) == 1;
@@ -12,7 +12,28 @@ public class A17FirstMissingPositive {
     }
 }
 
-class A17Solution {
+interface A17Solution {
+    public int firstMissingPositive(int[] nums);
+}
+
+class A17SolutionTwo implements A17Solution {
+    public int firstMissingPositive(int[] nums) {
+        boolean[] isPresent = new boolean[nums.length];
+        for(int n:nums) {
+            if(n > 0 && n < nums.length) {
+                isPresent[n-1] = true;
+            }
+        }
+        for(int i=0;i<nums.length;i++) {
+            if(!isPresent[i]) {
+                return i+1;
+            }
+        }
+        return nums.length+1;
+    }
+}
+
+class A17SolutionOne implements A17Solution {
     public int firstMissingPositive(int[] nums) {
         int positiveCount = 0, min = Integer.MAX_VALUE, max = Integer.MIN_VALUE;
         for(int n:nums) {
