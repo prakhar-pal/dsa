@@ -48,7 +48,6 @@ class A18Solution {
                 length = Math.max(length, newLength);
             }
         }
-        System.out.println();
         return length;
     }
 }
