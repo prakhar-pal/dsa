@@ -7,7 +7,7 @@ import java.util.*;
 public class A20SlidingWindowMaximum {
     public static void main(String[] args) {
         A20Solution solution = new A20SolutionThree();
-        // assert ArrayUtils.isSame1DArray(solution.maxSlidingWindow(new int[] {1,3,-1,-3,5,3,6,7}, 3), new int[] {3,3,5,5,6,7});
+        assert ArrayUtils.isSame1DArray(solution.maxSlidingWindow(new int[] {1,3,-1,-3,5,3,6,7}, 3), new int[] {3,3,5,5,6,7});
         assert ArrayUtils.isSame1DArray(solution.maxSlidingWindow(new int[] {1,3,-1,-3,5,3,6,7}, 2), new int[] {3,3,-1,5,5,6,7});
     }
 }
@@ -94,6 +94,35 @@ class A20SolutionThree implements A20Solution {
             }
             result[index++] = max;
         }
+        return result;
+    }
+}
+
+
+
+class A20SolutionFour implements A20Solution {
+    // overall complexity O(n)
+    public int[] maxSlidingWindow(int[] nums, int k) {
+        int[] result = new int[nums.length - k + 1];
+        Deque<Integer> dq = new LinkedList<>();
+        for(int i=0;i<k;i++) {
+            while(dq.size() > 0 && nums[dq.peekLast()] < nums[i]) {
+                dq.pollLast();
+            }
+            dq.offerLast(i);
+        }
+        int index = 0;
+        for(int i=k;i<nums.length;i++) {
+            result[index++] = nums[dq.peekFirst()];
+            if(dq.size() > 0 && nums[dq.peekFirst()] == nums[i-k]) {
+                dq.pollFirst();
+            }
+            while(dq.size() > 0 && nums[dq.peekLast()] < nums[i]) {
+                dq.pollLast();
+            }
+            dq.offerLast(i);
+        }
+        result[index++] = nums[dq.peekFirst()];
         return result;
     }
 }
