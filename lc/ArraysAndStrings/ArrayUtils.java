@@ -14,6 +14,18 @@ public class ArrayUtils {
         return true;
     }
 
+    public static Integer[] convert(int[] arr) {
+        Integer[] copy = new Integer[arr.length];
+        for(int i=0;i<arr.length;i++) {
+            copy[i] = arr[i];
+        }
+        return copy;
+    }
+
+    public static boolean isSame1DArray(int[] arr1, int[] arr2) {
+        return isSame1DArray(convert(arr1), convert(arr2));
+    }
+
     public static <T> T[] listToArray(List<T> list) {
         T[] array = (T[]) list.toArray();
         return array;
