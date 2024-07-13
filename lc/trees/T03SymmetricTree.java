@@ -3,34 +3,9 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
 
-//class TreeNode {
-//    int val;
-//    TreeNode left;
-//    TreeNode right;
-//
-//    TreeNode() {
-//    }
-//
-//    TreeNode(int val) {
-//        this.val = val;
-//    }
-//
-//    TreeNode(int val, TreeNode left, TreeNode right) {
-//        this.val = val;
-//        this.left = left;
-//        this.right = right;
-//    }
-//    @Override
-//    public String toString() {
-//        // TODO Auto-generated method stub
-//        return this.val + "";
-//    }
-//}
-
 class SolutionT3SymmetricTree {
     private boolean isSymmetric(ArrayList<TreeNode> list){
         int size = list.size();
-        // System.out.println("isSymmetric:list::"+ list.toString());
         for(int i=0;i<size;i++){
             TreeNode leftNode = list.get(i);
             System.out.print(leftNode != null ? leftNode.val : null + " ");
@@ -66,7 +41,7 @@ class SolutionT3SymmetricTree {
         return true;
     }
 }
-public class T3SymmetricTree {
+public class T03SymmetricTree {
     public static void main(String[] args) {
         TreeNode root = new TreeNode(3);
         root.left = new TreeNode(9);

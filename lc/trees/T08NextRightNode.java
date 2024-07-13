@@ -31,7 +31,7 @@ class SolutionT8NextRightNode {
     }
 }
 
-public class T8NextRightNode {
+public class T08NextRightNode {
     public static void printSol(Node root){
         while(root != null){
             Node temp = root;

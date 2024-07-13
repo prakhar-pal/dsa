@@ -1,17 +1,5 @@
 package lc.trees;
 import java.util.ArrayList;
-
-//https://leetcode.com/explore/learn/card/data-structure-tree/133/conclusion/932/
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-
-    TreeNode(int x) {
-        val = x;
-    }
-}
-
 class SolutionT9LowestCommonAncestor {
     public boolean updatePath(TreeNode root, TreeNode node, ArrayList<TreeNode> list) {
         if (root == null)
@@ -46,7 +34,7 @@ class SolutionT9LowestCommonAncestor {
     }
 }
 
-public class T9LowestCommonAncestor {
+public class T09LowestCommonAncestor {
     public static void main(String[] args) {
         TreeNode root = new TreeNode(3);
         root.left = new TreeNode(5);

@@ -1,14 +1,5 @@
 package lc.trees;
 // https://leetcode.com/explore/learn/card/data-structure-tree/133/conclusion/995/
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-
-    TreeNode(int x) {
-        val = x;
-    }
-}
 
 class Codec {
     private int index;
@@ -53,7 +44,7 @@ class Codec {
     }
 }
 
-public class U1SerializeDeserializeBinTree {
+public class T14SerializeDeserializeBinTree {
     public static boolean isSameTree(TreeNode root1, TreeNode root2){
         if ((root1 == null && root2 != null) || (root1 != null && root2 == null))
             return false;

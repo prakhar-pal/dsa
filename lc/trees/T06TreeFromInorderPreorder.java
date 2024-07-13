@@ -1,30 +1,10 @@
+package lc.trees;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
 
-//https://leetcode.com/explore/learn/card/data-structure-tree/133/conclusion/942/
-//class TreeNode {
-//    int val;
-//    TreeNode left;
-//    TreeNode right;
-//
-//    TreeNode() {
-//    }
-//
-//    TreeNode(int val) {
-//        this.val = val;
-//    }
-//
-//    TreeNode(int val, TreeNode left, TreeNode right) {
-//        this.val = val;
-//        this.left = left;
-//        this.right = right;
-//    }
-//    @Override
-//    public String toString() {
-//        return this.val + "";
-//    }
-//}
+// https://leetcode.com/explore/learn/card/data-structure-tree/133/conclusion/942/
+
 
 class SolutionT6TreeFromInorderPreorder {
     private int[] toArray(ArrayList<Integer> list){
@@ -70,7 +50,7 @@ class SolutionT6TreeFromInorderPreorder {
     }
 }
 
-public class T6TreeFromInorderPreorder {
+public class T06TreeFromInorderPreorder {
     public static void printSequence(TreeNode root){
         if(root == null) return;
         Queue<TreeNode> q = new LinkedList<TreeNode>();

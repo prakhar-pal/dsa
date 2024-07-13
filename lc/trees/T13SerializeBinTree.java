@@ -1,20 +1,11 @@
 package  lc.trees;
-//https://leetcode.com/explore/learn/card/data-structure-tree/133/conclusion/995/
 import java.util.LinkedList;
+//https://leetcode.com/explore/learn/card/data-structure-tree/133/conclusion/995/
 
 // this one has exponential memory requirements
 // e.g. for n nodes it requires arr of size 2^n-1
 
 // Definition for a binary tree node.
-//class TreeNode {
-//    int val;
-//    TreeNode left;
-//    TreeNode right;
-//
-//    TreeNode(int x) {
-//        val = x;
-//    }
-//}
 
 class Pair {
     public TreeNode node;
@@ -25,7 +16,7 @@ class Pair {
     }
 }
 
-class Codec {
+class U0Codec {
     // Encodes a tree to a single string.
     public int getTreeHeight(TreeNode root){
         if(root == null) return 0;
@@ -106,7 +97,7 @@ class Codec {
     }
 }
 
-public class U0SerializeBinTree {
+public class T13SerializeBinTree {
     public static boolean isSameTree(TreeNode root1, TreeNode root2){
         if ((root1 == null && root2 != null) || (root1 != null && root2 == null))
             return false;
@@ -138,7 +129,7 @@ public class U0SerializeBinTree {
         // root.right.right = new TreeNode(5);
         // root.right.left.left = new TreeNode(6);
         // root.right.left.right = new TreeNode(7);
-        Codec codec = new Codec();
+        U0Codec codec = new U0Codec();
         String serializedTree = codec.serialize(root);
         System.out.println("after serialzing: " + serializedTree);
         TreeNode node = codec.deserialize(serializedTree);

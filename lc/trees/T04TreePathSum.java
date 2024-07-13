@@ -1,26 +1,4 @@
 package  lc.trees;
-//class TreeNode {
-//    int val;
-//    TreeNode left;
-//    TreeNode right;
-//
-//    TreeNode() {
-//    }
-//
-//    TreeNode(int val) {
-//        this.val = val;
-//    }
-//
-//    TreeNode(int val, TreeNode left, TreeNode right) {
-//        this.val = val;
-//        this.left = left;
-//        this.right = right;
-//    }
-//    @Override
-//    public String toString() {
-//        return this.val + "";
-//    }
-//}
 
 class SolutionT4TreePathSum {
     public boolean hasPathSum(TreeNode root, int targetSum) {
@@ -30,7 +8,7 @@ class SolutionT4TreePathSum {
         return this.hasPathSum(root.left, targetSum - root.val) || this.hasPathSum(root.right, targetSum - root.val);
     }
 }
-public class T4TreePathSum {
+public class T04TreePathSum {
     public static void main(String[] args) {
         TreeNode root = new TreeNode(5);
         root.left = new TreeNode(4);
