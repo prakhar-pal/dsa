@@ -9,44 +9,44 @@ public class T17FriendCircle {
     public static void main(String[] args) {
         T17Solution solution = new T17Solution();
 
-        // assert solution.findCircleNum(new int[][] {
-        //     {1,1,0},
-        //     {1,1,0},
-        //     {0,0,1}
-        // }) == 2;
+        assert solution.findCircleNum(new int[][] {
+            {1,1,0},
+            {1,1,0},
+            {0,0,1}
+        }) == 2;
 
-        // assert solution.findCircleNum(new int[][] {
-        //     {1,0,0},
-        //     {0,1,0},
-        //     {0,0,1}
-        // }) == 3;
+        assert solution.findCircleNum(new int[][] {
+            {1,0,0},
+            {0,1,0},
+            {0,0,1}
+        }) == 3;
 
-        // assert solution.findCircleNum(new int[][] {
-        //     {1,0,1},
-        //     {0,1,0},
-        //     {1,0,1}
-        // }) == 2;
+        assert solution.findCircleNum(new int[][] {
+            {1,0,1},
+            {0,1,0},
+            {1,0,1}
+        }) == 2;
 
-        // assert solution.findCircleNum(new int[][] {
-        //     {1,1,0,0},
-        //     {1,1,0,0},
-        //     {0,0,1,1},
-        //     {0,0,1,1},
-        // }) == 2;
+        assert solution.findCircleNum(new int[][] {
+            {1,1,0,0},
+            {1,1,0,0},
+            {0,0,1,1},
+            {0,0,1,1},
+        }) == 2;
 
-        // assert solution.findCircleNum(new int[][] {
-        //     {1,1,1,0},
-        //     {1,1,0,0},
-        //     {1,0,1,0},
-        //     {0,0,0,1},
-        // }) == 2;
+        assert solution.findCircleNum(new int[][] {
+            {1,1,1,0},
+            {1,1,0,0},
+            {1,0,1,0},
+            {0,0,0,1},
+        }) == 2;
 
-        // assert solution.findCircleNum(new int[][] {
-        //     {1,0,0,0},
-        //     {0,1,1,0},
-        //     {0,1,1,0},
-        //     {0,0,0,1},
-        // }) == 3;
+        assert solution.findCircleNum(new int[][] {
+            {1,0,0,0},
+            {0,1,1,0},
+            {0,1,1,0},
+            {0,0,0,1},
+        }) == 3;
 
         assert solution.findCircleNum(new int[][] {
             {1,0,0,1},
