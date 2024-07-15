@@ -1,7 +1,7 @@
 package lc.BinarySearch;
 import java.util.*;
 
-public class C09KthSmallestBST {
+public class B19KthSmallestBST {
     public static void main(String[] args) {
         C09Solution sol = new C09SolutionOne();
 

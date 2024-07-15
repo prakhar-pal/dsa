@@ -1,3 +1,5 @@
+package lc.BinarySearch;
+
 // https://leetcode.com/explore/learn/card/binary-search/125/template-i/952/
 
 class SolutionB2SearchRotatedArrSearchRotatedArray {
@@ -27,7 +29,7 @@ class SolutionB2SearchRotatedArrSearchRotatedArray {
     }
 }
 
-class B2SearchRotatedArr {
+class B04SearchRotatedArr {
     public static void main(String[] args){
         int nums[] = {4,5,6,7,0,1,2};
         int target = 0;

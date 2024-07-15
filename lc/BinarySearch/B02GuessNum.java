@@ -1,3 +1,5 @@
+package lc.BinarySearch;
+
 class GuessGame {
     private int num;
     public GuessGame(int num){
@@ -38,7 +40,7 @@ class SolutionB1GuessNumGuessGame extends GuessGame {
     }
 }
 
-class B1GuessNum {
+class B02GuessNum {
     public static void main(String[] args){
         int n = 10, x = 6;
     }

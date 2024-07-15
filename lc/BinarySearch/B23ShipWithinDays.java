@@ -1,6 +1,6 @@
-package lc.ArraysAndStrings;
+package lc.BinarySearch;
 
-public class A22ShipWithinDays {
+public class B23ShipWithinDays {
     public static void main(String[] args) {
         A22Solution solution = new A22Solution();
         assert solution.shipWithinDays(new int[] {1,2,3,4,5,6,7,8,9,10}, 5) == 15;
@@ -9,6 +9,9 @@ public class A22ShipWithinDays {
     }
 }
 
+/**
+ * https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/description/
+ */
 class A22Solution {
     public int shipWithinDays(int[] weights, int days) {
         int maxWeight = Integer.MIN_VALUE;

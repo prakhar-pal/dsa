@@ -1,3 +1,4 @@
+package lc.BinarySearch;
 // https://leetcode.com/explore/learn/card/binary-search/144/more-practices/1031/
 
 class SolutionC02MinSortedArrDuplMinSortedArr {

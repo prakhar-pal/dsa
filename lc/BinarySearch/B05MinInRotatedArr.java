@@ -1,3 +1,5 @@
+package lc.BinarySearch;
+
 // https://leetcode.com/explore/learn/card/binary-search/126/template-ii/949/
 
 class SolutionB4MinInRotatedArrMinRotateArr {
@@ -56,7 +58,7 @@ class SolutionB4MinInRotatedArrNew {
     }
 }
 
-class B4MinInRotatedArr {
+class B05MinInRotatedArr {
     public static void main(String[] args){
         int nums1[] = {4,5,6,7,0,1,2};
         int[] nums2 = {3,4,5,1,2};

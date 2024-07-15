@@ -1,3 +1,4 @@
+package lc.BinarySearch;
 // https://leetcode.com/explore/learn/card/binary-search/146/more-practices-ii/1039/
 import java.util.Arrays;
 
@@ -21,7 +22,7 @@ class SolutionC06ArrDupl {
     }
 }
 
-class C06ArrDupl {
+class B16ArrDupl {
     public static void main(String[] args){
         SolutionC06ArrDupl sol = new SolutionC06ArrDupl();
 

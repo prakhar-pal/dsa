@@ -1,3 +1,5 @@
+package lc.BinarySearch;
+
 // https://leetcode.com/explore/learn/card/binary-search/138/background/1038/
 
 class SolutionB0BinarySearchBinarySearch {
@@ -14,7 +16,7 @@ class SolutionB0BinarySearchBinarySearch {
     }
 }
 
-class B0BinarySearch {
+class B01BinarySearch {
     public static void main(String[] args){
         SolutionB0BinarySearchBinarySearch sol = new SolutionB0BinarySearchBinarySearch();
         int arr1[] = {-1,0,3,5,9,12};

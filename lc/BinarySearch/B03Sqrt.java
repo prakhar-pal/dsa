@@ -1,3 +1,4 @@
+package lc.BinarySearch;
 class Cholution {
     private int getDigitCount(int num){
         if(num == 0) return 1;
@@ -54,7 +55,7 @@ class SolutionB1SqrtSqrt {
     }
 }
 
-class B1Sqrt {
+class B03Sqrt {
     public static void main(String[] args){
         SolutionB1SqrtSqrt sol = new SolutionB1SqrtSqrt();
         assert sol.mySqrt(4) == 2;

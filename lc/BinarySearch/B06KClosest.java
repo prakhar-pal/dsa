@@ -1,3 +1,4 @@
+package lc.BinarySearch;
 // https://leetcode.com/explore/learn/card/binary-search/135/template-iii/945/
 import java.util.ArrayList;
 import java.util.List;
@@ -50,7 +51,7 @@ class SolutionB6KClosest {
     }
 }
 
-class B6KClosest {
+class B06KClosest {
     public static void printAns(List<Integer> ans){
         for(int num: ans){
             System.out.print(num + " \t");

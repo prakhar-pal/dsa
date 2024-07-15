@@ -1,3 +1,4 @@
+package lc.BinarySearch;
 import java.util.Arrays;
 class SolutionC07KthSmallestPairDistance {
     public int smallestDistancePair(int[] nums, int k) {
@@ -17,7 +18,7 @@ class SolutionC07KthSmallestPairDistance {
     }
 }
 
-class C07KthSmallestPairDistance {
+class B17KthSmallestPairDistance {
     public static void main(String[] args){
         SolutionC07KthSmallestPairDistance sol = new SolutionC07KthSmallestPairDistance();
 

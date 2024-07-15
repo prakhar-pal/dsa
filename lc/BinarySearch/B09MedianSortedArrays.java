@@ -1,4 +1,7 @@
-// https://leetcode.com/problems/median-of-two-sorted-arrays/
+package lc.BinarySearch;
+/*
+* https://leetcode.com/problems/median-of-two-sorted-arrays/
+*/
 
 class SolutionB9MedianSortedArraysMedSortedArray {
     private double median(int[] nums) {
@@ -41,7 +44,7 @@ class SolutionB9MedianSortedArraysMedSortedArray {
     }
 }
 
-class B9MedianSortedArrays {
+class B09MedianSortedArrays {
     public static void main(String[] args) {
         int tc1[][] = { { 1, 3 }, { 2 } };
         int tc2[][] = { { 0, 0 }, { 0, 0 } };

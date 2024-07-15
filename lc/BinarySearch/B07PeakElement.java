@@ -1,7 +1,6 @@
+package lc.BinarySearch;
+
 class SolutionB7PeakElement {
-    // public int findPeakElement(int[] nums){
-    //     return findPeakElement(nums, 0, nums.length-1);
-    // }
     public int findPeakElement(int[] nums) {
         int low=0, high = nums.length-1;
         int peak = -1;
@@ -17,7 +16,7 @@ class SolutionB7PeakElement {
     }
 }
 
-class B7PeakElement {
+class B07PeakElement {
     public static void main(String[] args){
         SolutionB7PeakElement sol = new SolutionB7PeakElement();
         int arr[] = {1,2,3,1};

@@ -6,7 +6,7 @@ package lc.BinarySearch;
  * An island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically. You may assume all four edges of the grid are all surrounded by water.
  */
 
-public class D01NumberOfIslands {
+public class B20NumberOfIslands {
     public static void main(String[] args) {
 
         D01Solution sol = new D01SolutionOne();

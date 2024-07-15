@@ -1,3 +1,4 @@
+package lc.BinarySearch;
 // https://leetcode.com/explore/learn/card/binary-search/137/conclusion/978/
 class SolutionB8PerfectSquarePerfectSquare {
     public boolean isPerfectSquare(int num) {
@@ -22,7 +23,7 @@ class SolutionB8PerfectSquarePerfectSquare {
     }
 }
 
-class B8PerfectSquare {
+class B08PerfectSquare {
     public static void main(String[] args){
         SolutionB8PerfectSquarePerfectSquare sol = new SolutionB8PerfectSquarePerfectSquare();
         assert sol.isPerfectSquare(4) == true;

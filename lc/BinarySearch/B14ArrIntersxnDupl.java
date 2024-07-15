@@ -1,3 +1,4 @@
+package lc.BinarySearch;
 // https://leetcode.com/explore/learn/card/binary-search/144/more-practices/1029/
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -40,7 +41,7 @@ class SolutionC04ArrIntersxnDuplBySet {
 }
 
 
-class C04ArrIntersxnDupl {
+class B14ArrIntersxnDupl {
     private static void isSame(int[] arr1, int[] arr2){
         HashMap<Integer, Integer> hm1 = new HashMap<>();
         HashMap<Integer, Integer> hm2 = new HashMap<>();

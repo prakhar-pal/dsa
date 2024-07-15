@@ -1,3 +1,4 @@
+package lc.BinarySearch;
 // https://leetcode.com/explore/learn/card/binary-search/137/conclusion/977/
 
 class SolutionC01LetterSearchLetterSearch {
@@ -23,7 +24,7 @@ class SolutionC01LetterSearchLetterSearch {
     }
 }
 
-class C01LetterSearch {
+class B11LetterSearch {
     public static void main(String[] args){
         char letters1[] = {'c', 'f', 'j'};
         char target1 = 'a';

@@ -1,3 +1,4 @@
+package lc.BinarySearch;
 // https://leetcode.com/explore/learn/card/binary-search/144/more-practices/1035/
 class SolutionC05ArrTwoSum {
     public int[] twoSum(int[] nums, int target) {
@@ -20,7 +21,7 @@ class SolutionC05ArrTwoSum {
     }
 }
 
-class C05ArrTwoSum {
+class B15ArrTwoSum {
     private static boolean isSame(int[] ans, int[] expected){
         if(ans.length != expected.length) return false;
         for(int i=0;i<ans.length; i++){

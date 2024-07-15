@@ -1,3 +1,4 @@
+package lc.BinarySearch;
 // https://leetcode.com/explore/learn/card/binary-search/144/more-practices/1034/
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -47,7 +48,7 @@ class SolutionC03ArrIntersectionBySet {
 }
 
 
-class C03ArrIntersection {
+class B13ArrIntersection {
     private static void isSame(int[] arr1, int[] arr2){
         HashSet<Integer> hs1 = new HashSet<>();
         HashSet<Integer> hs2 = new HashSet<>();

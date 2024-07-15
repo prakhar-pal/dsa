@@ -9,7 +9,7 @@ package lc.BinarySearch;
  * Given an integer target, return true if target is in matrix or false otherwise.
  * You must write a solution in O(log(m * n)) time complexity.
  */
-public class D03Search2DMatrixPt1 {
+public class B22Search2DMatrixPt1 {
     public static void main(String[] args) {
         BSD03Solution sol = new BSD03Solution();
         assert sol.searchMatrix(new int[][] {

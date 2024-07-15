@@ -7,7 +7,7 @@ package lc.BinarySearch;
  * Integers in each column are sorted in ascending from top to bottom.
  */
 
-public class D02Search2DMatrixPt2 {
+public class B21Search2DMatrixPt2 {
     public static void main(String[] args){
         D02Solution sol = new D02Solution();
         assert sol.searchMatrix(new int[][] {
