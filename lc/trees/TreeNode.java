@@ -35,4 +35,34 @@ public class TreeNode {
             list = newList;
         }
     }
+
+    public static TreeNode createTree(List<Integer> arr) {
+        if(arr.size() == 0) {
+            return null;
+        }
+        TreeNode root = new TreeNode(arr.get(0));
+        TreeNode[] nodes = new TreeNode[arr.size()];
+        nodes[0] = root;
+        for(int i=0;i<arr.size();i++) {
+            TreeNode node = nodes[i];
+            if(node == null) {
+                continue;
+            }
+            if(2*i+1 < arr.size()) {
+                Integer leftValue = arr.get(2*i+1);
+                if(leftValue != null) {
+                    node.left = new TreeNode(leftValue);
+                }
+                nodes[2*i+1] = node.left;
+            }
+            if(2*i+2 < arr.size()) {
+                Integer rightValue = arr.get(2*i+2);
+                if(rightValue != null) {
+                    node.right = new TreeNode(rightValue);
+                }
+                nodes[2*i+2] = node.right;
+            }
+        }
+        return root;
+    }
 }
