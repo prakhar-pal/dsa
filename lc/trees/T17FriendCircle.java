@@ -7,7 +7,7 @@ import java.util.HashSet;
  */
 public class T17FriendCircle {
     public static void main(String[] args) {
-        T17Solution solution = new T17Solution();
+        T17Solution solution = new T17SolutionTwo();
 
         assert solution.findCircleNum(new int[][] {
             {1,1,0},
@@ -57,7 +57,47 @@ public class T17FriendCircle {
     }
 }
 
-class T17Solution {
+interface T17Solution {
+    public int findCircleNum(int[][] isConnected);
+}
+
+
+class T17SolutionTwo implements T17Solution {
+    /** solution which changes the isConnected input */
+    boolean[] isVisited;
+    public int findCircleNum(int[][] isConnected) {
+        int count = 0;
+        isVisited = new boolean[isConnected.length];
+        for(int row = 0; row < isConnected.length;row++) {
+            if(isVisited[row]) {
+                continue;
+            }
+            isVisited[row] = true;
+            for(int col = 0;col<isConnected.length;col++) {
+                if(isConnected[row][col] == 1) {
+                    count++;
+                    dfs(isConnected, col);
+                }
+            }
+        }
+        return count;
+    }
+    private void dfs(int[][] isConnected, int row) {
+        if(isVisited[row]) {
+            return;
+        }
+        isVisited[row] = true;
+        for(int col = 0;col<isConnected.length;col++) {
+            if(isConnected[row][col] == 1) {
+                isConnected[row][col] = 0;
+                dfs(isConnected, col);
+            }
+        }
+    }
+}
+
+class T17SolutionOne implements T17Solution {
+    /** solution which doesn't change the isConnected input */
     public int findCircleNum(int[][] isConnected) {
         int n = isConnected.length;
         HashSet<Integer> visitorSet = new HashSet<>();
