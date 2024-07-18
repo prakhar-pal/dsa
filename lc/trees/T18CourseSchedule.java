@@ -1,14 +1,13 @@
 package lc.trees;
 
-import java.util.HashSet;
-import java.util.Objects;
+import java.util.*;
 
 /**
  * https://leetcode.com/problems/course-schedule/description/
  */
 public class T18CourseSchedule {
     public static void main(String[] args) {
-        T18Solution solution = new T18Solution();
+        T18Solution solution = new T18SolutionTwo();
 
         assert solution.canFinish(2, new int[][] {
             {1, 0}
@@ -59,6 +58,24 @@ public class T18CourseSchedule {
             {2,4},
             {3,1},
             {3,2}
+        });
+
+        assert solution.canFinish(3, new int[][] {
+            {1,0},
+            {1,2},
+            {0,1},
+        }) == false;
+
+        assert solution.canFinish(3, new int[][] {
+            {0,1},
+            {0,2},
+            {1,0},
+        }) == false;
+
+        assert solution.canFinish(3, new int[][] {
+            {0,1},
+            {0,2},
+            {1,2},
         });
 
         assert solution.canFinish(100, new int[][]{
@@ -282,7 +299,11 @@ class CourseNode {
         return Objects.hash(courseId);
     }
 }
-class T18Solution {
+
+interface T18Solution {
+    public boolean canFinish(int numCourses, int[][] prerequisites);
+}
+class T18SolutionOne implements T18Solution{
     public boolean canFinish(int numCourses, int[][] prerequisites) {
         if(prerequisites.length == 0) {
             return true;
@@ -328,6 +349,57 @@ class T18Solution {
             alreadyVisited.add(courseNode);
         }
         visitedStack.remove(node);
+        return true;
+    }
+}
+
+class T18SolutionTwo implements T18Solution {
+    public boolean canFinish(int numCourses, int[][] prerequisites) {
+        HashMap<Integer, Set<Integer>> prereqMap = new HashMap<>();
+        for(int i=0;i<prerequisites.length;i++) {
+            int a = prerequisites[i][0];
+            int b = prerequisites[i][1];
+            Set<Integer> prereqCourses = prereqMap.getOrDefault(a, new HashSet<>());
+            prereqCourses.add(b);
+            prereqMap.put(a, prereqCourses);
+        }
+        for(int course: prereqMap.keySet()) {
+            Set<Integer> prereqCourses = prereqMap.get(course);
+            Set<Integer> prereqCoursesCopy = new HashSet<>(prereqCourses);
+            for(int prereqCourse: prereqCoursesCopy) {
+                HashSet<Integer> traversalSet = new HashSet<>();
+                if(!dfs(prereqMap, prereqCourse, traversalSet)) {
+                    return false;
+                }
+                prereqCourses.remove(prereqCourse);
+            }
+            if(prereqCourses.size() != 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    private boolean dfs(HashMap<Integer, Set<Integer>> prereqMap, int prereqCourse, HashSet<Integer> visitedCourses) {
+        if(!prereqMap.containsKey(prereqCourse) || prereqMap.get(prereqCourse).size() == 0) {
+            return true;
+        }
+        if(visitedCourses.contains(prereqCourse)) {
+            return false;
+        }
+        visitedCourses.add(prereqCourse);
+        Set<Integer> prereqCourses2 = prereqMap.get(prereqCourse);
+        Set<Integer> prereqCourses2Copy = new HashSet<>(prereqCourses2);
+        for(int prereqCourse2: prereqCourses2Copy) {
+            if(!dfs(prereqMap, prereqCourse2, visitedCourses)) {
+                return false;
+            }
+            prereqCourses2.remove(prereqCourse2);
+        }
+        visitedCourses.remove(prereqCourse);
+        if(prereqCourses2.size() != 0 ) {
+            return false;
+        }
         return true;
     }
 }
