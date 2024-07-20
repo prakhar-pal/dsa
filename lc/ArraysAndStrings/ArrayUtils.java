@@ -14,6 +14,24 @@ public class ArrayUtils {
         return true;
     }
 
+    public static boolean isSame2DArray(char[][] arr1, char[][] arr2) {
+        if(arr1.length != arr2.length) {
+            return false;
+        }
+        if(arr1[0].length != arr2[0].length) {
+            return false;
+        }
+        int m = arr1.length, n = arr1[0].length;
+        for(int i=0;i<m;i++) {
+            for(int j=0;j<n;j++) {
+                if(arr1[i][j] != arr2[i][j]) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
     public static Integer[] convert(int[] arr) {
         Integer[] copy = new Integer[arr.length];
         for(int i=0;i<arr.length;i++) {
