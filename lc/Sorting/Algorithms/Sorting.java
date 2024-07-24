@@ -1,6 +1,6 @@
 package lc.Sorting.Algorithms;
 
-import lc.common.Logger;
+import lc.utils.Logger;
 
 public class Sorting {
 

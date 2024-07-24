@@ -1,8 +1,8 @@
-package lc.other;
+package lc.random;
 /**
  * https://leetcode.com/problems/reverse-bits/
  */
-public class OE03ReverseBits {
+public class R05ReverseBits {
     public static void main(String[] args) {
         OE03Solution sol = new OE03Solution();
         assert sol.reverseBits(43261596) == 964176192;

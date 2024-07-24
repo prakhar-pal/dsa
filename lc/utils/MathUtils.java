@@ -1,4 +1,4 @@
-package lc.common;
+package lc.utils;
 import java.util.List;
 import java.lang.Comparable;
 import java.time.chrono.AbstractChronology;

@@ -1,13 +1,13 @@
-package lc.other;
+package lc.random;
 
-import lc.common.NumberToBinary;
+import lc.utils.NumberToBinary;
 
 /**
  * https://leetcode.com/problems/hamming-distance/
  * The Hamming distance between two integers is the number of positions at which the corresponding bits are different.
  * Given two integers x and y, return the Hamming distance between them.
  */
-public class OE02HammingDistance {
+public class R04HammingDistance {
    public static void main(String[] args) {
         OE02Solution sol = new OE02SolutionTwo();
         assert sol.hammingDistance(1, 4) == 2;

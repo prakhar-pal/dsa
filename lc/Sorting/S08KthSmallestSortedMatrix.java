@@ -3,7 +3,7 @@ package lc.Sorting;
 import java.util.Arrays;
 import java.util.Random;
 
-import lc.common.Logger;
+import lc.utils.Logger;
 
 /**
  * https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/description/

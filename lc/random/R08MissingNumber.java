@@ -1,10 +1,10 @@
-package lc.other;
+package lc.random;
 
 /**
  * https://leetcode.com/problems/missing-number/
  * Given an array nums containing n distinct numbers in the range [0, n], return the only number in the range that is missing from the array.
  */
-public class OE06MissingNumber {
+public class R08MissingNumber {
     public static void main(String[] args) {
         OE06Solution sol = new OE06Solution();
         assert sol.missingNumber(new int[] {3,0,1}) == 2;

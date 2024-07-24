@@ -1,5 +1,4 @@
-import lc.common.PairArray;
-// https://leetcode.com/explore/learn/card/binary-search/135/template-iii/944/
+import lc.utils.PairArray;
 
 class SolutionB5BinSearchRange {
     public int[] searchRange(int[] nums, int target) {
