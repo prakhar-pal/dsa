@@ -6,10 +6,10 @@ import java.util.*;
  * e.g. The following are magic numbers
  * 88,
  * 181
+ * 9006
  * The following aren't magic numbers
  * 66
  * 182
- * 9006
  */
 
 public class A01RotatedMagicNumber {

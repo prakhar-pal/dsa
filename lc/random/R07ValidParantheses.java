@@ -1,4 +1,4 @@
-package lc.other;
+package lc.random;
 
 /*
  * https://leetcode.com/problems/valid-parentheses/
@@ -9,7 +9,7 @@ package lc.other;
  *  Open brackets must be closed in the correct order.
  *  Every close bracket has a corresponding open bracket of the same type.
  */
-public class OE05ValidParantheses {
+public class R07ValidParantheses {
     public static void main(String[] args) {
         OE05Solution sol = new OE05Solution();
         assert sol.isValid("");

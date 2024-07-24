@@ -1,4 +1,4 @@
-package lc.common;
+package lc.utils;
 public class PairArray {
     public int[] result;
     public PairArray(int s, int e){

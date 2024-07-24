@@ -3,7 +3,7 @@ package lc.ArraysAndStrings;
 import java.util.ArrayList;
 import java.util.List;
 
-import lc.common.Logger;
+import lc.utils.Logger;
 
 /**
  * https://leetcode.com/problems/spiral-matrix/

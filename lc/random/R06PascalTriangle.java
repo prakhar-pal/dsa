@@ -1,4 +1,4 @@
-package lc.other;
+package lc.random;
 import java.util.*;
 
 import lc.ArraysAndStrings.ArrayUtils;
@@ -8,7 +8,7 @@ import lc.ArraysAndStrings.ArrayUtils;
  * Given an integer numRows, return the first numRows of Pascal's triangle.
  * In Pascal's triangle, each number is the sum of the two numbers directly above it as shown:
  */
-public class OE04PascalTriangle {
+public class R06PascalTriangle {
     public static void main(String[] args) {
         OE04Solution sol = new OE04Solution();
 

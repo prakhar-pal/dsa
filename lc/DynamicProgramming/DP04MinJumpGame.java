@@ -2,8 +2,10 @@ package lc.DynamicProgramming;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import lc.utils.MathUtils;
+
 import java.util.Arrays;
-import lc.common.MathUtils;
 
 /**
  * https://leetcode.com/problems/jump-game-ii/description/

@@ -1,6 +1,7 @@
 package lc.DynamicProgramming;
 import lc.ArraysAndStrings.ArrayUtils;
-import lc.common.Logger;
+import lc.utils.Logger;
+
 import java.util.*;
 
 /**

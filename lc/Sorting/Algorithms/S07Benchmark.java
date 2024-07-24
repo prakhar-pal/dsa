@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
 
-import lc.common.Logger;
+import lc.utils.Logger;
 
 /**
  * benchmarks run time of different sorting algorithms

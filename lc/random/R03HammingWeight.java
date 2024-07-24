@@ -1,12 +1,12 @@
-package lc.other;
-import lc.common.*;
+package lc.random;
+import lc.utils.*;
 
 /**
  * https://leetcode.com/problems/number-of-1-bits/description/
  * Write a function that takes the binary representation of a positive integer and returns the number of set bits it has 
  * (also known as the Hamming weight).
  */
-public class OE01HammingWeight {
+public class R03HammingWeight {
     public static void main(String[] args) {
         OE01Solution sol = new OE01SolutionTwo();
         System.out.println("sol="+sol.hammingWeight(11));

@@ -2,7 +2,7 @@ package lc.LinkedList;
 
 import java.util.*;
 
-import lc.common.Logger;
+import lc.utils.Logger;
 
 /**
  * https://leetcode.com/problems/copy-list-with-random-pointer/description/

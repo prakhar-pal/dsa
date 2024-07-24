@@ -1,4 +1,4 @@
-package lc.other;
+package lc.random;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -15,7 +15,7 @@ import java.util.Random;
  * 
  * You must implement the functions of the class such that each function works in average O(1) time complexity.
  */
-public class O02RandomizedSet {
+public class R02RandomizedSet {
     public static void main(String[] args) {
         RandomizedSet randomizedSet = new RandomizedSet();
         assert randomizedSet.insert(1); // Inserts 1 to the set. Returns true as 1 was inserted successfully.
