@@ -21,28 +21,33 @@ public class SortingBenchmark {
         }
         int arrayLength = Integer.parseInt(args[0]);
         Map<String, Sorter> sortingAlgos = new HashMap<>();
-        // sortingAlgos.put("BubbleSort", new BubbleSort());
-        // sortingAlgos.put("InsertionSort", new InsertionSort());
+        sortingAlgos.put("BubbleSort", new BubbleSort());
+        sortingAlgos.put("InsertionSort", new InsertionSort());
         sortingAlgos.put("MergeSort", new MergeSort());
         sortingAlgos.put("QuickSort", new QuickSort());
-        ArrayList<Long> averageTimes = new ArrayList<>();
-        for(String sortingAlgo: sortingAlgos.keySet()) {
-            int iterations = 10;
-            SortingConfig config = new SortingConfig(sortingAlgos.get(sortingAlgo), arrayLength);
-            long startTime = System.currentTimeMillis();
-            while(iterations!=0) {
-                iterations--;
-                config.runConfig();
+        int iterations = 10;
+        HashMap<String, List<Long>> timingMap = new HashMap<>();
+        while(iterations!=0) {
+            iterations--;
+            SortingConfig config = new SortingConfig(arrayLength);
+            for(String sortingAlgo: sortingAlgos.keySet()) {
+                config.setSorter(sortingAlgos.get(sortingAlgo));
+                long startTime = System.currentTimeMillis();
+                config.runSorter();
+                long endTime = System.currentTimeMillis();
+                List<Long> timeTookList = timingMap.getOrDefault(sortingAlgo, new ArrayList<>());
+                timeTookList.add(endTime - startTime);
+                timingMap.put(sortingAlgo, timeTookList);
             }
-            long endTime = System.currentTimeMillis();
-            averageTimes.add(endTime-startTime);
         }
-        for(String algo: sortingAlgos.keySet()) {
-            Logger.printf("%15s", algo);
-        }
-        Logger.log("");
-        for(long time: averageTimes) {
-            Logger.printf("%15s", time);
+        for(String algo: timingMap.keySet()) {
+            Long averageTime = 0l;
+            List<Long> timeTook = timingMap.get(algo);
+            for(Long time: timeTook) {
+                averageTime += time;
+            }
+            averageTime /= timeTook.size();
+            Logger.printf("%15s %15s\n", algo, averageTime);
         }
         Logger.log("");
     }
@@ -52,18 +57,18 @@ public class SortingBenchmark {
 class SortingConfig {
     private static int[] arr;
     Sorter sorter;
-    public SortingConfig(Sorter _sorter, int arrayLength) {
-        this.sorter = _sorter;
-        if(SortingConfig.arr == null) {
-            Random random = new Random();
-            int[] randomArray= new int[arrayLength];
-            for(int i=0;i<randomArray.length;i++) {
-                randomArray[i] = random.nextInt(arrayLength);
-            }
-            SortingConfig.arr = randomArray;
+    public SortingConfig(int arrayLength) {
+        Random random = new Random();
+        int[] randomArray = new int[arrayLength];
+        for (int i = 0; i < randomArray.length; i++) {
+            randomArray[i] = random.nextInt(arrayLength);
         }
+        SortingConfig.arr = randomArray;
     }
-    public void runConfig() {
+    public void setSorter(Sorter sorter) {
+        this.sorter = sorter;
+    }
+    public void runSorter() {
         int[] duplArr = Arrays.copyOf(SortingConfig.arr, SortingConfig.arr.length);
         for(int i=0;i<10;i++){
             sorter.sort(duplArr);
