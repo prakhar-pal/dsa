@@ -8,7 +8,7 @@ public class QuickSort implements Sorter {
         if(right-left <=0 || left < 0 || left >=arr.length || right <0 || right >= arr.length) {
             return;
         }
-        int pivotIndex = partitionArray(arr, left, right);
+        int pivotIndex = partitionArrayNaive(arr, left, right);
         sort(arr, left, pivotIndex-1);
         sort(arr, pivotIndex + 1 , right);
     }
@@ -21,16 +21,18 @@ public class QuickSort implements Sorter {
         int pivotIndex = left;
         for(int i=left;i<right;i++) {
             if(arr[i] <= pivot) {
-                int temp = arr[pivotIndex];
-                arr[pivotIndex] = arr[i];
-                arr[i] = temp;
+                swap(arr, i, pivotIndex);
                 pivotIndex++;
             }
         }
-        int temp = arr[pivotIndex];
-        arr[pivotIndex] = arr[right];
-        arr[right] = temp; 
+        swap(arr, right, pivotIndex);
         return pivotIndex;
+    }
+
+    public void swap(int[] arr, int i, int j) {
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
     }
 
     private int partitionArrayNaive(int[] arr, int left, int right) {
