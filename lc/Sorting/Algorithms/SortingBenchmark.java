@@ -1,8 +1,6 @@
 package lc.Sorting.Algorithms;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Random;
+import java.util.*;
 
 import lc.utils.Logger;
 
@@ -15,27 +13,31 @@ import lc.utils.Logger;
  * 20000         5674           1042            116
  */
 
-public class S07Benchmark {
+public class SortingBenchmark {
     public static void main(String[] args) {
         if(args.length == 0) {
             Logger.log("Usage:\n java S07Benchmark <arrayLength>");
+            return;
         }
         int arrayLength = Integer.parseInt(args[0]);
-        Sorter[] sorters = new Sorter[] {new BubbleSort(), new InsertionSort(), new QuickSort() };
-        String[] sortingAlgos = new String[] { "BubbleSort", "InsertionSort", "QuickSort" };
+        Map<String, Sorter> sortingAlgos = new HashMap<>();
+        // sortingAlgos.put("BubbleSort", new BubbleSort());
+        // sortingAlgos.put("InsertionSort", new InsertionSort());
+        sortingAlgos.put("MergeSort", new MergeSort());
+        sortingAlgos.put("QuickSort", new QuickSort());
         ArrayList<Long> averageTimes = new ArrayList<>();
-        for(Sorter sorter: sorters) {
-            int times = 10;
-            SortingConfig config = new SortingConfig(sorter, arrayLength);
+        for(String sortingAlgo: sortingAlgos.keySet()) {
+            int iterations = 10;
+            SortingConfig config = new SortingConfig(sortingAlgos.get(sortingAlgo), arrayLength);
             long startTime = System.currentTimeMillis();
-            while(times!=0) {
-                times--;
+            while(iterations!=0) {
+                iterations--;
                 config.runConfig();
             }
             long endTime = System.currentTimeMillis();
             averageTimes.add(endTime-startTime);
         }
-        for(String algo: sortingAlgos) {
+        for(String algo: sortingAlgos.keySet()) {
             Logger.printf("%15s", algo);
         }
         Logger.log("");
@@ -56,7 +58,7 @@ class SortingConfig {
             Random random = new Random();
             int[] randomArray= new int[arrayLength];
             for(int i=0;i<randomArray.length;i++) {
-                randomArray[i] = random.nextInt(2000);
+                randomArray[i] = random.nextInt(arrayLength);
             }
             SortingConfig.arr = randomArray;
         }
