@@ -1,5 +1,7 @@
 package lc.Sorting.Algorithms;
 
+import java.util.Random;
+
 public class QuickSort implements Sorter {
     public void sort(int[] arr) {
         sort(arr, 0, arr.length-1);
@@ -8,7 +10,7 @@ public class QuickSort implements Sorter {
         if(right-left <=0 || left < 0 || left >=arr.length || right <0 || right >= arr.length) {
             return;
         }
-        int pivotIndex = partitionArrayNaive(arr, left, right);
+        int pivotIndex = partitionArray(arr, left, right);
         sort(arr, left, pivotIndex-1);
         sort(arr, pivotIndex + 1 , right);
     }
@@ -17,6 +19,8 @@ public class QuickSort implements Sorter {
         /**
          * https://en.wikipedia.org/wiki/Quicksort#Lomuto_partition_scheme
          */
+        int randomPivotIndex = new Random().nextInt(left, right);
+        swap(arr, right, randomPivotIndex);
         int pivot = arr[right];
         int pivotIndex = left;
         for(int i=left;i<right;i++) {
