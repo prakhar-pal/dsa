@@ -68,7 +68,10 @@ class RKHasherOne implements RabinKarpHasher {
     }
 }
 class RKHasherTwo implements RabinKarpHasher {
-    /** rolling hash */
+    /**
+     * rolling hash
+     * 5%ile :(
+     * */
     private int p = 7;
     private int m = 23;  // (int) (Math.pow(10, 9) + 9);
     private int toInt(char ch) {
