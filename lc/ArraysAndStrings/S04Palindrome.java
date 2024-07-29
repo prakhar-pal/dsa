@@ -2,7 +2,13 @@ package lc.ArraysAndStrings;
 // https://leetcode.com/explore/interview/card/top-interview-questions-easy/127/strings/883/
 // check if a sentence is a palindrome 
 
-class SolutionS04Palindrome {
+
+interface S04Solution {
+    public boolean isPalindrome(String s);
+}
+
+
+class S04SolutionOne implements S04Solution {
     public boolean isPalindrome(String s) {
         s = s.toLowerCase();
         StringBuilder temp = new StringBuilder("");
@@ -18,9 +24,44 @@ class SolutionS04Palindrome {
     }
 }
 
+class S04SolutionTwo implements S04Solution {
+    public boolean isPalindrome(String original) {
+        String s = original.toLowerCase();
+        int left = 0, right = s.length() - 1;
+        while (left<=right) {
+            if(!isAlphaNumeric(s.charAt(left))) {
+                left++;
+                continue;
+            }
+            if(!isAlphaNumeric(s.charAt(right))) {
+                right--;
+                continue;
+            }
+            char leftChar = s.charAt(left);
+            char rightChar = s.charAt(right);
+            if(leftChar != rightChar) {
+                return false;
+            }
+            left++;
+            right--;
+        }
+        return true;
+    }
+
+    private boolean isAlphaNumeric(char ch) {
+        if(ch >= 'a' && ch <= 'z') {
+            return true;
+        }
+        if(ch >= '0' && ch <= '9') {
+            return true;
+        }
+        return false;
+    }
+}
+
 class S04 {
     public static void main(String[] args){
-        SolutionS04Palindrome sol = new SolutionS04Palindrome();
+        S04Solution sol = new S04SolutionTwo();
         
         String s1 = "A man, a plan, a canal: Panama";
         boolean result1 = true;
