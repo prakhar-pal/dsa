@@ -33,10 +33,25 @@ public class R16MinAbsoluteDifferenceBST {
 
 class R16Solution {
     private int minValue;
+    private TreeNode prev;
     public int getMinimumDifference(TreeNode node) {
         this.minValue = Integer.MAX_VALUE;
-        gmdUtil3(node);
+        prev = null;
+        gmdUtil4(node);
         return this.minValue;
+    }
+
+    private void gmdUtil4(TreeNode node) {
+        /* use inorder traversal to find the difference between previous and current element*/
+        if(node == null) {
+            return;
+        }
+        gmdUtil4(node.left);
+        if(this.prev != null) {
+            this.minValue = Math.min(this.minValue, node.val - prev.val);
+        }
+        this.prev = node;
+        gmdUtil4(node.right);
     }
 
     private void gmdUtil3(TreeNode node) {
