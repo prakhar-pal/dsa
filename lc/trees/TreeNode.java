@@ -65,4 +65,11 @@ public class TreeNode {
         }
         return root;
     }
+    public static TreeNode createTree(Integer[] arr) {
+        List<Integer> list = new ArrayList<>();
+        for(Integer i: arr) {
+            list.add(i);
+        }
+        return createTree(list);
+    }
 }
