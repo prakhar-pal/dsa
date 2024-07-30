@@ -1,3 +1,5 @@
+package lc.recursion;
+
 // https://leetcode.com/explore/learn/card/recursion-i/253/conclusion/1675/
 import java.util.Scanner;
 class SolutionRec09KthSymbolGrammar {

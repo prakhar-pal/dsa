@@ -1,3 +1,5 @@
+package lc.Sorting;
+
 // https://leetcode.com/problems/merge-intervals/
 
 import java.util.ArrayList;

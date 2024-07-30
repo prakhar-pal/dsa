@@ -1,3 +1,5 @@
+package lc.recursion;
+
 // https://leetcode.com/explore/learn/card/recursion-i/256/complexity-analysis/2380/
 import java.util.Scanner;
 

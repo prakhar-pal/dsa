@@ -1,3 +1,5 @@
+package lc.math;
+
 // https://leetcode.com/problems/excel-sheet-column-number/
 
 class SolutionP3ExcelColumnNumber {

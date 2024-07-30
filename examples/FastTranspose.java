@@ -1,3 +1,5 @@
+package examples;
+
 // implementation of fast transpose from horowitz-sahni-freed
 
 class MatrixTriple {

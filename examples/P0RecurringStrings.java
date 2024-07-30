@@ -1,3 +1,5 @@
+package examples;
+
 // I3 test talentica
 // for Sanny K
 

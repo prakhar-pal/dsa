@@ -1,3 +1,5 @@
+package lc.math;
+
 // https://leetcode.com/explore/interview/card/top-interview-questions-medium/113/math/820/
 class SolutionP0Divide {
     public static long LOWEST_QUOTIENT = (long)Math.pow(2, 31) * (-1);

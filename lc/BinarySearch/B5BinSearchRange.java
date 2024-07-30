@@ -1,3 +1,5 @@
+package lc.BinarySearch;
+
 import lc.utils.PairArray;
 
 class SolutionB5BinSearchRange {

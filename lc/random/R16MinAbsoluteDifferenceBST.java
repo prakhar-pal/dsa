@@ -18,7 +18,7 @@ public class R16MinAbsoluteDifferenceBST {
 
         TreeNode tree2 = TreeNode.createTree(new Integer[] {1,0,48,null,null,12,49});
         assert solution.getMinimumDifference(tree2) == 1;
-        
+
         TreeNode tree3 = TreeNode.createTree(new Integer[] {236,104,701,null,227,null,911});
         assert solution.getMinimumDifference(tree3) == 9;
 
@@ -38,6 +38,7 @@ class R16Solution {
         gmdUtil3(node);
         return this.minValue;
     }
+
     private void gmdUtil3(TreeNode node) {
         /** beats 12.79% */
         List<Integer> sorted = convertToSortedList(node);
