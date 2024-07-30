@@ -5,9 +5,9 @@ import java.util.*;
  Definition for a binary tree node.
  */
 public class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
+    public int val;
+    public TreeNode left;
+    public TreeNode right;
     TreeNode() {}
     TreeNode(int val) { this.val = val; }
     TreeNode(int val, TreeNode left, TreeNode right) {
@@ -64,5 +64,12 @@ public class TreeNode {
             }
         }
         return root;
+    }
+    public static TreeNode createTree(Integer[] arr) {
+        List<Integer> list = new ArrayList<>();
+        for(Integer i: arr) {
+            list.add(i);
+        }
+        return createTree(list);
     }
 }

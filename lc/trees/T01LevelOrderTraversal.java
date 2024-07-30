@@ -25,13 +25,18 @@ class SolutionT1LevelOrderTraversal {
     }
 }
 
-class T01LevelOrderTraversal {
+public class T01LevelOrderTraversal {
     public static void main(String[] args) {
         TreeNode root = new TreeNode(3);
         root.left = new TreeNode(9);
         root.right = new TreeNode(20);
         root.right.left = new TreeNode(15);
         root.right.right = new TreeNode(7);
+        T01LevelOrderTraversal traversal = new T01LevelOrderTraversal();
+        traversal.traverseAndPrint(root);
+    }
+
+    public void traverseAndPrint(TreeNode root) {
         SolutionT1LevelOrderTraversal sol = new SolutionT1LevelOrderTraversal();
         List<List<Integer>> list = sol.levelOrder(root);
         for(List<Integer> row : list){
