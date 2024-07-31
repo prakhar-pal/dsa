@@ -1,3 +1,5 @@
+package lc.BinarySearch;
+
 // https://leetcode.com/explore/learn/card/binary-search/126/template-ii/947/
 
 /* The isBadVersion API is defined in the parent class VersionControl.

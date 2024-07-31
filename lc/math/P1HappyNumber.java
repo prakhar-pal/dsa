@@ -1,3 +1,5 @@
+package lc.math;
+
 import java.util.HashSet;;
 /* https://leetcode.com/explore/interview/card/top-interview-questions-medium/113/math/815/ */
 

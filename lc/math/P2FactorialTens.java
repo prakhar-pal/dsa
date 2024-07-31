@@ -1,3 +1,5 @@
+package lc.math;
+
 // https://leetcode.com/problems/factorial-trailing-zeroes/description/
 
 import java.util.HashMap;

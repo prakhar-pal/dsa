@@ -1,8 +1,6 @@
 package lc.random;
 import java.util.*;
 
-import lc.ArraysAndStrings.ArrayUtils;
-
 /**
  * https://leetcode.com/problems/summary-ranges/
  */

@@ -1,3 +1,5 @@
+package lc.ArraysAndStrings;
+
 // https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/564/
 
 class SolutionA02MaxProfit2 {

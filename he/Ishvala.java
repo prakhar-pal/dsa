@@ -1,3 +1,5 @@
+package he;
+
 import java.util.Scanner;
 
 class Ishvala {

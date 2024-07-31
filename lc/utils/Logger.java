@@ -6,6 +6,9 @@ public class Logger {
     public static <T> void log(T object) {
         System.out.println(object);
     }
+    public static void log() {
+        System.out.println();
+    }
     public static void lognl() {
         System.out.println();
     }

@@ -1,3 +1,5 @@
+package lc.ArraysAndStrings;
+
 // https://leetcode.com/explore/featured/card/top-interview-questions-easy/92/array/727/
 
 class SolutionA01 {

@@ -1,3 +1,4 @@
+package he.r;
 //https://www.hackerearth.com/problem/algorithm/b-sequence-f919fc86/?source=list_view
 import java.util.Scanner;
 
