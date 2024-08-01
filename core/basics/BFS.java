@@ -15,9 +15,8 @@ public class BFS {
         g1.addEge(0, 3);
         g1.addEge(2, 3);
         g1.addEge(3, 4);
-        boolean[] visited1 = new boolean[nodeCount1];
         Logger.log("bfs for graph 1");
-        bfs.bfs(g1, 0, visited1);
+        bfs.bfs(g1, 0);
 
         int[][] edges2 = new int[][] {
             {0,1},
@@ -29,25 +28,23 @@ public class BFS {
         };
         int nodeCount2 = 7;
         Graph g2 = new Graph(nodeCount2, edges2);
-        boolean[] visited2 = new boolean[nodeCount2];
         Logger.log("bfs for graph 2");
-        bfs.bfs(g2, 0, visited2);
+        bfs.bfs(g2, 0);
     }
-    private void bfs(Graph g, int node, boolean[] visited) {
-        if(visited[node]) {
-            return;
-        }
-        visited[node] = true;
+    private void bfs(Graph g, int node) {
+        boolean[] visited = new boolean[g.v];
         Queue<Integer> queue = new LinkedList<>();
-        for(int i: g.adjList.get(node)) {
-            if(!visited[i]) {
-                Logger.log("visited " + i);
+        queue.add(node);
+        while (!queue.isEmpty()) {
+            int n = queue.poll();
+            if(visited[n]) {
+                continue;
+            }
+            visited[n] = true;
+            Logger.log("visited " + n);
+            for(int i: g.adjList.get(n)) {
                 queue.add(i);
             }
-        }
-        while (!queue.isEmpty()) {
-            int newNode = queue.poll();
-            bfs(g, newNode, visited);
         }
     }
 }
