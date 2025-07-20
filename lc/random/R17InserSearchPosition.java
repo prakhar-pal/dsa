@@ -1,6 +1,6 @@
 package lc.random;
 
-import lc.utils.Logger;
+import lc.utils.Clogger;
 
 /**
  * https://leetcode.com/problems/search-insert-position

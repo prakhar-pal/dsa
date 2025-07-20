@@ -1,6 +1,6 @@
 package lc.random;
 import java.util.*;
-import lc.utils.Logger;
+import lc.utils.Clogger;
 
 /**
  * https://leetcode.com/problems/clone-graph/description
@@ -19,7 +19,7 @@ public class R20CloneGraph {
         });
         Node clonedNode1 = solution.cloneGraph(inputNodes1[0]);
         assert clonedNode1 != inputNodes1[0];
-        Logger.log("printing graph 1");
+        Clogger.log("printing graph 1");
         r20CloneGraph.printAdjacencyList(clonedNode1);
 
         Node[] inputNodes2 = r20CloneGraph.createGraphFromAdjList(4, new int[][] {
@@ -36,11 +36,11 @@ public class R20CloneGraph {
         Map<Integer, Set<Integer>> adjacencyList1 = this.createAdjacencyList(node);
         for(int key: adjacencyList1.keySet()) {
             Set<Integer> row = adjacencyList1.get(key);
-            Logger.logi("row="+key+"\t");
+            Clogger.logi("row="+key+"\t");
             for(int i: row) {
-                Logger.logi(i + "\t");
+                Clogger.logi(i + "\t");
             }
-            Logger.lognl();
+            Clogger.lognl();
         }
     }
 
@@ -154,7 +154,7 @@ class R20SolutionTwo implements R20Solution {
         }
 
         for(int i=0; i<node.neighbors.size(); i++){
-            Logger.printf("setting %d as neighbor of %d\n", node.neighbors.get(i).val, ans.val);
+            Clogger.printf("setting %d as neighbor of %d\n", node.neighbors.get(i).val, ans.val);
             ans.neighbors.add(visited.get(node.neighbors.get(i).val));
         }
         return ans;

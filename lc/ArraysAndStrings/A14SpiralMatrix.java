@@ -3,7 +3,7 @@ package lc.ArraysAndStrings;
 import java.util.ArrayList;
 import java.util.List;
 
-import lc.utils.Logger;
+import lc.utils.Clogger;
 
 /**
  * https://leetcode.com/problems/spiral-matrix/
@@ -14,11 +14,11 @@ public class A14SpiralMatrix {
         List<Integer> list = solution.spiralOrder(new int[][] {
             {1,2,3},{4,5,6},{7,8,9}
         });
-        Logger.log("Spiral order is");
+        Clogger.log("Spiral order is");
         for(Integer i: list) {
-            Logger.logi(i);
+            Clogger.logi(i);
         }
-        Logger.lognl();
+        Clogger.lognl();
     }
 }
 
@@ -32,7 +32,7 @@ class A14Solution {
     }
 
     private void spiralTraversal(int[][] matrix, List<Integer> list, int row, int col, String direction) {
-        Logger.log("row="+row+" col="+col+" direction="+direction);
+        Clogger.log("row="+row+" col="+col+" direction="+direction);
         list.add(matrix[row][col]);
         visited[row][col] = true;
         int nextRow = row, nextCol = col;
