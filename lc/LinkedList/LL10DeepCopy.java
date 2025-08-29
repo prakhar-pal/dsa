@@ -2,7 +2,7 @@ package lc.LinkedList;
 
 import java.util.*;
 
-import lc.utils.Logger;
+import lc.utils.Clogger;
 
 /**
  * https://leetcode.com/problems/copy-list-with-random-pointer/description/
@@ -16,10 +16,10 @@ public class LL10DeepCopy {
         });
         Node result = solution.copyRandomList(head);
         while(result != null) {
-            Logger.printf("[%d %d]", result.val, result.random != null ? result.random.val : null);
+            Clogger.printf("[%d %d]", result.val, result.random != null ? result.random.val : null);
             result = result.next;
         }
-        Logger.lognl();
+        Clogger.lognl();
     }
 
     public static Node createListFromArray(Integer[][] arr) {

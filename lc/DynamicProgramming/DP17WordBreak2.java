@@ -1,6 +1,6 @@
 package lc.DynamicProgramming;
 import lc.ArraysAndStrings.ArrayUtils;
-import lc.utils.Logger;
+import lc.utils.Clogger;
 
 import java.util.*;
 
@@ -12,7 +12,7 @@ import java.util.*;
 public class DP17WordBreak2 {
     public static void main(String[] args) {
         DP17Solution sol = new DP17SolutionTwo();
-        Logger.log(sol.wordBreak("catsanddog", ArrayUtils.arrayToList(new String[] {"cat","cats","and","sand","dog"})));;
+        Clogger.log(sol.wordBreak("catsanddog", ArrayUtils.arrayToList(new String[] {"cat","cats","and","sand","dog"})));;
     }
 }
 

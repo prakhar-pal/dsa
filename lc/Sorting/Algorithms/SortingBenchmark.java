@@ -2,7 +2,7 @@ package lc.Sorting.Algorithms;
 
 import java.util.*;
 
-import lc.utils.Logger;
+import lc.utils.Clogger;
 
 /**
  * benchmarks run time of different sorting algorithms
@@ -16,7 +16,7 @@ import lc.utils.Logger;
 public class SortingBenchmark {
     public static void main(String[] args) {
         if(args.length == 0) {
-            Logger.log("Usage:\n java S07Benchmark <arrayLength>");
+            Clogger.log("Usage:\n java S07Benchmark <arrayLength>");
             return;
         }
         int arrayLength = Integer.parseInt(args[0]);
@@ -47,9 +47,9 @@ public class SortingBenchmark {
                 averageTime += time;
             }
             averageTime /= timeTook.size();
-            Logger.printf("%15s %15s\n", algo, averageTime);
+            Clogger.printf("%15s %15s\n", algo, averageTime);
         }
-        Logger.log("");
+        Clogger.log("");
     }
 }
 

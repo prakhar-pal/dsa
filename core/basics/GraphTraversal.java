@@ -2,7 +2,7 @@ package core.basics;
 
 import java.util.*;
 
-import lc.utils.Logger;
+import lc.utils.Clogger;
 
 public class GraphTraversal {
     private int method = 1; // use 0 for BFS, 1 for DFS
@@ -16,7 +16,7 @@ public class GraphTraversal {
         g1.addEge(0, 3);
         g1.addEge(2, 3);
         g1.addEge(3, 4);
-        Logger.log("traversal for graph 1");
+        Clogger.log("traversal for graph 1");
         traversal.travserse(g1, 3);
 
         int[][] edges2 = new int[][] {
@@ -29,15 +29,15 @@ public class GraphTraversal {
         };
         int nodeCount2 = 7;
         Graph g2 = new Graph(nodeCount2, edges2);
-        Logger.log("traversal for graph 2");
+        Clogger.log("traversal for graph 2");
         traversal.travserse(g2, 3);
     }
     private void travserse(Graph g, int node) {
         if(method == 0) {
-            Logger.log("method=bfs");
+            Clogger.log("method=bfs");
             this.bfs(g, node);
         }else {
-            Logger.log("method=dfs");
+            Clogger.log("method=dfs");
             this.dfs(g, node);
         }
     }
@@ -51,7 +51,7 @@ public class GraphTraversal {
                 continue;
             }
             visited[n] = true;
-            Logger.log("visited " + n);
+            Clogger.log("visited " + n);
             for(int i: g.adjList.get(n)) {
                 queue.add(i);
             }
@@ -66,7 +66,7 @@ public class GraphTraversal {
             return;
         }
         visited[node] = true;
-        Logger.log("visiting " + node);
+        Clogger.log("visiting " + node);
         for(int n: g.adjList.get(node)) {
             dfs(g, n, visited);
         }

@@ -1,16 +1,16 @@
 package lc.Sorting.Algorithms;
 
-import lc.utils.Logger;
+import lc.utils.Clogger;
 
 public class Sorting {
 
     public static void main(String[] args) {
         if (args.length == 0) {
-            Logger.log("Usage: java -ea lc.common.Sorting <algorithm>");
+            Clogger.log("Usage: java -ea lc.common.Sorting <algorithm>");
             return;
         }
         Sorter sorter;
-        Logger.log("Using " + args[0] + " sorting algorithm");
+        Clogger.log("Using " + args[0] + " sorting algorithm");
         switch (args[0]) {
             case "insertion":
                 sorter = new InsertionSort();
@@ -22,7 +22,7 @@ public class Sorting {
                 sorter = new QuickSort();
                 break;
             default:
-                Logger.log("didn't find any matching algorithm, using bubble sort as default");
+                Clogger.log("didn't find any matching algorithm, using bubble sort as default");
                 sorter = new BubbleSort();
                 break;
         }
@@ -51,11 +51,11 @@ public class Sorting {
             }
         }
         if(!result) {
-            Logger.log("Not sorted");
+            Clogger.log("Not sorted");
             for(int n: arr) {
-                Logger.logi(n);
+                Clogger.logi(n);
             }
-            Logger.log("");
+            Clogger.log("");
         }
         return result;
     }
