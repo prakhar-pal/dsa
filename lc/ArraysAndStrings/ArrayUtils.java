@@ -1,4 +1,5 @@
 package lc.ArraysAndStrings;
+import java.lang.reflect.Array;
 import java.util.*;
 
 public class ArrayUtils {
@@ -64,6 +65,19 @@ public class ArrayUtils {
 
     public static <T> T[] listToArray(List<T> list) {
         T[] array = (T[]) list.toArray();
+        return array;
+    }
+
+   public static <T> T[][] to2DArray(List<List<T>> list, Class<T> clazz) {
+        int rows = list.size();
+        int cols = rows == 0 ? 0 : list.get(0).size();
+
+        @SuppressWarnings("unchecked")
+        T[][] array = (T[][]) Array.newInstance(clazz, rows, cols);
+        for (int i = 0; i < rows; i++) {
+            List<T> row = list.get(i);
+            array[i] = row.toArray((T[]) Array.newInstance(clazz, row.size()));
+        }
         return array;
     }
 

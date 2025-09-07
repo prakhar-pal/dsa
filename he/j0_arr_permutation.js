@@ -1,4 +1,3 @@
-//const fs = require()
 function permutation(permArray,arr,outArr=[],level=0){
     if(arr.length === 0) {
         //console.log(outArr);
@@ -8,7 +7,6 @@ function permutation(permArray,arr,outArr=[],level=0){
     arr.forEach((el,index)=>{
         const remainingElements = [...arr];
         remainingElements.splice(index,1);
-        //console.log(level,arr, outArr, remainingElements, el);
         permutation(permArray, remainingElements, [...outArr,el], level+1);
     });
 }
