@@ -1,4 +1,4 @@
-package lc.ArraysAndStrings;
+package lc.utils;
 import java.lang.reflect.Array;
 import java.util.*;
 
