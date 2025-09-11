@@ -2,8 +2,6 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
 
-import javax.swing.plaf.basic.BasicInternalFrameTitlePane.SystemMenuBar;
-
 /**
  * In the bin-packing problem, we are given n metal objects, each weighing between
 zero and one kilogram. Our goal is to find the smallest number of bins that will

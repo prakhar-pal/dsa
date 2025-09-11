@@ -3,7 +3,7 @@ package lc.trees;
 import java.util.HashSet;
 import java.util.Objects;
 
-import lc.ArraysAndStrings.ArrayUtils;
+import lc.utils.ArrayUtils;
 
 /**
  * https://leetcode.com/problems/surrounded-regions/

@@ -1,6 +1,6 @@
 package lc.ArraysAndStrings;
 
-import java.util.Random;
+import lc.utils.ArrayUtils;
 
 /**
  * https://leetcode.com/problems/sort-an-array/description/
@@ -9,9 +9,9 @@ public class A22SortIntegerArray {
     public static void main(String[] args) {
         A22Solution solution = new A22SolutionTwo();
 
-        // assert ArrayUtils.isSame1DArray(solution.sortArray(new int[]{}), new int[] {});
+        assert ArrayUtils.isSame1DArray(solution.sortArray(new int[]{}), new int[] {});
         assert ArrayUtils.isSame1DArray(solution.sortArray(new int[]{2,1}), new int[] {1,2});
-        // assert ArrayUtils.isSame1DArray(solution.sortArray(new int[]{5,2,3,1}), new int[] {1,2,3,5});
+        assert ArrayUtils.isSame1DArray(solution.sortArray(new int[]{5,2,3,1}), new int[] {1,2,3,5});
         assert ArrayUtils.isSame1DArray(solution.sortArray(new int[]{5,1,1,2,0,0}), new int[] {0,0,1,1,2,5});
     }
 }

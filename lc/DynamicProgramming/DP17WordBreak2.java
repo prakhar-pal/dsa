@@ -1,5 +1,5 @@
 package lc.DynamicProgramming;
-import lc.ArraysAndStrings.ArrayUtils;
+import lc.utils.ArrayUtils;
 import lc.utils.Clogger;
 
 import java.util.*;

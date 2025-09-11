@@ -1,6 +1,6 @@
 package lc.trees;
 
-import lc.ArraysAndStrings.ArrayUtils;
+import lc.utils.ArrayUtils;
 
 /**
  * https://leetcode.com/problems/binary-tree-maximum-path-sum/

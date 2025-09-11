@@ -2,7 +2,7 @@ package lc.random;
 
 import java.util.*;
 
-import lc.ArraysAndStrings.ArrayUtils;
+import lc.utils.ArrayUtils;
 
 public class R09SortJumbledNums {
     public static void main(String[] args) {

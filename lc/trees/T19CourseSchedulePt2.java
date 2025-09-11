@@ -1,7 +1,10 @@
 package lc.trees;
-import java.util.*;
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.Objects;
+import java.util.Queue;
 
-import lc.ArraysAndStrings.ArrayUtils;
+import lc.utils.ArrayUtils;
 
 /**
  * https://leetcode.com/problems/course-schedule-ii/

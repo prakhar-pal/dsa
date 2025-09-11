@@ -1,5 +1,5 @@
 package lc.Sorting;
-import lc.ArraysAndStrings.*;
+import lc.utils.ArrayUtils;
 // https://leetcode.com/problems/sort-colors/description/
 class SolutionP0SortColors {
     public void sortColors(int[] nums) {

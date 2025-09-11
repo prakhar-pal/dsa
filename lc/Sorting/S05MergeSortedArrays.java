@@ -1,6 +1,6 @@
 package lc.Sorting;
 
-import lc.ArraysAndStrings.ArrayUtils;
+import lc.utils.ArrayUtils;
 
 /**
  * https://leetcode.com/problems/merge-sorted-array/description/

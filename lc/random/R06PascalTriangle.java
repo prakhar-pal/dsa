@@ -1,7 +1,7 @@
 package lc.random;
 import java.util.*;
 
-import lc.ArraysAndStrings.ArrayUtils;
+import lc.utils.ArrayUtils;
 
 /**
  * https://leetcode.com/problems/pascals-triangle/
