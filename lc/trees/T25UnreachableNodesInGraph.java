@@ -1,10 +1,8 @@
 package lc.trees;
 
-import java.util.List;
 import java.util.ArrayList;
 import java.util.HashMap;
-import lc.utils.StringUtils;
-import lc.utils.Clogger;
+import java.util.List;
 
 // https://leetcode.com/problems/count-unreachable-pairs-of-nodes-in-an-undirected-graph/description
 class T25UnreachableNodesInGraph {

@@ -1,5 +1,6 @@
 package lc.LinkedList;
-import lc.ArraysAndStrings.ArrayUtils;
+
+import lc.utils.ArrayUtils;
 
 /**
  * https://leetcode.com/problems/delete-node-in-a-linked-list/description/

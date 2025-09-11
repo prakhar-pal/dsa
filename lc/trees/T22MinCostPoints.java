@@ -1,7 +1,7 @@
 package lc.trees;
 
-import java.util.*;
-import lc.utils.Clogger;
+import java.util.HashSet;
+import java.util.PriorityQueue;
 
 class T22MinCostPoints {
 

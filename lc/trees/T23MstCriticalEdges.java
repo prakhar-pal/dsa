@@ -1,14 +1,17 @@
 package lc.trees;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.List;
 
-import lc.ArraysAndStrings.ArrayUtils;
+import lc.utils.ArrayUtils;
 
 // https://leetcode.com/problems/find-critical-and-pseudo-critical-edges-in-minimum-spanning-tree/description/
 class T23MstCriticalEdges {
 
     public static void main(String[] args) {
-        T22Solution sol = new T22Solution();
+        T23Solution sol = new T23Solution();
         assert Arrays.deepEquals(ArrayUtils.to2DArray(sol.findCriticalAndPseudoCriticalEdges(5,
                 new int[][] { { 0, 1, 1 }, { 1, 2, 1 }, { 2, 3, 2 }, { 0, 3, 2 }, { 0, 4, 3 }, { 3, 4, 3 },
                         { 1, 4, 6 } }), Integer.class),
@@ -16,7 +19,7 @@ class T23MstCriticalEdges {
     }
 }
 
-class T22Solution {
+class T23Solution {
 
     public List<List<Integer>> findCriticalAndPseudoCriticalEdges(
             int n,

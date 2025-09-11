@@ -1,6 +1,6 @@
 package lc.trees;
 
-import lc.ArraysAndStrings.ArrayUtils;
+import lc.utils.ArrayUtils;
 
 class T26RedundantConnection {
   public static void main(String[] args) {
