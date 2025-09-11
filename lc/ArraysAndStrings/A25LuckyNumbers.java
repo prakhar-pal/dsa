@@ -1,8 +1,8 @@
-package lc.ArraysAndStrings;
+package ArraysAndStrings;
 
 import java.util.*;
 
-import lc.utils.ArrayUtils;
+import utils.ArrayUtils;
 
 public class A25LuckyNumbers {
   public static void main(String[] args) {
