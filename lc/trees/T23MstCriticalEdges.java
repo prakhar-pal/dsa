@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 
-import utils.ArrayUtils;
+import lc.utils.ArrayUtils;
 
 // https://leetcode.com/problems/find-critical-and-pseudo-critical-edges-in-minimum-spanning-tree/description/
 class T23MstCriticalEdges {

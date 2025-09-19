@@ -87,17 +87,6 @@ public class ArrayUtils {
         return array;
     }
 
-    // public static <T> T[][] listTo2DArray(List<List<T>> list) {
-    //     T[][] arr = new T[list.size()][];
-    //     for (int i = 0; i < list.size(); i++) {
-    //         List<T> row = list.get(i);
-    //         arr[i] = new T[row.size()];
-    //         for (int j = 0; j < row.size(); j++) {
-    //             arr[i][j] = row.get(j);
-    //         }
-    //     }
-    //     return arr;
-    // }
 
    public static <T> T[][] to2DArray(List<List<T>> list, Class<T> clazz) {
         int rows = list.size();

@@ -2,7 +2,7 @@ package ArraysAndStrings;
 
 import java.util.*;
 
-import utils.ArrayUtils;
+import lc.utils.ArrayUtils;
 
 public class A25LuckyNumbers {
   public static void main(String[] args) {
