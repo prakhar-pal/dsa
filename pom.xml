@@ -5,11 +5,7 @@
     <groupId>root-group</groupId>
     <artifactId>root-artifact</artifactId>
     <version>0.0a-SNAPSHOT</version>
-    <packaging>pom</packaging>
-    <modules>
-        <module>lc</module>
-        <module>core/basics</module>
-    </modules>
+    <packaging>jar</packaging>
     <build>
         <sourceDirectory>${project.basedir}</sourceDirectory>
         <plugins>
@@ -18,8 +14,9 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.13.0</version>
                 <configuration>
-                    <source>21</source>   <!-- or your Java version -->
+                    <source>21</source>  
                     <target>21</target>
+                    <excludes>skiena/**</excludes>
                 </configuration>
             </plugin>
         </plugins>

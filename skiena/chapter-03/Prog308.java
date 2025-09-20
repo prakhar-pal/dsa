@@ -8,26 +8,28 @@ import java.util.Queue;
 //• member(x,T) – Return true iff x ∈ T .
 //All operations must take O(log n) time on an n-element set.
 
-class Node {
-    public int data, childrenCount;
-    public Node parent, left, right;
-    public Node(int data){
-        this.data = data;
-        this.parent = this.left = this.right = null;
-        this.childrenCount = 0;
-    }
-    public void incrementChildrentCount(){
-        this.childrenCount++;
-    }
-
-    public static void nodeToArr(Node node, ArrayList<Node> list){
-        if(node == null) return;
-        if(node.left != null) Node.nodeToArr(node.left, list);
-        list.add(node);
-        if(node.right != null) Node.nodeToArr(node.right, list);
-    }
-}
 class Dict {
+
+    class Node {
+        public int data, childrenCount;
+        public Node parent, left, right;
+        public Node(int data){
+            super();
+            this.data = data;
+            this.parent = this.left = this.right = null;
+            this.childrenCount = 0;
+        }
+        public void incrementChildrentCount(){
+            this.childrenCount++;
+        }
+
+        public static void nodeToArr(Node node, ArrayList<Node> list){
+            if(node == null) return;
+            if(node.left != null) Node.nodeToArr(node.left, list);
+            list.add(node);
+            if(node.right != null) Node.nodeToArr(node.right, list);
+        }
+    }
     private Node rootNode;
     public Dict() {
         this.rootNode = null;
@@ -136,7 +138,7 @@ public class Prog308 {
         }
         dict.print();
         int k = Integer.parseInt(args[0]);
-        Node node = dict.findKthSmallest2(k);
+        Dict.Node node = dict.findKthSmallest2(k);
         System.out.println(k+"th smallest is:" + (node != null ? node.data: "null"));
     }
     public static void main(String[] args){
