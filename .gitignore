@@ -8,3 +8,5 @@ out
 .jdtls
 bin
 target
+.project
+.settings

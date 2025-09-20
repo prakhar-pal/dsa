@@ -17,6 +17,11 @@
                     <source>21</source>  
                     <target>21</target>
                     <excludes>skiena/**</excludes>
+                    <excludes>asked/**</excludes>
+                    <excludes>core/**</excludes>
+                    <excludes>examples/**</excludes>
+                    <excludes>he/**</excludes>
+                    <excludes>scripts/**</excludes>
                 </configuration>
             </plugin>
         </plugins>
