@@ -17,6 +17,10 @@ public class ArrayUtils {
         return true;
     }
 
+    public static boolean isSame1DArray(char[] arr1, char[] arr2) {
+        return isSame1DArray(convert(arr1), convert(arr2));
+    }
+
     public static boolean isSame2DArray(char[][] arr1, char[][] arr2) {
         if(arr1.length != arr2.length) {
             return false;
@@ -72,6 +76,14 @@ public class ArrayUtils {
 
     public static Integer[] convert(int[] arr) {
         Integer[] copy = new Integer[arr.length];
+        for(int i=0;i<arr.length;i++) {
+            copy[i] = arr[i];
+        }
+        return copy;
+    }
+
+    public static Character[] convert(char[] arr) {
+        Character[] copy = new Character[arr.length];
         for(int i=0;i<arr.length;i++) {
             copy[i] = arr[i];
         }

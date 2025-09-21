@@ -3,7 +3,7 @@ package lc.DynamicProgramming;
 import java.util.*;
 
 // https://leetcode.com/problems/subsets-ii/
-public class DP24Subsets2 {
+public class BT11SubsetsTwoWithDuplicates {
 
     public static void main(String[] args) {
         DP24Solution solution = new DP24Solution();
