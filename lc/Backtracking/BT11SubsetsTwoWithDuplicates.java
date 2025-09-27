@@ -6,12 +6,12 @@ import java.util.*;
 public class BT11SubsetsTwoWithDuplicates {
 
     public static void main(String[] args) {
-        DP24Solution solution = new DP24Solution();
+        BT11Solution solution = new BT11Solution();
         solution.subsetsWithDup(new int[] { 1, 2, 2 });
     }
 }
 
-class DP24Solution {
+class BT11Solution {
     List<List<Integer>> result;
     public List<List<Integer>> subsetsWithDup(int[] nums) {
         List<Integer> list = new ArrayList<>();

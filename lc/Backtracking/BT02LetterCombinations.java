@@ -50,7 +50,7 @@ class BT02LCSolution {
             strings.add(nts.mapping.get(num));
         }
         List<String> result = new ArrayList<>();
-        if(digits.length() == 0) {
+        if(digits.isEmpty()) {
             return result;
         }else {
             result = strings.get(0);
