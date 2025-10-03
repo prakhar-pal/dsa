@@ -1,7 +1,9 @@
 package lc.random;
 
-import java.util.*;
-import lc.ArraysAndStrings.ArrayUtils;
+import java.util.ArrayList;
+import java.util.List;
+
+import lc.utils.ArrayUtils;
 
 /**
  * https://leetcode.com/problems/insert-interval/
@@ -9,7 +11,7 @@ import lc.ArraysAndStrings.ArrayUtils;
 public class R32InsertIntervals {
     public static void main(String[] args) {
         R32Solution solution = new R32Solution();
-        assert ArrayUtils.isSame2DArray(solution.insert(new int[][] {
+        assert lc.utils.ArrayUtils.isSame2DArray(solution.insert(new int[][] {
             {1,3},
             {6,9}
         }, new int[] {2,5}), new int[][] {

@@ -1,7 +1,8 @@
 package lc.trees;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
-import lc.ArraysAndStrings.ArrayUtils;
+import lc.utils.ArrayUtils;
 
 /**
  * https://leetcode.com/problems/count-of-smaller-numbers-after-self

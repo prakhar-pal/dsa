@@ -1,6 +1,7 @@
 package lc.LinkedList;
-import lc.ArraysAndStrings.ArrayUtils;
 import java.util.*;
+
+import lc.utils.ArrayUtils;
 
 /**
  * https://leetcode.com/problems/remove-nth-node-from-end-of-list/description/

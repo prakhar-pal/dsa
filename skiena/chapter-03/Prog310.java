@@ -2,8 +2,6 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
 
-import javax.swing.plaf.basic.BasicInternalFrameTitlePane.SystemMenuBar;
-
 /**
  * In the bin-packing problem, we are given n metal objects, each weighing between
 zero and one kilogram. Our goal is to find the smallest number of bins that will
@@ -16,7 +14,10 @@ best-fit heuristic (taking as input the n weights w 1 , w 2 , ..., w n and outpu
 the number of bins used) in O(n log n) time.
  */
 
-class Node {
+
+
+class BinContainer {
+    class Node {
     public int data, childrenCount;
     public Node parent, left, right;
     public Node(int data){
@@ -53,8 +54,6 @@ class Node {
         System.out.println();
     }
 }
-
-class BinContainer {
     private Node rootNode;
     private int binCapacity;
     private int binCount;

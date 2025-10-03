@@ -1,5 +1,5 @@
 package lc.Backtracking;
-import core.basics.*;
+import basics.*;
 import java.util.*;
 
 /*

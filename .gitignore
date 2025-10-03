@@ -5,3 +5,8 @@ out
 *.iml
 *anjuta*
 .vscode
+.jdtls
+bin
+target
+.project
+.settings

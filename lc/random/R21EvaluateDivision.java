@@ -1,5 +1,6 @@
 package lc.random;
-import lc.ArraysAndStrings.*;
+import lc.utils.ArrayUtils;
+
 import java.util.*;
 
 /**

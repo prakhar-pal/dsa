@@ -1,4 +1,4 @@
-package core.basics;
+package basics;
 
 import java.util.*;
 public class TrieNodeImpl {
