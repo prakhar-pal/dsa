@@ -397,9 +397,6 @@ class T18SolutionTwo implements T18Solution {
             prereqCourses2.remove(prereqCourse2);
         }
         visitedCourses.remove(prereqCourse);
-        if(prereqCourses2.size() != 0 ) {
-            return false;
-        }
-        return true;
+        return prereqCourses2.isEmpty();
     }
 }
