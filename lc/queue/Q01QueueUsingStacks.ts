@@ -20,6 +20,7 @@ class MyQueue {
     constructor() {
         this.mainStack = new Stack();
         this.secondaryStack = new Stack();
+
     }
 
     push(x: number): void {
