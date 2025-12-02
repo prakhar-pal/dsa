@@ -4,7 +4,7 @@ import java.util.*;
 
 public class DE02MinStack {
     public static void main(String[] args) {
-        MinStack minStack = new MinStack();
+        MinStack minStack = new MinStackV2();
         minStack.push(-2);
         minStack.push(0);
         minStack.push(-3);
@@ -13,7 +13,7 @@ public class DE02MinStack {
         assert minStack.top() == 0;    // return 0
         assert minStack.getMin() == -2; // return -2
 
-        MinStack minStack2 = new MinStack();
+        MinStack minStack2 = new MinStackV2();
         minStack2.push(0);
         minStack2.push(1);
         minStack2.push(0);
@@ -21,7 +21,7 @@ public class DE02MinStack {
         minStack2.pop();
         assert minStack2.getMin() == 0; // return -2
 
-        MinStack minStack3 = new MinStack();
+        MinStack minStack3 = new MinStackV2();
         minStack3.push(46);
         minStack3.push(46);
         minStack3.push(47);
@@ -42,17 +42,24 @@ public class DE02MinStack {
     }
 }
 
-class MinStack {
+interface MinStack {
+    public void push(int val);
+    public void pop();
+    public int top();
+    public int getMin();
+}
+
+class MinStackV1 implements MinStack {
     private List<Integer> list;
     private List<Integer> minList;
     private Integer currentMin = null;
     private HashMap<Integer, Integer> minCountMap;
-    public MinStack() {
+    public MinStackV1() {
         list = new ArrayList<>();
         minList = new ArrayList<>();
         minCountMap = new HashMap<>();
     }
-    
+
     public void push(int val) {
         if(currentMin == null || val < currentMin) {
             currentMin = val;
@@ -63,7 +70,7 @@ class MinStack {
         }
         list.add(val);
     }
-    
+
     public void pop() {
         int value = list.remove(list.size()-1);
         if(value == currentMin) {
@@ -82,13 +89,44 @@ class MinStack {
             }
         }
     }
-    
+
     public int top() {
         return list.get(list.size()-1);
     }
-    
+
     public int getMin() {
         return currentMin;
     }
 }
 
+
+class MinStackV2 implements MinStack {
+    private List<Integer> list;
+    private List<Integer> minList;
+    public MinStackV2() {
+        list = new ArrayList<>();
+        minList = new ArrayList<>();
+    }
+
+    public void push(int val) {
+        if(minList.isEmpty() || val <= minList.getLast()) {
+            minList.addLast(val);
+        }
+        list.addLast(val);
+    }
+
+    public void pop() {
+        int value = list.removeLast();
+        if(value == minList.getLast()) {
+            minList.removeLast();
+        }
+    }
+
+    public int top() {
+        return list.getLast();
+    }
+
+    public int getMin() {
+        return minList.getLast();
+    }
+}
