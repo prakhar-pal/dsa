@@ -21,11 +21,26 @@ class SolutionDP09One implements SolutionDP09 {
     }
 }
 
+class SolutionDP09Two implements SolutionDP09 {
+    public int maxSubArray(int[] nums){
+        int max = nums[0];
+        int current = nums[0];
+        for(int i=0;i<nums.length;i++) {
+            int num = nums[i];
+            if(num > num + current) {
+                current = num;
+            } else {
+                current = num + current;
+            }
+            max = Math.max(max, current);
+        }
+        return max;
+    }
+}
 public class DP09MaxSubArray {
     public static void main(String[] args) {
         int[] nums = {-5,-6,-7,-1,-2,-3};
-        SolutionDP09 sol = new SolutionDP09One();
-        System.out.println("sol"+ sol.maxSubArray(nums));
+        SolutionDP09 sol = new SolutionDP09Two();
         assert sol.maxSubArray(nums) == -1;
     }
 }
