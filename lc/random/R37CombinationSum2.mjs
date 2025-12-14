@@ -31,6 +31,7 @@ var combinationSum2 = function(candidates, target) {
 };
 
 class SolutionTwo {
+    // optimized solution
     /**
      * 
      * @param {Number[]} candidates 
