@@ -1,6 +1,7 @@
 package lc.ArraysAndStrings;
-
 import java.util.HashMap;
+
+// two-pointer
 
 /**
  * https://leetcode.com/problems/longest-substring-without-repeating-characters/description/
@@ -9,10 +10,10 @@ import java.util.HashMap;
 public class S06LongestSubstringWoDuplChars {
     public static void main(String[] args) {
         S06Solution sol = new S06Solution();
-        // assert sol.lengthOfLongestSubstring("abcabcbb") == 3;
-        // assert sol.lengthOfLongestSubstring("bbbbb") == 1;
-        // assert sol.lengthOfLongestSubstring("pwwkew") == 3;
-        // assert sol.lengthOfLongestSubstring("") == 0;
+        assert sol.lengthOfLongestSubstring("abcabcbb") == 3;
+        assert sol.lengthOfLongestSubstring("bbbbb") == 1;
+        assert sol.lengthOfLongestSubstring("pwwkew") == 3;
+        assert sol.lengthOfLongestSubstring("") == 0;
         assert sol.lengthOfLongestSubstring("abba") == 2;
     }
 }

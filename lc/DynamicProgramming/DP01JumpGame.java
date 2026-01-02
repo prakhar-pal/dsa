@@ -42,3 +42,23 @@ class P0SolutionOne implements P0Solution{
         return index == 0;
     }
 }
+
+
+class P0SolutionTwo implements P0Solution{
+    /**
+     * Runtime 1ms, beats 99.91% of users with Java
+     * Memory 47.96MB, beats 19.24% of users with Java
+     */
+    public boolean canJump(int[] nums) {
+        return canReach(nums, nums.length-1);
+    }
+    private boolean canReach(int[] nums, int index) {
+        for(int i=index-1;i>=0;i--) {
+            boolean canJumpToIndex = index <= (i + nums[i]);
+            if(canJumpToIndex) {
+                return canReach(nums, i);
+            }
+        }
+        return index == 0;
+    }
+}
